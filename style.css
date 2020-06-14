@@ -191,6 +191,13 @@ a {
     flex-wrap: wrap;
     justify-content: space-between;
     padding-bottom: 30px;
+    position: relative;
+}
+
+.tovar_cart:hover {
+    width: 261px;
+    height: 280px;
+    
 }
 
 .tovar_info {
