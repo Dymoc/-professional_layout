@@ -1,0 +1,165 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+}
+
+.center {
+    padding: 0 calc(50% - 570px);
+}
+
+a {
+    text-decoration: none;
+}
+
+.header {
+    height: 100px;
+    background-color: #ffffff;
+    border: 1px solid #ececec;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.17);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__left,
+.header__right {
+    display: flex;
+    align-items: center;
+}
+
+.header__form {
+    display: flex;
+    align-items: center;
+    margin-left: 37px;
+}
+
+.header__cart {
+    margin-right: 26px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo__img {
+    margin-right: 13px;
+
+}
+
+.logo__img h1 {
+    font-size: 27px;
+    font-weight: 300;
+    color: rgba(34, 34, 34, 1);
+    text-align: center;
+    letter-spacing: 0.03em;
+    line-height: 32px;
+    text-transform: uppercase;
+}
+
+.logo_d {
+    font-weight: 900;
+    color: rgba(241, 109, 127, 1);
+}
+
+.nav {
+    background-color: #ffffff;
+}
+
+.menu {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+}
+
+.menu__link {
+    font-size: 14px;
+    font-weight: bold;
+    color: #222222;
+    text-transform: uppercase;
+    padding: 19px;
+    display: block;
+}
+
+.promo {
+    height: 613px;
+    background-color: #e8e8e8;
+    background-image: url(img/promo.png);
+    background-repeat: no-repeat;
+    background-position: center -52px;
+    display: flex;
+    align-items: flex-start;
+}
+
+.promo__content {
+    margin-top: 224px;
+    border-left: 12px solid #f16d7f;
+    padding-left: 12px;
+}
+
+.banner {
+    display: flex;
+    margin-top: 98px;
+}
+
+.banner_right,
+.banner_left {
+    width: 560px;
+}
+
+.banner_right{
+    margin-right: 20px;
+}
+
+.banner_hot_deal{
+    position: relative;
+}
+
+.banner_luxirous {
+    margin-top: 20px;
+    position: relative;
+}
+
+.banner_offer{
+    position: relative;
+}
+
+.banner_new{
+    margin-top: 20px;
+    position: relative;
+}
+
+.badge {
+    background-color: #fff;
+    position: absolute;
+    top: 26px;
+}
+
+.badge h1{
+    font-family: 'Lato';
+    font-size: 18px;
+    font-weight: 900;
+    color: rgba(34, 34, 34, 1);
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    margin-left: 18px;
+    margin-right: 18px;
+    margin-top: 16px;
+}
+
+.badge p{
+    font-family: 'Lato';
+    font-size: 30px;
+    font-weight: 900;
+    color: rgba(241, 109, 127, 1);
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    margin-left: 18px;
+    margin-right: 18px;
+    margin-bottom: 16px;
+}
