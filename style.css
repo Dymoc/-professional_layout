@@ -38,6 +38,15 @@ a {
     margin-left: 37px;
 }
 
+.header__browse {
+    font-size: 14px;
+    font-weight: 300;
+    color: rgba(34, 34, 34, 1);
+    text-align: right;
+    letter-spacing: 0.03em;
+    line-height: 32px;
+}
+
 .header__cart {
     margin-right: 26px;
 }
@@ -60,6 +69,14 @@ a {
     letter-spacing: 0.03em;
     line-height: 32px;
     text-transform: uppercase;
+}
+
+.button {
+    font-size: 15px;
+    color: rgba(0, 0, 0, 1); /*TODO поменять цвет*/
+    text-align: right;
+    letter-spacing: 0.03em;
+    line-height: 32px;
 }
 
 .pinc {
@@ -199,7 +216,6 @@ a {
 }
 
 .add_to_cart {
-    background-image: url(img/featured_hover.png);
     display: none;
     position: absolute;
     opacity: 0.7;
@@ -265,9 +281,7 @@ a {
 
 .feature {
     margin-top: 113px;
-
-}
-
-.feature_banner {
     background-color: #000;
 }
+
+
