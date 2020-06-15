@@ -316,7 +316,7 @@ a {
 
 .feature_box_delivery {
     position: absolute;
-    top: 55px;
+    top: 60px;
     left: 800px;
     width: 300px;
 }
@@ -346,7 +346,7 @@ a {
 
 .feature_box_sales {
     position: absolute;
-    top: 204px;
+    top: 215px;
     left: 800px;
     width: 300px;
 }
@@ -376,7 +376,7 @@ a {
 
 .feature_box_quality {
     position: absolute;
-    top: 358px;
+    top: 375px;
     left: 800px;
     width: 300px;
 }
