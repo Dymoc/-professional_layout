@@ -73,7 +73,8 @@ a {
 
 .button {
     font-size: 15px;
-    color: rgba(0, 0, 0, 1); /*TODO поменять цвет*/
+    color: rgba(0, 0, 0, 1);
+    /*TODO поменять цвет*/
     text-align: right;
     letter-spacing: 0.03em;
     line-height: 32px;
@@ -282,6 +283,39 @@ a {
 .feature {
     margin-top: 113px;
     background-color: #000;
+    position: relative;
+    width: 1140px;
 }
 
 
+.feature_shadow {
+    position: absolute;
+    left: 0px;
+}
+
+.feature_text {
+    position: absolute;
+    top: 146px;
+    left: 39px;
+}
+
+.feature_text h1 {
+    font-size: 54px;
+    font-weight: bold;
+    color: rgba(255, 255, 255, 1);
+    letter-spacing: 0.03em;
+}
+
+.feature_text p {
+    font-size: 32px;
+    color: rgba(255, 255, 255, 1);
+    margin-left: -15px;
+    -webkit-transform: scale(0.89);
+    -ms-transform: scale(0.89);
+}
+
+.feature_box {
+    position: absolute;
+    top: 48px;
+    left: 800px;
+}
