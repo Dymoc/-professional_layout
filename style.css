@@ -403,3 +403,12 @@ a {
     line-height: 24px;
     padding-left: 78px;
 }
+
+.subscribe {
+    width: 1600px;
+    height: 438px;
+    background-image: url(img/subscribe.png);
+    background-repeat: no-repeat;
+    margin: 0 auto;
+    margin-top: 97px;
+}
