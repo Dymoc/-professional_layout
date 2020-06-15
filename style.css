@@ -125,7 +125,7 @@ a {
     position: relative;
 }
 
-.banner_offer{ 
+.banner_offer {
     position: relative;
 }
 
@@ -194,10 +194,8 @@ a {
     position: relative;
 }
 
-.tovar_cart:hover {
-    width: 261px;
-    height: 280px;
-    
+.tovar_cart {
+    margin-bottom: 30px;
 }
 
 .tovar_info {
@@ -222,5 +220,15 @@ a {
 
 .prduct_bottom {
     width: 212px;
+    text-align: center;
     margin: 0 auto;
+}
+
+.feature {
+    margin-top: 113px;
+
+}
+
+.feature_banner {
+    background-color: #000;
 }
