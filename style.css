@@ -55,6 +55,13 @@ a {
     background-color: rgba(255, 255, 255, 1);
     border: 1px solid rgba(230, 230, 230, 1);
     border-radius: 0px 3px 3px 0px;
+    padding: 0px 16px;
+    font-size: 14px;
+    font-weight: 300;
+    color: rgba(164, 164, 164, 1);
+    text-align: left;
+    letter-spacing: 0.03em;
+    line-height: 32px;
 }
 
 .header__button {
@@ -249,6 +256,14 @@ a {
     position: absolute;
     top: 97px;
     left: 70px;
+    font-size: 13px;
+    font-weight: bold;
+    color: rgba(255, 255, 255, 1);
+    padding-left: 43px;
+    padding-top: 10px;
+    background-image: url(img/cart-white.png);
+    background-repeat: no-repeat;
+    background-position: 10px;
 }
 
 .img_cart_white {
@@ -257,14 +272,7 @@ a {
     left: 82px;
 }
 
-.add_to_cart p {
-    font-size: 13px;
-    font-weight: bold;
-    color: rgba(255, 255, 255, 1);
-    position: absolute;
-    top: 112px;
-    left: 113px;
-}
+.add_to_cart p {}
 
 .tovar_cart:hover {
     box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.17);
