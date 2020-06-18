@@ -492,3 +492,47 @@ a {
     width: 38px;
     background-color: rgba(214, 214, 214, 1);
 }
+
+.subscribe_send {
+    height: 41px;
+    margin-top: 120px;
+    text-align: center;
+}
+
+.subscribe_send h1 {
+    font-size: 24px;
+    color: rgba(34, 34, 36, 1);
+    text-align: center;
+    letter-spacing: 0.03em;
+    line-height: 54px;
+    text-transform: uppercase;
+}
+
+.subscribe_send p {
+    font-size: 14px;
+    color: rgba(34, 34, 36, 1);
+    text-align: center;
+    letter-spacing: 0.03em;
+    line-height: 24px;
+}
+
+.send_email {
+    position: relative;
+    margin-top: 30px
+}
+
+.send_email input {
+    height: 46px;
+    width: 334px;
+    background-color: rgba(225, 225, 225, 1);
+    border-radius: 23px;
+}
+
+.send_email button {
+    height: 46px;
+    width: 104px;
+    background-color: rgba(241, 109, 127, 1);
+    border-radius: 0px 23px 23px 0px;
+    position: absolute;
+    left: 250px;
+}
