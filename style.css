@@ -439,10 +439,12 @@ a {
     background-repeat: no-repeat;
     margin: 0 auto;
     margin-top: 97px;
+    display: flex;
+}
 }
 
-.slider {
-
+.subscribe_send {
+    padding-top: 111px;
 }
 
 .slider img {
@@ -458,8 +460,9 @@ a {
     letter-spacing: 0.03em;
     line-height: 26px;
     margin-left: 100px;
-    padding-top:  111px;
+    padding-top: 111px;
 }
+
 .slider_name_autor {
     margin-top: 10px;
     font-size: 16px;
@@ -477,4 +480,15 @@ a {
     letter-spacing: 0.03em;
     line-height: 14px;
     margin-left: 100px;
+}
+
+.pagination {
+    margin-left: 100px;
+    margin-top: 30px;
+}
+
+.button_slider {
+    height: 4px;
+    width: 38px;
+    background-color: rgba(214, 214, 214, 1);
 }
