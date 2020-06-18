@@ -441,8 +441,13 @@ a {
     margin-top: 97px;
 }
 
+.slider {
+
+}
+
 .slider img {
     float: left;
+    margin-top: 111px;
 }
 
 .slider_content {
@@ -452,8 +457,9 @@ a {
     color: rgba(34, 34, 36, 1);
     letter-spacing: 0.03em;
     line-height: 26px;
+    margin-left: 100px;
+    padding-top:  111px;
 }
-
 .slider_name_autor {
     margin-top: 10px;
     font-size: 16px;
@@ -461,6 +467,7 @@ a {
     color: rgba(241, 109, 127, 1);
     letter-spacing: 0.03em;
     line-height: 26px;
+    margin-left: 100px;
 }
 
 .slider_autor {
@@ -469,4 +476,5 @@ a {
     color: rgba(34, 34, 36, 1);
     letter-spacing: 0.03em;
     line-height: 14px;
+    margin-left: 100px;
 }
