@@ -1,5 +1,5 @@
 * {
-    margin: 0;
+    margin: 0 auto;
     padding: 0;
     box-sizing: border-box;
 }
@@ -492,6 +492,7 @@ a {
     height: 4px;
     width: 38px;
     background-color: rgba(214, 214, 214, 1);
+    margin-right: 13px;
 }
 
 .subscribe_send {
@@ -536,4 +537,9 @@ a {
     border-radius: 0px 23px 23px 0px;
     position: absolute;
     left: 250px;
+}
+
+.footer_up {
+    display: flex;
+    justify-content: space-between
 }
