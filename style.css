@@ -265,6 +265,13 @@ a {
     position: relative;
 }
 
+.stars {
+    position: absolute;
+    top: 335px;
+    left: 170px;
+    display: none;
+}
+
 .add_to_cart {
     display: none;
     position: absolute;
@@ -302,6 +309,10 @@ a {
 
 
 .tovar_cart:hover .add_to_cart {
+    display: block;
+}
+
+.tovar_cart:hover .stars {
     display: block;
 }
 
