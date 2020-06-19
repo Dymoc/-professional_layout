@@ -538,6 +538,7 @@ a {
     height: 41px;
     margin-top: 120px;
     text-align: center;
+    position: relative
 }
 
 .subscribe_send h1 {
@@ -562,7 +563,7 @@ a {
     margin-top: 30px
 }
 
-.send_email input {
+.send_email {
     height: 46px;
     width: 334px;
     border: 1px solid rgba(230, 230, 230, 1);
@@ -577,14 +578,15 @@ a {
     outline: none;
 }
 
-.send_email a {
+.subscribe_button {
     height: 46px;
     width: 104px;
     background-color: rgba(241, 109, 127, 1);
     border: 1px solid rgba(230, 230, 230, 1);
     border-radius: 0px 23px 23px 0px;
     position: absolute;
-    left: 250px;
+    left: 230px;
+    top: 108px;
 }
 
 .subscribe_button {
@@ -665,7 +667,9 @@ a {
 }
 
 .social_icon a {
+    width: 32px;
     position: absolute;
-    top: 9px;
-    left: 9px;
+    top: 2px;
+    line-height: 32px;
+    padding-left: 8px
 }
