@@ -80,6 +80,7 @@ a {
 .logo {
     display: flex;
     align-items: center;
+    width: 164px;
 }
 
 .logo__img {
@@ -128,9 +129,13 @@ a {
     font-size: 14px;
     font-weight: bold;
     color: #222222;
-    text-transform: uppercase;
     padding: 19px;
     display: block;
+    font-size: 14px;
+    font-weight: bold;
+    color: rgba(34, 34, 34, 1);
+    line-height: 19px;
+    text-transform: uppercase;
 }
 
 .promo {
@@ -542,14 +547,23 @@ a {
 .send_email input {
     height: 46px;
     width: 334px;
+    border: 1px solid rgba(230, 230, 230, 1);
     background-color: rgba(225, 225, 225, 1);
     border-radius: 23px;
+    font-size: 14px;
+    color: rgba(34, 34, 36, 1);
+    letter-spacing: 0.03em;
+    line-height: 54px;
+    padding-left: 28px;
+    padding-right: 90px;
+    outline: none;
 }
 
 .send_email button {
     height: 46px;
     width: 104px;
     background-color: rgba(241, 109, 127, 1);
+    border: 1px solid rgba(230, 230, 230, 1);
     border-radius: 0px 23px 23px 0px;
     position: absolute;
     left: 250px;
@@ -558,4 +572,13 @@ a {
 .footer_up {
     display: flex;
     justify-content: space-between
+}
+
+.footer {
+    margin-top: 109px;
+}
+
+.abaut p {
+    width: 430px;
+    margin-top: 29px;
 }
