@@ -160,6 +160,8 @@ a {
     font-weight: 900;
     color: rgba(34, 34, 34, 1);
     letter-spacing: 0.03em;
+    line-height: 0.8em;
+    margin-bottom: 18px;
 }
 
 .promo__content p {
@@ -167,6 +169,7 @@ a {
     font-weight: 900;
     color: rgba(34, 34, 34, 1);
     letter-spacing: 0.03em;
+    line-height: 0.9em;
 }
 
 .banner {
