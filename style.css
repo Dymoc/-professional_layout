@@ -518,12 +518,21 @@ a {
 .pagination {
     margin-left: 100px;
     margin-top: 30px;
+    display: flex;
+    width: 150px;
 }
 
 .button_slider {
     height: 4px;
     width: 38px;
-    background-color: rgba(214, 214, 214, 1);
+    background-color: rgba(240, 240, 240, 1);
+    margin-right: 13px;
+}
+
+.button_slider:hover {
+    height: 4px;
+    width: 38px;
+    background-color: rgba(241, 109, 127, 1);
     margin-right: 13px;
 }
 
@@ -570,7 +579,7 @@ a {
     outline: none;
 }
 
-.send_email button {
+.send_email a {
     height: 46px;
     width: 104px;
     background-color: rgba(241, 109, 127, 1);
@@ -578,6 +587,13 @@ a {
     border-radius: 0px 23px 23px 0px;
     position: absolute;
     left: 250px;
+}
+
+.subscribe_button {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 1);
+    letter-spacing: 0.03em;
+    line-height: 45px;
 }
 
 .footer_up {
