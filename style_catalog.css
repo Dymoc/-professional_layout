@@ -80,7 +80,8 @@ details[open] > .category_head::after {
     color: rgba(111, 110, 110, 1);
     line-height: 26px;
     padding-right: 8px;
-    border-right: 2px solid rgba(223, 223, 223, 1)
+    border-right: 2px solid rgba(223, 223, 223, 1);
+    text-transform: none;
 }
 
 .top_filter_trending_now_text_a:last-child {
