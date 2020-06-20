@@ -471,13 +471,16 @@ a {
 .subscribe {
     width: 1600px;
     height: 438px;
-    background-image: url(img/subscribe.png);
+    background: url(img/subscribe.png);
     background-repeat: no-repeat;
     margin: 0 auto;
     margin-top: 97px;
     display: flex;
 }
 
+.slider {
+    border-right: 1px solid #fff;
+}
 .slider img {
     float: left;
     margin-top: 111px;
@@ -669,7 +672,7 @@ a {
 .social_icon a {
     width: 32px;
     position: absolute;
-    top: 2px;
+    top: 1px;
     line-height: 32px;
     padding-left: 9px;
 }
