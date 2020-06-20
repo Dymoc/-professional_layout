@@ -671,5 +671,19 @@ a {
     position: absolute;
     top: 2px;
     line-height: 32px;
-    padding-left: 8px
+    padding-left: 9px;
+}
+
+.fab {
+    font-size: 16px;
+    color: rgba(178, 178, 178, 1);
+    text-align: right;
+    letter-spacing: 0.03em;
+}
+
+.social_icon:hover .fab {
+    font-size: 16px;
+    color: rgba(247, 247, 248, 1);
+    text-align: right;
+    letter-spacing: 0.03em;
 }
