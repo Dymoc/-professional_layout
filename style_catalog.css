@@ -2,6 +2,7 @@
     height: 148px;
     background-image: url(img/breadcrumb.png);
     padding-top: 65px;
+    margin-bottom: 71px;
 }
 
 .breadcrumb_header {
@@ -50,11 +51,28 @@ details[open] > .category_head::after {
     line-height: 33px
 }
 
-.content {
-    width: 846px;
-    justify-content: space-around;
-}
-
 .top_filter {
     display: flex;
+}
+
+.top_filter_size {
+    width: 236px;
+    font-size: 14px;
+    font-weight: 400;
+    color: rgba(111, 110, 110, 1);
+    line-height: 20px;
+    text-transform: uppercase;
+}
+
+.top_filter_size_header {
+    font-weight: bold;
+    margin-bottom: 26px;
+}
+
+.top_filter_size_chekbox {
+    margin-right: 5px
+}
+
+.top_filter_size_text {
+    padding-right: 20px;
 }
