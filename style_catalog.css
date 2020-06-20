@@ -52,14 +52,9 @@ details[open] > .category_head::after {
 
 .content {
     width: 846px;
+    justify-content: space-around;
 }
 
 .top_filter {
     display: flex;
-}
-
-#price {
-    width: 180px;
-    height: 45px;
-    background: #333;
 }
