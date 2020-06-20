@@ -1,0 +1,40 @@
+.breadcrumb {
+    height: 148px;
+    background-image: url(img/breadcrumb.png);
+    padding-top: 65px;
+}
+
+.breadcrumb_header {
+    font-size: 24px;
+    font-weight: 900;
+    line-height: 20px;
+    text-transform: uppercase;
+}
+
+
+.category_head {
+    display: block;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 20px;
+    text-transform: uppercase;
+}
+
+.category_head::-webkit-details-marker {
+    display: none;
+}
+
+.category_head::after {
+    content: '\25B6';
+    padding-right: 0.5em;
+}
+
+details[open] > .category_head::after {
+    content: '\25BC';
+}
+
+.link_category {
+    font-size: 14px;
+    color: rgba(111, 110, 110, 1);
+    line-height: 33px;
+}
