@@ -55,6 +55,35 @@ details[open] > .category_head::after {
     display: flex;
 }
 
+.top_filter_trending_now {
+    width: 225px;
+    margin: 0px;
+    margin-left: 30px;
+    font-size: 14px;
+    font-weight: 400;
+    color: rgba(111, 110, 110, 1);
+    line-height: 20px;
+    text-transform: uppercase;
+}
+
+.top_filter_trending_now_text {
+    font-weight: bold;
+    margin-bottom: 26px;
+}
+
+.top_filter_trending_now_text_a {
+    font-size: 14px;
+    color: rgba(111, 110, 110, 1);
+    line-height: 26px;
+    padding-right: 8px;
+
+    border-right: 2px solid rgba(223, 223, 223, 1)
+}
+
+.top_filter_trending_now_text_a:last-child {
+    border-right: none;
+}
+
 .top_filter_size {
     width: 236px;
     font-size: 14px;
