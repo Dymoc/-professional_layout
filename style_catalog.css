@@ -3,6 +3,8 @@
     background-image: url(img/breadcrumb.png);
     padding-top: 65px;
     margin-bottom: 71px;
+    display: flex;
+    justify-content: space-around;
 }
 
 .breadcrumb_header {
@@ -10,7 +12,20 @@
     font-weight: 900;
     line-height: 20px;
     text-transform: uppercase;
+    margin-left: 225px;
 }
+
+
+.breadcrumb_nav {
+    margin-right: 240px;
+    font-size: 14px;
+    font-weight: 300;
+    color: rgba(99, 99, 99, 1);
+    text-align: center;
+    line-height: 20px;
+    text-transform: uppercase;
+}
+
 
 .central_content {
     display: flex;
@@ -154,4 +169,39 @@ details[open] > .category_head::after {
     height: 50px;
     background-color: rgba(243, 243, 243, 1);
     margin-top: 43px;
+}
+
+
+.feature_box_banner {
+    height: 341px;
+    background-color: #000;
+    margin-bottom: -97px;
+    display: flex;
+    text-align: center;
+}
+
+
+.feature_box_banner_img {
+    margin-top: 89px;
+    margin-left: 80px;
+}
+
+.feature_box_banner_h1 {
+    font-size: 20px;
+    font-weight: bold;
+    color: rgba(251, 251, 251, 1);
+    letter-spacing: 0.03em;
+    padding-left: 78px;
+    margin-top: 32px;
+}
+
+.feature_box_banner_p {
+    width: 400px;
+    font-size: 14px;
+    font-weight: 300;
+    color: rgba(251, 251, 251, 1);
+    letter-spacing: 0.03em;
+    line-height: 24px;
+    padding-left: 78px;
+    margin-top: 17px
 }
