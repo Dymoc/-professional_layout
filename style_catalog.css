@@ -174,15 +174,40 @@ details[open] > .category_head::after {
     margin-top: 43px;
 }
 
+.button_arrows {
+    min-width: 57px;
+    min-height: 38px;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    position: absolute;
+    top: 140px;
+    left: 70px;
+    font-size: 13px;
+    font-weight: bold;
+    color: rgba(255, 255, 255, 1);
+    padding-left: 43px;
+    padding-top: 10px;
+    background-image: url(img/arrows.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
 
 .button_like {
-    width: 57px;
-    height: 38px;
-    border: 1px solid #000;
+    min-width: 57px;
+    min-height: 38px;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    position: absolute;
+    top: 140px;
+    left: 135px;
+    font-size: 13px;
+    font-weight: bold;
+    color: rgba(255, 255, 255, 1);
+    padding-left: 43px;
+    padding-top: 10px;
     background-image: url(img/heard.png);
     background-repeat: no-repeat;
-    top: -100px;
-    left: 100px
+    background-position: center;
 }
 
 
