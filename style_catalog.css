@@ -172,6 +172,57 @@ details[open] > .category_head::after {
     height: 50px;
     background-color: rgba(243, 243, 243, 1);
     margin-top: 43px;
+    font-size: 14px;
+    color: rgba(111, 110, 110, 1);
+    line-height: 26px;
+}
+
+
+.sort_filter {
+    display: inline-flex;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.sort_filter_1 {
+    display: inline-flex;
+    height: 30px;
+}
+
+.sort_filter_2 {
+    display: inline-flex;
+    height: 30px;
+}
+
+.sort_by {
+    border: 1 solid rgba(111, 110, 110, 1);
+    background-color: #fff;
+    width: 60px;
+    text-align: center;
+}
+
+.sort_name {
+    font-size: 14px;
+    color: rgba(111, 110, 110, 1);
+    line-height: 26px;
+    border: none;
+    margin-left: 4px;
+}
+
+.sort_show {
+    border: 1 solid rgba(111, 110, 110, 1);
+    background-color: #fff;
+    width: 60px;
+    text-align: center;
+    margin-left: 10px
+}
+
+.sort_namber {
+    font-size: 14px;
+    color: rgba(111, 110, 110, 1);
+    line-height: 26px;
+    border: none;
+    margin-left: 4px;
 }
 
 .button_arrows {
