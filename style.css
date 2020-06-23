@@ -298,15 +298,6 @@ a {
     background-position: 10px;
 }
 
-.button_like {
-    width: 57px;
-    height: 38px;
-    border: 1px solid #000;
-    background-image: url(img/heard.png);
-    background-repeat: no-repeat;
-    top:-100px;
-    left: 100px
-}
 
 .tovar_cart:hover {
     box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.17);
@@ -483,6 +474,7 @@ a {
 .slider {
     border-right: 1px solid #fff;
 }
+
 .slider img {
     float: left;
     margin-top: 111px;

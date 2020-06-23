@@ -41,6 +41,9 @@
     font-weight: bold;
     line-height: 20px;
     text-transform: uppercase;
+    padding-left: 11px;
+
+    border-left: 5px solid rgba(239, 91, 112, 1);
 }
 
 .category_head::-webkit-details-marker {
@@ -169,6 +172,17 @@ details[open] > .category_head::after {
     height: 50px;
     background-color: rgba(243, 243, 243, 1);
     margin-top: 43px;
+}
+
+
+.button_like {
+    width: 57px;
+    height: 38px;
+    border: 1px solid #000;
+    background-image: url(img/heard.png);
+    background-repeat: no-repeat;
+    top: -100px;
+    left: 100px
 }
 
 
