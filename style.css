@@ -368,8 +368,6 @@ a {
     font-size: 32px;
     color: rgba(255, 255, 255, 1);
     margin-left: -15px;
-    -webkit-transform: scale(0.89);
-    -ms-transform: scale(0.89);
 }
 
 .feature_box_delivery {
@@ -650,7 +648,6 @@ a {
     display: flex;
     width: 191px;
     justify-content: space-between;
-    margin-top:
 }
 
 .social_icon {
