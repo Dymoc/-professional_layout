@@ -17,12 +17,32 @@
 
     &_nav {
         margin-right: 240px;
+
+    }
+
+    &_nav_ul {
+        display: flex;
+        justify-content: space-between;
+        list-style-type: none;
+    }
+
+    &_nav_link a {
         font-size: 14px;
         font-weight: 300;
         color: rgba(99, 99, 99, 1);
         text-align: center;
         line-height: 20px;
         text-transform: uppercase;
+        margin-right: 3px;
+        margin-left: 5px;
+    }
+
+    &_nav_link:last-child a {
+        color: $siteColor;
+    }
+
+    &_nav_link:not(:last-child):after {
+        content: ' / ';
     }
 }
 
@@ -112,7 +132,8 @@ details[open]>.category_head::after {
                 text-transform: none;
             }
 
-            &_a:last-child, &_a:nth-child(4){
+            &_a:last-child,
+            &_a:nth-child(4) {
                 border-right: none;
             }
 

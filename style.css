@@ -751,12 +751,35 @@ a {
 
 .breadcrumb_nav {
   margin-right: 240px;
+}
+
+.breadcrumb_nav_ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  list-style-type: none;
+}
+
+.breadcrumb_nav_link a {
   font-size: 14px;
   font-weight: 300;
   color: #636363;
   text-align: center;
   line-height: 20px;
   text-transform: uppercase;
+  margin-right: 3px;
+  margin-left: 5px;
+}
+
+.breadcrumb_nav_link:last-child a {
+  color: #f16d7f;
+}
+
+.breadcrumb_nav_link:not(:last-child):after {
+  content: ' / ';
 }
 
 .central_content {
