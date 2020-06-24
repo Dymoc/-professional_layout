@@ -1,5 +1,4 @@
-$whiteColor: rgba(255, 255, 255, 1);
-$SiteColor: rgba(241, 109, 127, 1);
+$siteColor: rgba(241, 109, 127, 1);
 
 * {
     margin: 0 auto;
@@ -106,15 +105,16 @@ a {
     height: 38px;
     font-size: 15px;
     color: rgba(255, 255, 255, 1);
-    background-color: rgba(241, 109, 127, 1);
+    background-color: $siteColor;
     text-align: center;
+
     letter-spacing: 0.03em;
     line-height: 32px;
 }
 
 .pinc {
     font-weight: 900;
-    color: $SiteColor;
+    color: $siteColor;
 }
 
 .nav {
@@ -153,7 +153,7 @@ a {
 
 .promo__content {
     margin-top: 224px;
-    border-left: 12px solid #f16d7f;
+    border-left: 12px solid $siteColor;
     padding-left: 12px;
     margin-left: 0px;
 }
@@ -497,7 +497,7 @@ a {
     margin-top: 10px;
     font-size: 16px;
     font-weight: bold;
-    color: rgba(241, 109, 127, 1);
+    color: $siteColor;
     letter-spacing: 0.03em;
     line-height: 26px;
     margin-left: 100px;
@@ -529,7 +529,7 @@ a {
 .button_slider:hover {
     height: 4px;
     width: 38px;
-    background-color: rgba(241, 109, 127, 1);
+    background-color: $siteColor;
     margin-right: 13px;
 }
 
@@ -580,7 +580,7 @@ a {
 .subscribe_button {
     height: 46px;
     width: 104px;
-    background-color: rgba(241, 109, 127, 1);
+    background-color: $siteColor;
     border: 1px solid rgba(230, 230, 230, 1);
     border-radius: 0px 23px 23px 0px;
     position: absolute;
@@ -597,7 +597,7 @@ a {
 
 .footer_up {
     display: flex;
-    justify-content: space-between
+    justify-content: space-between;
 }
 
 .footer {
@@ -661,7 +661,7 @@ a {
 }
 
 .social_icon:hover {
-    background-color: rgba(241, 109, 127, 1);
+    background-color: $siteColor;
 }
 
 .social_icon a {
