@@ -648,33 +648,33 @@ a {
     line-height: 24px;
 }
 
-.social {
-    .social_icon {
-        height: 32px;
+
+.social_icon {
+    height: 32px;
+    width: 32px;
+    background-color: rgba(255, 255, 255, 1);
+    position: relative;
+
+    &:hover {
+        background-color: $siteColor;
+    }
+
+    & a {
         width: 32px;
-        background-color: rgba(255, 255, 255, 1);
-        position: relative;
+        position: absolute;
+        top: 1px;
+        line-height: 32px;
+        padding-left: 9px;
+    }
 
-        &:hover {
-            background-color: $siteColor;
-        }
-
-        & a {
-            width: 32px;
-            position: absolute;
-            top: 1px;
-            line-height: 32px;
-            padding-left: 9px;
-        }
-
-        &:hover .fab {
-            font-size: 16px;
-            color: rgba(247, 247, 248, 1);
-            text-align: right;
-            letter-spacing: 0.03em;
-        }
+    &:hover .fab {
+        font-size: 16px;
+        color: rgba(247, 247, 248, 1);
+        text-align: right;
+        letter-spacing: 0.03em;
     }
 }
+
 
 
 .fab {

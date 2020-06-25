@@ -688,18 +688,18 @@ a {
   line-height: 24px;
 }
 
-.social .social_icon {
+.social_icon {
   height: 32px;
   width: 32px;
   background-color: white;
   position: relative;
 }
 
-.social .social_icon:hover {
+.social_icon:hover {
   background-color: #f16d7f;
 }
 
-.social .social_icon a {
+.social_icon a {
   width: 32px;
   position: absolute;
   top: 1px;
@@ -707,7 +707,7 @@ a {
   padding-left: 9px;
 }
 
-.social .social_icon:hover .fab {
+.social_icon:hover .fab {
   font-size: 16px;
   color: #f7f7f8;
   text-align: right;
