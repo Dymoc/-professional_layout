@@ -4,7 +4,7 @@
     padding-top: 65px;
     margin-bottom: 71px;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
 
     &_header {
         font-size: 24px;
@@ -14,9 +14,8 @@
         margin-left: 225px;
     }
 
-
     &_nav {
-        margin-right: 240px;
+        margin-right: 260px;
 
     }
 
@@ -54,15 +53,20 @@
     width: 243px;
 
     &_head {
-        display: block;
+        height: 37px;
+        display: flex;
+        justify-content: space-between;
         font-size: 14px;
         font-weight: bold;
-        line-height: 20px;
+        line-height: 35px;
+        color: rgba(111, 110, 110, 1);
         text-transform: uppercase;
         padding-left: 11px;
         border-left: 5px solid $siteColor;
         outline: none;
         box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.05);
+        margin-bottom: 20px;
+        ;
     }
 
     &_head::-webkit-details-marker {
@@ -70,18 +74,21 @@
     }
 
     &_head::after {
-        content: '\25B6';
-        padding-right: 0.5em;
+        content: '\25BC';
     }
 }
 
+details[open]>.category_head {
+    color: $siteColor;
+}
+
 details[open]>.category_head::after {
-    content: '\25BC';
+    content: '\25B2';
 }
 
 .link {
     list-style-type: none;
-    margin-top: 10px;
+    margin-top: 12px;
     margin-left: 15px;
 
     &_category {
@@ -91,15 +98,10 @@ details[open]>.category_head::after {
     }
 }
 
-
-
-.brand>.category_head {
-    border-left: 5px solid #fff;
+.list_category:last-child {
+    margin-bottom: 20px;
 }
 
-.designer>.category_head {
-    border-left: 5px solid #fff;
-}
 
 .filter {
     width: 855px;

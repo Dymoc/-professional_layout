@@ -118,11 +118,11 @@ a {
     color: $siteColor;
 }
 
-.nav {
+.menu {
     background-color: #ffffff;
 }
 
-.menu {
+.menu_ul {
     list-style-type: none;
     display: flex;
     justify-content: center;
@@ -139,6 +139,11 @@ a {
         color: rgba(34, 34, 34, 1);
         line-height: 19px;
         text-transform: uppercase;
+        border-bottom: 3px solid #fff;
+    }
+
+    &__link:hover {
+        border-bottom: 3px solid $siteColor;
     }
 }
 
