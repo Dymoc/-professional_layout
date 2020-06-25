@@ -889,7 +889,8 @@ details[open] > .category_head::after {
 }
 
 .top_filter_size {
-  width: 256px;
+  min-width: 235px;
+  max-width: 246px;
   font-size: 14px;
   font-weight: 400;
   color: #6f6e6e;
