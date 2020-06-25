@@ -1,5 +1,5 @@
 $siteColor: rgba(241, 109, 127, 1);
-$sitewidth: 1440px;
+$siteWidth: 1440px;
 
 * {
     margin: 0 auto;
@@ -9,7 +9,7 @@ $sitewidth: 1440px;
 
 body {
     font-family: 'Lato', sans-serif;
-    width: $sitewidth;
+    width: $siteWidth;
 }
 
 .center {
@@ -465,7 +465,7 @@ a {
 }
 
 .subscribe {
-    width: $sitewidth;
+    width: $siteWidth;
     height: 438px;
     background: url(img/subscribe.png);
     background-repeat: no-repeat;
