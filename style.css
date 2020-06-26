@@ -1136,11 +1136,10 @@ details[open] > .category_head::after {
 
 .sc_product_cart_info {
   margin-left: -30px;
+  width: 275px;
 }
 
 .sc_product_cart_info_h1 {
-  width: 280px;
-  margin-bottom: 25px;
   color: #222222;
   text-transform: uppercase;
 }
@@ -1148,6 +1147,7 @@ details[open] > .category_head::after {
 .sc_product_cart_info_color {
   color: #575757;
   line-height: 20px;
+  margin-top: 25px;
   margin-bottom: 5px;
 }
 
@@ -1171,6 +1171,8 @@ details[open] > .category_head::after {
   font-size: 13px;
   color: #656565;
   line-height: 20px;
+  min: 0;
+  max: 99;
 }
 
 .sc_product_cart_action {
@@ -1183,6 +1185,10 @@ details[open] > .category_head::after {
   color: silver;
   text-align: right;
   text-transform: uppercase;
+}
+
+.sc_product_cart_action a:hover {
+  color: #656565;
 }
 
 .sc_button {

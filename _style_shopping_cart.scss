@@ -43,10 +43,9 @@
 
     &_info {
         margin-left: -30px;
+        width: 275px;
 
         &_h1 {
-            width: 280px;
-            margin-bottom: 25px;
             color: rgba(34, 34, 34, 1);
             text-transform: uppercase;
         }
@@ -54,6 +53,7 @@
         &_color {
             color: rgba(87, 87, 87, 1);
             line-height: 20px;
+            margin-top: 25px;
             margin-bottom: 5px;
 
             & span {
@@ -78,6 +78,8 @@
         font-size: 13px;
         color: rgba(101, 101, 101, 1);
         line-height: 20px;
+        min: 0;
+        max: 99;
     }
 
     &_action {
@@ -90,9 +92,11 @@
             text-align: right;
             text-transform: uppercase;
         }
+
+        & a:hover {
+            color: rgba(101, 101, 101, 1);
+        }
     }
-
-
 }
 
 .sc_button {
