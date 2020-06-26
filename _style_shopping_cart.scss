@@ -1,0 +1,292 @@
+.sc_product_cols_name {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+
+    &_h1 {
+        height: 12px;
+        font-family: 'Lato';
+        font-size: 13px;
+        font-weight: bold;
+        color: rgba(34, 34, 34, 1);
+        letter-spacing: -0.01em;
+        line-height: 20px;
+        text-transform: uppercase;
+        text-align: center;
+        margin-bottom: 20px;
+        margin-right: 0px;
+        text-align: right;
+    }
+
+    &_h1:first-child {
+        text-align: left;
+        padding-right: 300px;
+        margin-left: 0px;
+    }
+}
+
+.sc_product_cart {
+    display: flex;
+    border-top: 1px solid rgba(234, 234, 234, 1);
+    position: relative;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    align-items: center;
+    font-size: 13px;
+    font-weight: 500;
+    color: rgba(111, 110, 110, 1);
+    line-height: 20px;
+
+    &_a {
+        margin-left: 0px;
+    }
+
+    &_info {
+        margin-left: -30px;
+
+        &_h1 {
+            width: 280px;
+            margin-bottom: 25px;
+            color: rgba(34, 34, 34, 1);
+            text-transform: uppercase;
+        }
+
+        &_color {
+            color: rgba(87, 87, 87, 1);
+            line-height: 20px;
+            margin-bottom: 5px;
+
+            & span {
+                color: rgba(87, 87, 87, 1);
+                line-height: 20px;
+            }
+        }
+
+        &_size {
+            color: rgba(87, 87, 87, 1);
+            line-height: 20px;
+        }
+    }
+
+    &_quantity {
+        width: 54px;
+        height: 30px;
+        padding: 5px 24px 5px 24px;
+        border: 1px solid rgba(234, 234, 234, 1);
+        text-align: center;
+        padding: 5px;
+        font-size: 13px;
+        color: rgba(101, 101, 101, 1);
+        line-height: 20px;
+    }
+
+    &_action {
+        text-align: right;
+        margin-right: 20px;
+
+        & a {
+            font-size: 16px;
+            color: rgba(192, 192, 192, 1);
+            text-align: right;
+            text-transform: uppercase;
+        }
+    }
+
+
+}
+
+.sc_button {
+    border-top: 1px solid rgba(234, 234, 234, 1);
+    padding-top: 44px;
+    display: flex;
+    justify-content: space-between;
+
+    &_clear {
+        background-color: #fff;
+        padding: 20px 38px 20px 38px;
+        font-size: 14px;
+        font-weight: bold;
+        color: rgba(74, 74, 74, 1);
+        text-transform: uppercase;
+        margin-left: 0px;
+        outline: 1px solid rgba(234, 234, 234, 1);
+    }
+
+    &_continue {
+        background-color: #fff;
+        padding: 20px 38px 20px 38px;
+        font-size: 14px;
+        font-weight: bold;
+        color: rgba(74, 74, 74, 1);
+        text-transform: uppercase;
+        margin-right: 0px;
+        outline: 1px solid rgba(234, 234, 234, 1);
+    }
+}
+
+
+
+.sc_info {
+    display: flex;
+    margin-top: 63px;
+
+    &_address {
+        display: flex;
+        flex-direction: column;
+
+        &_form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        &_h1 {
+            font-size: 16px;
+            font-weight: bold;
+            color: rgba(34, 34, 34, 1);
+            text-transform: uppercase;
+            text-align: left;
+            margin-left: 0px;
+            margin-bottom: 22px;
+        }
+
+        &_cantry {
+            width: 355px;
+            height: 45px;
+            font-size: 13px;
+            font-weight: 300;
+            color: rgba(177, 177, 177, 1);
+            padding-left: 18px;
+            margin-bottom: 20px;
+            border: 1px solid rgba(234, 234, 234, 1);
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            -ms-appearance: none;
+            appearance: none;
+            background: url('img/caret-down-solid.svg') no-repeat center;
+            background-position: 330px;
+            outline: 0;
+        }
+
+        &_state {
+            width: 355px;
+            height: 45px;
+            font-size: 13px;
+            font-weight: 300;
+            color: rgba(177, 177, 177, 1);
+            padding-left: 18px;
+            padding-right: 18px;
+            margin-bottom: 20px;
+            border: 1px solid rgba(234, 234, 234, 1);
+        }
+
+        &_zip {
+            width: 355px;
+            height: 45px;
+            font-size: 13px;
+            font-weight: 300;
+            color: rgba(177, 177, 177, 1);
+            padding-left: 18px;
+            padding-right: 18px;
+            margin-bottom: 20px;
+            border: 1px solid rgba(234, 234, 234, 1);
+        }
+
+        &_submit {
+            width: 100px;
+            height: 35px;
+            margin-left: 0px;
+            background-color: #fff;
+            border: 1px solid rgba(234, 234, 234, 1);
+            font-size: 11px;
+            font-weight: bold;
+            color: rgba(74, 74, 74, 1);
+            text-transform: uppercase;
+        }
+    }
+
+    &_coupon {
+        display: flex;
+        flex-direction: column;
+
+        &_h1 {
+            font-size: 16px;
+            font-weight: bold;
+            color: rgba(34, 34, 34, 1);
+            text-transform: uppercase;
+            text-align: left;
+            margin-left: 0px;
+            margin-bottom: 22px;
+        }
+
+        &_form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        &_text {
+            font-size: 14px;
+            font-weight: 300;
+            color: rgba(0, 0, 0, 1);
+            margin-left: 0px;
+        }
+
+        &_number {
+            width: 355px;
+            height: 45px;
+            margin-top: 22px;
+            font-size: 13px;
+            font-weight: 300;
+            color: rgba(177, 177, 177, 1);
+            padding-left: 18px;
+            padding-right: 18px;
+            margin-bottom: 20px;
+            border: 1px solid rgba(234, 234, 234, 1);
+        }
+
+        &_submit {
+            width: 118px;
+            height: 35px;
+            margin-left: 0px;
+            background-color: #fff;
+            border: 1px solid rgba(234, 234, 234, 1);
+            font-size: 11px;
+            font-weight: bold;
+            color: rgba(74, 74, 74, 1);
+            text-transform: uppercase;
+        }
+    }
+
+    &_total {
+        width: 360px;
+        height: 214px;
+        background-color: rgba(230, 230, 230, 1);
+        text-align: right;
+        padding-right: 41px;
+
+        &_sub {
+            font-size: 11px;
+            color: rgba(74, 74, 74, 1);
+            text-transform: uppercase;
+            margin-top: 40px;
+        }
+
+        &_grund {
+            font-size: 16px;
+            font-weight: bold;
+            color: rgba(34, 34, 34, 1);
+            text-transform: uppercase;
+            margin-top: 14px;
+        }
+
+        &_button {
+            width: 273px;
+            height: 50px;
+            font-size: 16px;
+            font-weight: bold;
+            color: rgba(255, 255, 255, 1);
+            text-transform: uppercase;
+            margin-top: 42px;
+            background-color: $siteColor;
+        }
+    }
+}

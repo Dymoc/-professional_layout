@@ -1,5 +1,5 @@
 $siteColor: rgba(241, 109, 127, 1);
-$siteWidth: 1440px;
+$siteWidth: 1600px;
 
 * {
     margin: 0 auto;
@@ -690,3 +690,4 @@ a {
 }
 
 @import 'style_catalog';
+@import 'style_shopping_cart';
