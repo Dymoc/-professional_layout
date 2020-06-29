@@ -1236,8 +1236,6 @@ a {
   font-size: 13px;
   color: #656565;
   line-height: 20px;
-  min: 0;
-  max: 99;
 }
 
 .sc_product_cart_action {
