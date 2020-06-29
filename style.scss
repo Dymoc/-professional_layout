@@ -53,15 +53,32 @@ a {
         line-height: 32px;
         border: 1px solid rgb(202, 199, 199);
         border-radius: 0px 3px 3px 0px;
-        padding: 0px 26px 0px 14px;
+        padding: 0px 10px 0px 14px;
         position: relative;
 
+        &_summary {
+            outline: none;
+        }
 
-            &[open] .drop {
-                display: flex;
-                z-index: 10;
-                top: 24px;
-            }
+        &_summary::-webkit-details-marker {
+            display: none;
+        }
+
+
+         &[open] .drop {
+            display: flex;
+            z-index: 10;
+            top: 24px;
+        }
+
+        &_summary::after {
+            content: '\25BC';
+            color: rgba(131, 131, 131, 1);
+            padding-left: 0.3em;
+            font-size: 12px;
+            letter-spacing: 0.03em;
+            line-height: 32px;
+        }
         
     }
 

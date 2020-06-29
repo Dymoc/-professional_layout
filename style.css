@@ -61,8 +61,16 @@ a {
   line-height: 32px;
   border: 1px solid #cac7c7;
   border-radius: 0px 3px 3px 0px;
-  padding: 0px 26px 0px 14px;
+  padding: 0px 10px 0px 14px;
   position: relative;
+}
+
+.header__browse_summary {
+  outline: none;
+}
+
+.header__browse_summary::-webkit-details-marker {
+  display: none;
 }
 
 .header__browse[open] .drop {
@@ -71,6 +79,15 @@ a {
   display: flex;
   z-index: 10;
   top: 24px;
+}
+
+.header__browse_summary::after {
+  content: '\25BC';
+  color: #838383;
+  padding-left: 0.3em;
+  font-size: 12px;
+  letter-spacing: 0.03em;
+  line-height: 32px;
 }
 
 .header__form input {
