@@ -4,7 +4,8 @@
     "sources": [
         "style.scss",
         "_style_catalog.scss",
-        "_style_shopping_cart.scss"
+        "_style_shopping_cart.scss",
+        "_style_checkout.scss"
     ],
     "names": [],
     "file": "style.css"
