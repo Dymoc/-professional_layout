@@ -1,0 +1,24 @@
+.chekout_adress_h1 {
+    font-size: 16px;
+    font-weight: bold;
+    color: rgba(34, 34, 34, 1);
+    text-transform: uppercase;
+    margin-bottom: 39px;
+}
+
+.forms {
+    display: flex;
+}
+
+ 
+.guest_form {
+    margin: 0px;
+
+&_h2 {
+    font-size: 13px;
+    color: rgba(34, 34, 34, 1);
+    text-align: left;
+    text-transform: uppercase;    
+    padding-left: 0px;
+}
+}

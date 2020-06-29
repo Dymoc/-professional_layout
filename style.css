@@ -1474,4 +1474,30 @@ a {
   background-color: #f16d7f;
   border: none;
 }
+
+.chekout_adress_h1 {
+  font-size: 16px;
+  font-weight: bold;
+  color: #222222;
+  text-transform: uppercase;
+  margin-bottom: 39px;
+}
+
+.forms {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.guest_form {
+  margin: 0px;
+}
+
+.guest_form_h2 {
+  font-size: 13px;
+  color: #222222;
+  text-align: left;
+  text-transform: uppercase;
+  padding-left: 0px;
+}
 /*# sourceMappingURL=style.css.map */
