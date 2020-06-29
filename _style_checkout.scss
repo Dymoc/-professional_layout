@@ -23,6 +23,10 @@
     padding-left: 0px;
 }
 
+.Required {
+    color: $siteColor;
+}
+
 .form_h3 {
     font-size: 13px;
     color: rgba(179, 178, 178, 1);
@@ -39,5 +43,9 @@
 }
 
 .button_forgot {
-
+    font-size: 14px;
+    color: rgba(34, 34, 34, 1);
+    line-height: 20px;
+    border: none;
+    background-color: $siteBGC;
 }
