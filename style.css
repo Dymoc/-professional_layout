@@ -1500,12 +1500,20 @@ a {
   border: none;
 }
 
-.chekout_adress_h1 {
+.chekout {
+  border-bottom: 1px solid silver;
+}
+
+.chekout_h1 {
   font-size: 16px;
   font-weight: bold;
   color: #222222;
+  line-height: 72px;
   text-transform: uppercase;
-  margin-bottom: 39px;
+}
+
+.chekout:first-of-type {
+  padding-bottom: 50px;
 }
 
 .forms {
