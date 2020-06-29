@@ -51,6 +51,15 @@ a {
         border: 1px solid rgb(202, 199, 199);
         border-radius: 0px 3px 3px 0px;
         padding: 0px 26px 0px 14px;
+        position: relative;
+
+
+            &[open] .drop {
+                display: flex;
+                z-index: 1;
+                top: 24px;
+            }
+        
     }
 
     &__form input {
@@ -101,6 +110,54 @@ a {
     }
 }
 
+
+.drop {
+    border-radius: 5px;
+    padding: 12px 20px;
+    position: absolute;
+    background-color: #fff;
+    display: none;
+    top: 48px;
+
+    &_last {
+        right: 0;
+    }
+
+    &__flex {
+        width: 234px;
+        margin-right: 46px;
+
+        &:last-of-type {
+            margin-right: 0;
+        }
+    }
+
+    &__h3 {
+        font-size: 14px;
+        color: #232323;
+        letter-spacing: 0.03em;
+        line-height: 32px;
+        text-transform: uppercase;
+        border-bottom: 1px solid #e8e8e8;
+        margin-bottom: 8px;
+    }
+
+    &__ul {
+        list-style-type: none;
+    }
+
+    &__link {
+        font-size: 14px;
+        color: #646464;
+        letter-spacing: 0.03em;
+        line-height: 28px;
+
+        &:hover {
+            color: $siteColor;            
+        }
+    }
+}
+
 .button {
     width: 130px;
     height: 38px;
@@ -145,7 +202,17 @@ a {
     &__link:hover {
         border-bottom: 3px solid $siteColor;
     }
+
+    &__list {
+        position: relative;
+
+        &:hover .drop {
+            display: flex;
+        }
+    }
 }
+
+
 
 .promo {
     height: 613px;

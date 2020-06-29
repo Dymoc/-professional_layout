@@ -52,6 +52,14 @@
 .category {
     width: 243px;
 
+    &[open]>.category_head {
+        color: $siteColor;
+    }
+    
+    &[open]>.category_head::after {
+        content: '\25B2';
+    }
+
     &_head {
         height: 37px;
         display: flex;
@@ -65,8 +73,7 @@
         border-left: 5px solid $siteColor;
         outline: none;
         box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.05);
-        margin-bottom: 20px;
-        ;
+        margin-bottom: 20px;        
     }
 
     &_head::-webkit-details-marker {
@@ -78,13 +85,7 @@
     }
 }
 
-details[open]>.category_head {
-    color: $siteColor;
-}
 
-details[open]>.category_head::after {
-    content: '\25B2';
-}
 
 .link {
     list-style-type: none;
