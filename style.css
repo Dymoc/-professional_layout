@@ -69,7 +69,7 @@ a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  z-index: 1;
+  z-index: 10;
   top: 24px;
 }
 
@@ -1472,5 +1472,6 @@ a {
   text-transform: uppercase;
   margin-top: 42px;
   background-color: #f16d7f;
+  border: none;
 }
 /*# sourceMappingURL=style.css.map */

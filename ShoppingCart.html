@@ -8,6 +8,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/eef10ed1cf.js" crossorigin="anonymous"></script>
+    <script>
+        function openChekout(){
+    window.open=("http://ya.ru");
+        }
+    </script>
 </head>
 
 <body>
@@ -19,7 +24,7 @@
             </a>
             <form class="header__form" action="">
                 <details class="header__browse">
-                    <summary>Browse</summary>
+                    <summary class="header__browse_summary">Browse</summary>
                     <div class="drop">
                         <div class="drop__flex">
                             <h3 class="drop__h3">Women</h3>
@@ -256,7 +261,7 @@
             <form class="sc_info_total">
                 <div class="sc_info_total_sub">Sub total $900</div>
                 <div class="sc_info_total_grund">GRAND TOTAL <span class="siteColor">$900</span></div>
-                <button class="sc_info_total_button">proceed to checkout</button>
+                <button type="button" class="sc_info_total_button" onclick="location ='checkout.html'">proceed to checkout</button>
             </form>
         </div>
     </main>
