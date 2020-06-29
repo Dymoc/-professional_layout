@@ -12,13 +12,32 @@
 
  
 .guest_form {
-    margin: 0px;
+    margin: 0px;    
+}
 
-&_h2 {
+.form_h2 {
     font-size: 13px;
     color: rgba(34, 34, 34, 1);
     text-align: left;
     text-transform: uppercase;    
     padding-left: 0px;
 }
+
+.form_h3 {
+    font-size: 13px;
+    color: rgba(179, 178, 178, 1);
+    line-height: 20px;
+}
+
+.checkout_button {
+    font-size: 14px;
+    font-weight: bold;
+    color: rgba(74, 74, 74, 1);
+    text-transform: uppercase;
+    background-color: $siteBGC;
+    border: 1px solid $siteBorderColor;
+}
+
+.button_forgot {
+
 }

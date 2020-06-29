@@ -1493,11 +1493,26 @@ a {
   margin: 0px;
 }
 
-.guest_form_h2 {
+.form_h2 {
   font-size: 13px;
   color: #222222;
   text-align: left;
   text-transform: uppercase;
   padding-left: 0px;
+}
+
+.form_h3 {
+  font-size: 13px;
+  color: #b3b2b2;
+  line-height: 20px;
+}
+
+.checkout_button {
+  font-size: 14px;
+  font-weight: bold;
+  color: #4a4a4a;
+  text-transform: uppercase;
+  background-color: white;
+  border: 1px solid #eaeaea;
 }
 /*# sourceMappingURL=style.css.map */

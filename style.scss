@@ -1,5 +1,8 @@
 $siteColor: rgba(241, 109, 127, 1);
+$siteBorderColor: rgba(234, 234, 234, 1);
+$siteBGC: rgba(255, 255, 255, 1);
 $siteWidth: 1600px;
+
 
 * {
     margin: 0 auto;
@@ -64,7 +67,7 @@ a {
 
     &__form input {
         line-height: 30px;
-        background-color: rgba(255, 255, 255, 1);
+        background-color: $siteBGC;
         border: 1px solid rgba(230, 230, 230, 1);
         border-radius: 0px 3px 3px 0px;
         padding: 0px 16px;
@@ -79,7 +82,7 @@ a {
     &__button {
         height: 32px;
         width: 32px;
-        background-color: rgba(255, 255, 255, 1);
+        background-color: $siteBGC;
         border: 1px solid rgba(230, 230, 230, 1);
         border-radius: 0px 3px 3px 0px;
     }
@@ -724,7 +727,7 @@ a {
 .social_icon {
     height: 32px;
     width: 32px;
-    background-color: rgba(255, 255, 255, 1);
+    background-color: $siteBGC;
     position: relative;
 
     &:hover {
