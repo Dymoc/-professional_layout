@@ -18,6 +18,10 @@ a {
   text-decoration: none;
 }
 
+a:hover {
+  color: #f16d1b;
+}
+
 .header {
   height: 100px;
   background-color: #ffffff;
@@ -736,12 +740,16 @@ a {
   margin-top: 30px;
 }
 
-.footer nav ul a {
+.footer .nav_link {
   font-family: 'Lato';
   font-size: 16px;
   color: #898989;
   letter-spacing: 0.03em;
   line-height: 42px;
+}
+
+.footer .nav_link:hover {
+  color: #f16d1b;
 }
 
 .footer_copyright_and_social {
