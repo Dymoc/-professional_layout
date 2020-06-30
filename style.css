@@ -163,6 +163,39 @@ a:hover {
   text-transform: uppercase;
 }
 
+.logo__img_h1:hover {
+  -webkit-animation: tracking-in-contract 0.8s cubic-bezier(0.215, 0.61, 0.355, 1) both;
+          animation: tracking-in-contract 0.8s cubic-bezier(0.215, 0.61, 0.355, 1) both;
+}
+
+@-webkit-keyframes tracking-in-contract {
+  0% {
+    letter-spacing: 1em;
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    letter-spacing: normal;
+    opacity: 1;
+  }
+}
+
+@keyframes tracking-in-contract {
+  0% {
+    letter-spacing: 1em;
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    letter-spacing: normal;
+    opacity: 1;
+  }
+}
+
 .drop {
   border-radius: 5px;
   padding: 12px 20px;
@@ -1251,7 +1284,6 @@ form > button:hover {
   display: -ms-flexbox;
   display: flex;
   border-top: 1px solid #eaeaea;
-  position: relative;
   padding-top: 20px;
   padding-bottom: 20px;
   -webkit-box-align: center;
@@ -1268,32 +1300,24 @@ form > button:hover {
 }
 
 .sc_product_cart_a img:hover {
-  -webkit-animation: flip-in-hor-bottom 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-          animation: flip-in-hor-bottom 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  -webkit-animation: fade-in 1.2s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+          animation: fade-in 1.2s cubic-bezier(0.39, 0.575, 0.565, 1) both;
 }
 
-@-webkit-keyframes flip-in-hor-bottom {
+@-webkit-keyframes fade-in {
   0% {
-    -webkit-transform: rotateX(80deg);
-            transform: rotateX(80deg);
     opacity: 0;
   }
   100% {
-    -webkit-transform: rotateX(0);
-            transform: rotateX(0);
     opacity: 1;
   }
 }
 
-@keyframes flip-in-hor-bottom {
+@keyframes fade-in {
   0% {
-    -webkit-transform: rotateX(80deg);
-            transform: rotateX(80deg);
     opacity: 0;
   }
   100% {
-    -webkit-transform: rotateX(0);
-            transform: rotateX(0);
     opacity: 1;
   }
 }
