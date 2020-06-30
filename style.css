@@ -46,8 +46,14 @@ a:hover {
   margin: 0px;
 }
 
+.header__right {
+  position: relative;
+}
+
 .header__right a {
   color: white;
+  text-align: center;
+  margin-top: 5px;
 }
 
 .header__form {
@@ -111,14 +117,6 @@ a:hover {
   text-align: left;
   letter-spacing: 0.03em;
   line-height: 32px;
-}
-
-.header__button {
-  height: 32px;
-  width: 32px;
-  background-color: white;
-  border: 1px solid #e6e6e6;
-  border-radius: 0px 3px 3px 0px;
 }
 
 .header__cart {
@@ -198,14 +196,19 @@ a:hover {
 }
 
 .button {
-  width: 130px;
-  height: 38px;
   font-size: 15px;
   color: white;
   background-color: #f16d7f;
   text-align: center;
   letter-spacing: 0.03em;
-  line-height: 32px;
+  line-height: 25px;
+  padding: 8px 19px 8px 17px;
+  border: none;
+  outline: none;
+}
+
+.button i {
+  margin-left: 9px;
 }
 
 form > button:hover {

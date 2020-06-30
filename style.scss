@@ -42,8 +42,14 @@ a:hover {
         margin: 0px;
     }
 
+    &__right {
+        position: relative;
+    }
+
     &__right a {
         color: $siteBGC;
+        text-align: center;
+        margin-top: 5px;
     }
 
     &__form {
@@ -105,14 +111,6 @@ a:hover {
         line-height: 32px;
     }
 
-    &__button {
-        height: 32px;
-        width: 32px;
-        background-color: $siteBGC;
-        border: 1px solid rgba(230, 230, 230, 1);
-        border-radius: 0px 3px 3px 0px;
-    }
- 
     &__cart {
         margin-right: 26px;
     }
@@ -188,14 +186,19 @@ a:hover {
 }
 
 .button {
-    width: 130px;
-    height: 38px;
     font-size: 15px;
     color: rgba(255, 255, 255, 1);
     background-color: $siteColor;
     text-align: center;
     letter-spacing: 0.03em;
-    line-height: 32px;
+    line-height: 25px;
+    padding: 8px 19px 8px 17px;
+    border: none;
+    outline: none;
+}
+
+.button i {
+    margin-left: 9px;
 }
 
 form > button:hover {
