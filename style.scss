@@ -194,9 +194,12 @@ a:hover {
     color: rgba(255, 255, 255, 1);
     background-color: $siteColor;
     text-align: center;
-
     letter-spacing: 0.03em;
     line-height: 32px;
+}
+
+form > button:hover {
+    color: $siteColor;
 }
 
 .siteColor {

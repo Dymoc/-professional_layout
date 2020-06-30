@@ -182,7 +182,7 @@
     <main class="center">
         <section class="chekout">
             <div class="chekout_h1">01. Shipping Adress</div>
-            <div class="forms">
+            <div class="form">
                 <form class="form_guest">
                     <div class="form_h2">Check as a guest or register</div>
                     <div class="form_h3">Register with us for future convenience</div>
@@ -192,20 +192,25 @@
                     <label for="reg" class="form_label">register</label>
                     <div class="form_h2">register and save time!</div>
                     <div class="form_h3">Register with us for future convenience</div>
-                    <details>Fast and easy checkout</details>
-                    <summary></summary>
-                    <details>Easy access to your order history and status
+                    <details class="form_details">
+                    <summary class="form_summary">Fast and easy checkout</summary>
+                    <ul class="form_summary_ul">
+                        <li>Lorem, ipsum dolor.</li>
+                        <li>Lorem, ipsum dolor.</li>
+                    </ul>
                     </details>
-                    <summary></summary>
+                    <details class="form_details">                    
+                    <summary class="form_summary">Easy access to your order history and status</summary>
+                    </details>
                     <button class="checkout_button">cONTINUE</button>
                 </form>
-                <form class="reg_form">
-                    <div class="form_h2">Check as a guest or register</div>
-                    <div class="form_h3">Register with us for future convenience</div>
-                    <div class="guest_form_input_text">EMAIL ADDRESS</div>
-                    <input type="email">
-                    <div class="guest_form_input_text">PASSWORD</div>
-                    <input type="password">
+                <form class="form_reg">
+                    <div class="form_h2">Already registed?</div>
+                    <div class="form_h3">Please log in below</div>
+                    <div class="form_input_name">EMAIL ADDRESS <span class="siteColor">*</span></div>
+                    <input type="email" class="form_input_text">
+                    <div class="form_input_name">PASSWORD <span class="siteColor">*</span></div>
+                    <input type="password" class="form_input_text">
                     <div class="Required">* Required Fileds</div>
                     <button class="checkout_button">Log in</button>
                     <button class="button_forgot">Forgot Password ?</button>

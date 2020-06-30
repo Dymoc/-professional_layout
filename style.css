@@ -208,6 +208,10 @@ a:hover {
   line-height: 32px;
 }
 
+form > button:hover {
+  color: #f16d7f;
+}
+
 .siteColor {
   font-weight: 900;
   color: #f16d7f;
@@ -1403,7 +1407,7 @@ a:hover {
   border: 1px solid #eaeaea;
 }
 
-.sc_info_address_submit {
+.sc_info_address_button {
   width: 100px;
   height: 35px;
   margin-left: 0px;
@@ -1465,7 +1469,7 @@ a:hover {
   border: 1px solid #eaeaea;
 }
 
-.sc_info_coupon_submit {
+.sc_info_coupon_button {
   width: 118px;
   height: 35px;
   margin-left: 0px;
@@ -1528,7 +1532,7 @@ a:hover {
   padding-bottom: 50px;
 }
 
-.forms {
+.form {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1536,6 +1540,10 @@ a:hover {
 
 .form_guest {
   margin: 0px;
+}
+
+.form_guest details:first-of-type {
+  margin: 33px 0px 5px 0px;
 }
 
 .form_h2 {
@@ -1548,6 +1556,12 @@ a:hover {
   margin-bottom: 15px;
 }
 
+.form_h3 {
+  font-size: 13px;
+  color: #b3b2b2;
+  line-height: 20px;
+}
+
 .form_radio {
   margin-bottom: 20px;
 }
@@ -1556,16 +1570,58 @@ a:hover {
   margin-top: 35px;
 }
 
+.form_summary {
+  display: block;
+  outline: none;
+  font-size: 13px;
+  color: #b3b2b2;
+  line-height: 20px;
+}
+
+.form_summary_ul {
+  list-style-type: none;
+  font-size: 13px;
+  color: #b3b2b2;
+  line-height: 20px;
+}
+
+.form_summary::-webkit-details-marker {
+  display: none;
+}
+
+.form_summary::before {
+  content: '\00BB';
+  padding-right: 0.5em;
+  font-size: 20px;
+}
+
+.form_details[open] > summary::before {
+  content: '\00BB';
+}
+
+.form_input_name {
+  font-size: 12px;
+  color: #222222;
+  line-height: 20px;
+  margin-top: 25px;
+  margin-bottom: 16px;
+}
+
+.form_input_text {
+  width: 490px;
+  height: 45px;
+  background-color: white;
+  border: 1px solid #eaeaea;
+  padding: 0px 18px 0px 18px;
+  font-size: 17px;
+  color: #222222;
+}
+
 .Required {
   color: #f16d7f;
   font-size: 13px;
   line-height: 20px;
-}
-
-.form_h3 {
-  font-size: 13px;
-  color: #b3b2b2;
-  line-height: 20px;
+  margin-top: 22px;
 }
 
 .checkout_button {
@@ -1577,6 +1633,7 @@ a:hover {
   text-transform: uppercase;
   background-color: white;
   border: 1px solid #eaeaea;
+  margin-top: 38px;
 }
 
 .button_forgot {
@@ -1585,6 +1642,7 @@ a:hover {
   line-height: 20px;
   border: none;
   background-color: white;
+  margin-left: 32px;
 }
 
 .button_forgot:hover {
