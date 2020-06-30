@@ -137,6 +137,43 @@ a:hover {
 
     &__img {
         margin-right: 13px;
+
+        &:hover {
+            animation: jello-vertical 0.9s both;
+
+            @keyframes jello-vertical {
+                0% {
+                  -webkit-transform: scale3d(1, 1, 1);
+                          transform: scale3d(1, 1, 1);
+                }
+                30% {
+                  -webkit-transform: scale3d(0.75, 1.25, 1);
+                          transform: scale3d(0.75, 1.25, 1);
+                }
+                40% {
+                  -webkit-transform: scale3d(1.25, 0.75, 1);
+                          transform: scale3d(1.25, 0.75, 1);
+                }
+                50% {
+                  -webkit-transform: scale3d(0.85, 1.15, 1);
+                          transform: scale3d(0.85, 1.15, 1);
+                }
+                65% {
+                  -webkit-transform: scale3d(1.05, 0.95, 1);
+                          transform: scale3d(1.05, 0.95, 1);
+                }
+                75% {
+                  -webkit-transform: scale3d(0.95, 1.05, 1);
+                          transform: scale3d(0.95, 1.05, 1);
+                }
+                100% {
+                  -webkit-transform: scale3d(1, 1, 1);
+                          transform: scale3d(1, 1, 1);
+                }
+              }
+              
+        }
+        
     }
 
     &__img_h1 {
@@ -148,11 +185,7 @@ a:hover {
         line-height: 32px;
         text-transform: uppercase;
 
-        
-
-        }
-
-        &__img_h1:hover {
+        &:hover {
 
             animation: tracking-in-contract 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
 
@@ -171,6 +204,10 @@ a:hover {
             }          
         }
     }    
+
+        }
+
+        
 }
 
 
@@ -722,13 +759,13 @@ form > button:hover {
     width: 38px;
     background-color: rgba(240, 240, 240, 1);
     margin-right: 13px;
-}
 
-.button_slider:hover {
-    height: 4px;
-    width: 38px;
-    background-color: $siteColor;
-    margin-right: 13px;
+    &:hover {
+        height: 4px;
+        width: 38px;
+        background-color: $siteColor;
+        margin-right: 13px;
+    }
 }
 
 .send_email {
@@ -762,11 +799,35 @@ form > button:hover {
         color: $siteColor;
         letter-spacing: 0.03em;
         line-height: 26px;
+
+        
     }
 
     & nav {
         margin-top: 10px;
 
+        &:hover .footer_up_h1{
+
+            animation: text-pop-up-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+
+            @keyframes text-pop-up-top {
+                0% {
+                  -webkit-transform: translateY(0);
+                          transform: translateY(0);
+                  -webkit-transform-origin: 50% 50%;
+                          transform-origin: 50% 50%;
+                  text-shadow: none;
+                }
+                100% {
+                  -webkit-transform: translateY(-15px);
+                          transform: translateY(-15px);
+                  -webkit-transform-origin: 50% 50%;
+                          transform-origin: 50% 50%;
+                  text-shadow: 0 1px 0 #cccccc, 0 2px 0 #cccccc, 0 3px 0 #cccccc, 0 4px 0 #cccccc, 0 5px 0 #cccccc, 0 6px 0 #cccccc, 0 7px 0 #cccccc, 0 8px 0 #cccccc, 0 9px 0 #cccccc, 0 50px 30px rgba(0, 0, 0, 0.3);
+                }
+              }
+              
+        }
 
     }
 
