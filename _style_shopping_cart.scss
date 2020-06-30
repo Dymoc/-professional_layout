@@ -24,21 +24,40 @@
     }
 }
 
-.sc_product_cart {
-    display: flex;
-    border-top: 1px solid rgba(234, 234, 234, 1);
-    position: relative;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    align-items: center;
-    font-size: 13px;
-    font-weight: 500;
-    color: rgba(111, 110, 110, 1);
-    line-height: 20px;
 
-    &_a {
-        margin-left: 0px;
+
+    .sc_product_cart {
+        display: flex;
+        border-top: 1px solid rgba(234, 234, 234, 1);
+        position: relative;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        align-items: center;
+        font-size: 13px;
+        font-weight: 500;
+        color: rgba(111, 110, 110, 1);
+        line-height: 20px;
+
+        &_a {
+            margin-left: 0px;
+
+            & img:hover {
+                animation: flip-in-hor-bottom 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+            }
+
+            @keyframes flip-in-hor-bottom {
+                0% {              
+                        transform: rotateX(80deg);
+                opacity: 0;
+                }
+                100% {
+                        transform: rotateX(0);
+                opacity: 1;
+                }
+            }          
     }
+
+
 
     &_info {
         margin-left: -30px;
@@ -91,7 +110,7 @@
         }
 
         & a:hover {
-            color: rgba(101, 101, 101, 1);
+            color: $siteColor;
         }
     }
 }
@@ -102,6 +121,11 @@
     display: flex;
     justify-content: space-between;
 
+    & button:hover {
+        border: 1px solid $siteColor;
+        color: $siteColor;
+    }
+
     &_clear {
         background-color: #fff;
         padding: 20px 38px 20px 38px;
@@ -110,7 +134,7 @@
         color: rgba(74, 74, 74, 1);
         text-transform: uppercase;
         margin-left: 0px;
-        outline: 1px solid rgba(234, 234, 234, 1);
+        border: 1px solid $siteBorderColor;
     }
 
     &_continue {
@@ -121,7 +145,7 @@
         color: rgba(74, 74, 74, 1);
         text-transform: uppercase;
         margin-right: 0px;
-        outline: 1px solid rgba(234, 234, 234, 1);
+        border: 1px solid $siteBorderColor;
     }
 }
 
@@ -289,6 +313,10 @@
             margin-top: 42px;
             background-color: $siteColor;
             border: none;
+
+            &:hover {
+                outline: 2px solid #000;
+            }
         }
     }
 }

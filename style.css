@@ -228,6 +228,7 @@ a:hover {
 
 form > button:hover {
   color: #f16d7f;
+  outline: 1px solid #f16d7f;
 }
 
 .siteColor {
@@ -1266,6 +1267,37 @@ form > button:hover {
   margin-left: 0px;
 }
 
+.sc_product_cart_a img:hover {
+  -webkit-animation: flip-in-hor-bottom 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+          animation: flip-in-hor-bottom 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+@-webkit-keyframes flip-in-hor-bottom {
+  0% {
+    -webkit-transform: rotateX(80deg);
+            transform: rotateX(80deg);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: rotateX(0);
+            transform: rotateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes flip-in-hor-bottom {
+  0% {
+    -webkit-transform: rotateX(80deg);
+            transform: rotateX(80deg);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: rotateX(0);
+            transform: rotateX(0);
+    opacity: 1;
+  }
+}
+
 .sc_product_cart_info {
   margin-left: -30px;
   width: 275px;
@@ -1318,7 +1350,7 @@ form > button:hover {
 }
 
 .sc_product_cart_action a:hover {
-  color: #656565;
+  color: #f16d7f;
 }
 
 .sc_button {
@@ -1332,6 +1364,11 @@ form > button:hover {
           justify-content: space-between;
 }
 
+.sc_button button:hover {
+  border: 1px solid #f16d7f;
+  color: #f16d7f;
+}
+
 .sc_button_clear {
   background-color: #fff;
   padding: 20px 38px 20px 38px;
@@ -1340,7 +1377,7 @@ form > button:hover {
   color: #4a4a4a;
   text-transform: uppercase;
   margin-left: 0px;
-  outline: 1px solid #eaeaea;
+  border: 1px solid #eaeaea;
 }
 
 .sc_button_continue {
@@ -1351,7 +1388,7 @@ form > button:hover {
   color: #4a4a4a;
   text-transform: uppercase;
   margin-right: 0px;
-  outline: 1px solid #eaeaea;
+  border: 1px solid #eaeaea;
 }
 
 .sc_info {
@@ -1542,6 +1579,10 @@ form > button:hover {
   border: none;
 }
 
+.sc_info_total_button:hover {
+  outline: 2px solid #000;
+}
+
 .chekout {
   border-bottom: 1px solid silver;
 }
@@ -1673,5 +1714,6 @@ form > button:hover {
 
 .button_forgot:hover {
   color: #f16d7f;
+  outline: none;
 }
 /*# sourceMappingURL=style.css.map */

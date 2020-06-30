@@ -158,6 +158,8 @@ a:hover {
     background-color: #fff;
     display: none;
     top: 48px;
+    
+    
 
     &_last {
         right: 0;
@@ -166,6 +168,7 @@ a:hover {
     &__flex {
         width: 234px;
         margin-right: 46px;
+
 
         &:last-of-type {
             margin-right: 0;
@@ -193,7 +196,8 @@ a:hover {
         line-height: 28px;
 
         &:hover {
-            color: $siteColor;             
+            color: $siteColor;    
+           
         }
     }
 }
@@ -216,6 +220,7 @@ a:hover {
 
 form > button:hover {
     color: $siteColor;
+    outline: 1px solid $siteColor;
 }
 
 .siteColor {
