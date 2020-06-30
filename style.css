@@ -1532,6 +1532,16 @@ a {
   text-align: left;
   text-transform: uppercase;
   padding-left: 0px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.form_radio {
+  margin-bottom: 20px;
+}
+
+.form_radio:first-of-type {
+  margin-top: 35px;
 }
 
 .Required {
@@ -1545,6 +1555,8 @@ a {
 }
 
 .checkout_button {
+  width: 180px;
+  height: 50px;
   font-size: 14px;
   font-weight: bold;
   color: #4a4a4a;
@@ -1559,5 +1571,9 @@ a {
   line-height: 20px;
   border: none;
   background-color: white;
+}
+
+.button_forgot:hover {
+  color: #f16d1b;
 }
 /*# sourceMappingURL=style.css.map */

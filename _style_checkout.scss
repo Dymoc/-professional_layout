@@ -14,24 +14,31 @@
     padding-bottom: 50px;
 }
 
-
-
-
 .forms {
     display: flex;
 }
 
- 
+
 .guest_form {
-    margin: 0px;    
+    margin: 0px;
 }
 
 .form_h2 {
     font-size: 13px;
     color: rgba(34, 34, 34, 1);
     text-align: left;
-    text-transform: uppercase;    
+    text-transform: uppercase;
     padding-left: 0px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.form_radio {
+    margin-bottom: 20px;
+}
+
+.form_radio:first-of-type {
+    margin-top: 35px;
 }
 
 .Required {
@@ -45,6 +52,8 @@
 }
 
 .checkout_button {
+    width: 180px;
+    height: 50px;
     font-size: 14px;
     font-weight: bold;
     color: rgba(74, 74, 74, 1);
@@ -59,4 +68,8 @@
     line-height: 20px;
     border: none;
     background-color: $siteBGC;
+}
+
+.button_forgot:hover {
+    color: $siteColor;
 }
