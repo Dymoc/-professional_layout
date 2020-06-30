@@ -36,6 +36,14 @@ a:hover {
     justify-content: space-between;
     align-items: center;
 
+    &__button{
+        height: 32px;
+        width: 32px;
+        background-color: $siteBGC;
+        border: 1px solid $siteBorderColor;
+        border-radius: 0px 3px 3px 0px;
+    }
+
     &__left,
     &__right {
         display: flex;
@@ -49,7 +57,12 @@ a:hover {
     &__right a {
         color: $siteBGC;
         text-align: center;
-        margin-top: 5px;
+        margin-top: 5px;        
+        transition: ease-in-out 0.3s;
+
+        &:hover {
+            transform: scale(1.2);
+        }
     }
 
     &__form {
@@ -180,7 +193,7 @@ a:hover {
         line-height: 28px;
 
         &:hover {
-            color: $siteColor;            
+            color: $siteColor;             
         }
     }
 }
@@ -371,15 +384,19 @@ form > button:hover {
         justify-content: space-between;
         padding-bottom: 30px;
         position: relative;
+
     }
 }
 
 .tovar_cart {
     margin-bottom: 30px;
     position: relative;
+    transition: ease-in 0.3s;
+
 
     &:hover {
         box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.17);
+        transform: scale(1.03);
     }
 
 
@@ -392,6 +409,7 @@ form > button:hover {
     }
 }
 
+  
 .stars {
     position: absolute;
     top: 335px;
@@ -403,6 +421,10 @@ form > button:hover {
     display: none;
     position: absolute;
     opacity: 0.7;
+
+    & a {
+        color: #fff;
+    }
 }
 
 .button_add_to_cart {

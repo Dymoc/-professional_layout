@@ -39,6 +39,14 @@ a:hover {
           align-items: center;
 }
 
+.header__button {
+  height: 32px;
+  width: 32px;
+  background-color: white;
+  border: 1px solid #eaeaea;
+  border-radius: 0px 3px 3px 0px;
+}
+
 .header__left, .header__right {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -54,6 +62,13 @@ a:hover {
   color: white;
   text-align: center;
   margin-top: 5px;
+  -webkit-transition: ease-in-out 0.3s;
+  transition: ease-in-out 0.3s;
+}
+
+.header__right a:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
 }
 
 .header__form {
@@ -400,11 +415,15 @@ form > button:hover {
 .tovar_cart {
   margin-bottom: 30px;
   position: relative;
+  -webkit-transition: ease-in 0.3s;
+  transition: ease-in 0.3s;
 }
 
 .tovar_cart:hover {
   -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.17);
           box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.17);
+  -webkit-transform: scale(1.03);
+          transform: scale(1.03);
 }
 
 .tovar_cart:hover .add_to_cart {
@@ -426,6 +445,10 @@ form > button:hover {
   display: none;
   position: absolute;
   opacity: 0.7;
+}
+
+.add_to_cart a {
+  color: #fff;
 }
 
 .button_add_to_cart {
