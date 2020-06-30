@@ -46,6 +46,10 @@ a:hover {
   margin: 0px;
 }
 
+.header__right a {
+  color: white;
+}
+
 .header__form {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -60,6 +64,7 @@ a:hover {
   font-size: 14px;
   font-weight: 300;
   color: #222222;
+  background-color: whitesmoke;
   text-align: right;
   letter-spacing: 0.03em;
   line-height: 32px;
@@ -983,8 +988,7 @@ a:hover {
 }
 
 .top_filter_trending_now_text_a:hover {
-  color: #141414;
-  font-weight: 600;
+  color: #f16d7f;
 }
 
 .top_filter_size {
@@ -1530,7 +1534,7 @@ a:hover {
   display: flex;
 }
 
-.guest_form {
+.form_guest {
   margin: 0px;
 }
 
@@ -1554,6 +1558,8 @@ a:hover {
 
 .Required {
   color: #f16d7f;
+  font-size: 13px;
+  line-height: 20px;
 }
 
 .form_h3 {

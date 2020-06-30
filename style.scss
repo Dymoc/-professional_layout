@@ -42,6 +42,10 @@ a:hover {
         margin: 0px;
     }
 
+    &__right a {
+        color: $siteBGC;
+    }
+
     &__form {
         display: flex;
         align-items: center;
@@ -52,6 +56,7 @@ a:hover {
         font-size: 14px;
         font-weight: 300;
         color: rgba(34, 34, 34, 1);
+        background-color: rgba(245, 245, 245, 1);
         text-align: right;
         letter-spacing: 0.03em;
         line-height: 32px;
@@ -107,7 +112,7 @@ a:hover {
         border: 1px solid rgba(230, 230, 230, 1);
         border-radius: 0px 3px 3px 0px;
     }
-
+ 
     &__cart {
         margin-right: 26px;
     }

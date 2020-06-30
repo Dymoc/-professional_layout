@@ -19,7 +19,7 @@
 }
 
 
-.guest_form {
+.form_guest {
     margin: 0px;
 }
 
@@ -43,6 +43,8 @@
 
 .Required {
     color: $siteColor;
+    font-size: 13px;
+    line-height: 20px;
 }
 
 .form_h3 {
