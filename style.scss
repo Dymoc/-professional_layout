@@ -36,7 +36,7 @@ a:hover {
     justify-content: space-between;
     align-items: center;
 
-    &__button{
+    &__button {
         height: 32px;
         width: 32px;
         background-color: $siteBGC;
@@ -57,7 +57,7 @@ a:hover {
     &__right a {
         color: $siteBGC;
         text-align: center;
-        margin-top: 5px;        
+        margin-top: 5px;
         transition: ease-in-out 0.3s;
 
         &:hover {
@@ -93,7 +93,7 @@ a:hover {
         }
 
 
-         &[open] .drop {
+        &[open] .drop {
             display: flex;
             z-index: 10;
             top: 24px;
@@ -107,7 +107,7 @@ a:hover {
             letter-spacing: 0.03em;
             line-height: 32px;
         }
-        
+
     }
 
     &__form input {
@@ -143,37 +143,43 @@ a:hover {
 
             @keyframes jello-vertical {
                 0% {
-                  -webkit-transform: scale3d(1, 1, 1);
-                          transform: scale3d(1, 1, 1);
+                    -webkit-transform: scale3d(1, 1, 1);
+                    transform: scale3d(1, 1, 1);
                 }
+
                 30% {
-                  -webkit-transform: scale3d(0.75, 1.25, 1);
-                          transform: scale3d(0.75, 1.25, 1);
+                    -webkit-transform: scale3d(0.75, 1.25, 1);
+                    transform: scale3d(0.75, 1.25, 1);
                 }
+
                 40% {
-                  -webkit-transform: scale3d(1.25, 0.75, 1);
-                          transform: scale3d(1.25, 0.75, 1);
+                    -webkit-transform: scale3d(1.25, 0.75, 1);
+                    transform: scale3d(1.25, 0.75, 1);
                 }
+
                 50% {
-                  -webkit-transform: scale3d(0.85, 1.15, 1);
-                          transform: scale3d(0.85, 1.15, 1);
+                    -webkit-transform: scale3d(0.85, 1.15, 1);
+                    transform: scale3d(0.85, 1.15, 1);
                 }
+
                 65% {
-                  -webkit-transform: scale3d(1.05, 0.95, 1);
-                          transform: scale3d(1.05, 0.95, 1);
+                    -webkit-transform: scale3d(1.05, 0.95, 1);
+                    transform: scale3d(1.05, 0.95, 1);
                 }
+
                 75% {
-                  -webkit-transform: scale3d(0.95, 1.05, 1);
-                          transform: scale3d(0.95, 1.05, 1);
+                    -webkit-transform: scale3d(0.95, 1.05, 1);
+                    transform: scale3d(0.95, 1.05, 1);
                 }
+
                 100% {
-                  -webkit-transform: scale3d(1, 1, 1);
-                          transform: scale3d(1, 1, 1);
+                    -webkit-transform: scale3d(1, 1, 1);
+                    transform: scale3d(1, 1, 1);
                 }
-              }
-              
+            }
+
         }
-        
+
     }
 
     &__img_h1 {
@@ -190,24 +196,26 @@ a:hover {
             animation: tracking-in-contract 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
 
 
-        @keyframes tracking-in-contract {
-            0% {
-              letter-spacing: 1em;
-              opacity: 0;
-            }
-            40% {
-              opacity: 0.6;
-            }
-            100% {
-              letter-spacing: normal;
-              opacity: 1;
-            }          
-        }
-    }    
+            @keyframes tracking-in-contract {
+                0% {
+                    letter-spacing: 1em;
+                    opacity: 0;
+                }
 
+                40% {
+                    opacity: 0.6;
+                }
+
+                100% {
+                    letter-spacing: normal;
+                    opacity: 1;
+                }
+            }
         }
 
-        
+    }
+
+
 }
 
 
@@ -218,8 +226,8 @@ a:hover {
     background-color: #fff;
     display: none;
     top: 48px;
-    
-    
+
+
 
     &_last {
         right: 0;
@@ -256,8 +264,8 @@ a:hover {
         line-height: 28px;
 
         &:hover {
-            color: $siteColor;    
-           
+            color: $siteColor;
+
         }
     }
 }
@@ -278,7 +286,7 @@ a:hover {
     margin-left: 9px;
 }
 
-form > button:hover {
+form>button:hover {
     color: $siteColor;
     outline: 1px solid $siteColor;
 }
@@ -474,7 +482,7 @@ form > button:hover {
     }
 }
 
-  
+
 .stars {
     position: absolute;
     top: 335px;
@@ -681,7 +689,7 @@ form > button:hover {
             line-height: 54px;
             text-transform: uppercase;
         }
-    
+
         & p {
             font-size: 14px;
             color: rgba(34, 34, 36, 1);
@@ -689,7 +697,7 @@ form > button:hover {
             letter-spacing: 0.03em;
             line-height: 24px;
         }
-        
+
     }
 
     &_button {
@@ -800,33 +808,34 @@ form > button:hover {
         letter-spacing: 0.03em;
         line-height: 26px;
 
-        
+
     }
 
     & nav {
         margin-top: 10px;
 
-        &:hover .footer_up_h1{
+        &:hover .footer_up_h1 {
 
             animation: text-pop-up-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 
             @keyframes text-pop-up-top {
                 0% {
-                  -webkit-transform: translateY(0);
-                          transform: translateY(0);
-                  -webkit-transform-origin: 50% 50%;
-                          transform-origin: 50% 50%;
-                  text-shadow: none;
+                    -webkit-transform: translateY(0);
+                    transform: translateY(0);
+                    -webkit-transform-origin: 50% 50%;
+                    transform-origin: 50% 50%;
+                    text-shadow: none;
                 }
+
                 100% {
-                  -webkit-transform: translateY(-15px);
-                          transform: translateY(-15px);
-                  -webkit-transform-origin: 50% 50%;
-                          transform-origin: 50% 50%;
-                  text-shadow: 0 1px 0 #cccccc, 0 2px 0 #cccccc, 0 3px 0 #cccccc, 0 4px 0 #cccccc, 0 5px 0 #cccccc, 0 6px 0 #cccccc, 0 7px 0 #cccccc, 0 8px 0 #cccccc, 0 9px 0 #cccccc, 0 50px 30px rgba(0, 0, 0, 0.3);
+                    -webkit-transform: translateY(-15px);
+                    transform: translateY(-15px);
+                    -webkit-transform-origin: 50% 50%;
+                    transform-origin: 50% 50%;
+                    text-shadow: 0 1px 0 #cccccc, 0 2px 0 #cccccc, 0 3px 0 #cccccc, 0 4px 0 #cccccc, 0 5px 0 #cccccc, 0 6px 0 #cccccc, 0 7px 0 #cccccc, 0 8px 0 #cccccc, 0 9px 0 #cccccc, 0 50px 30px rgba(0, 0, 0, 0.3);
                 }
-              }
-              
+            }
+
         }
 
     }
@@ -843,12 +852,12 @@ form > button:hover {
         letter-spacing: 0.03em;
         line-height: 42px;
     }
-  
+
     .nav_link:hover {
         color: $siteColor;
     }
 
-    
+
 
     &_copyright_and_social {
         height: 79px;
@@ -921,4 +930,5 @@ form > button:hover {
 
 @import 'style_catalog';
 @import 'style_shopping_cart';
-@import 'style_checkout'
+@import 'style_checkout';
+@import "style_single_page";
