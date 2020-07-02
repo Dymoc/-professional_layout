@@ -1,3 +1,45 @@
-.singl__content {
-    width: 20px;
+.singlePage {
+    position: relative;
+}
+
+.singlePage__slider {
+    height: 777px;
+    width: $siteWidth;
+    background-color: rgba(247, 247, 247, 1);
+    border: 1px solid $siteBorderColor;
+    position: relative;
+    text-align: center;    
+   display: inline-block;
+   margin-bottom: 763px;
+}
+
+
+.slider__pagination {
+    position: absolute;
+    width: 47px;
+    height: 47px;
+    background-color:rgba(42, 42, 42, 0.15);
+    font-size: -24px;
+    color: rgba(255, 255, 255, 1);
+    line-height: 45px;
+    top: 350px;
+        
+    &:hover {
+        background-color: $siteColor;
+    }
+}   
+
+.slider__pagination_right {
+    right: 0px;
+}
+
+.discription {
+    height: 730px;
+    text-align: center;
+    width: 1141px;
+    border: 1px solid $siteBorderColor;
+    position: absolute;
+    top: 700px;
+    left: calc(50% - 570px);
+    background-color: $siteBGC;
 }

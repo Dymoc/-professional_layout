@@ -1004,7 +1004,6 @@ form > button:hover {
   height: 148px;
   background-image: url(img/breadcrumb.png);
   padding-top: 65px;
-  margin-bottom: 71px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1062,6 +1061,7 @@ form > button:hover {
 
 .category {
   width: 243px;
+  margin-top: 71px;
 }
 
 .category[open] > .category_head {
@@ -1119,6 +1119,7 @@ form > button:hover {
 
 .filter {
   width: 855px;
+  margin-top: 71px;
 }
 
 .top_filter {
@@ -1362,6 +1363,7 @@ form > button:hover {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  margin-top: 71px;
 }
 
 .sc_product_cols_name_h1 {
@@ -1715,6 +1717,7 @@ form > button:hover {
 
 .chekout {
   border-bottom: 1px solid silver;
+  margin-top: 71px;
 }
 
 .chekout_h1 {
@@ -1845,5 +1848,50 @@ form > button:hover {
 .button_forgot:hover {
   color: #f16d7f;
   outline: none;
+}
+
+.singlePage {
+  position: relative;
+}
+
+.singlePage__slider {
+  height: 777px;
+  width: 1600px;
+  background-color: #f7f7f7;
+  border: 1px solid #eaeaea;
+  position: relative;
+  text-align: center;
+  display: inline-block;
+  margin-bottom: 763px;
+}
+
+.slider__pagination {
+  position: absolute;
+  width: 47px;
+  height: 47px;
+  background-color: rgba(42, 42, 42, 0.15);
+  font-size: -24px;
+  color: white;
+  line-height: 45px;
+  top: 350px;
+}
+
+.slider__pagination:hover {
+  background-color: #f16d7f;
+}
+
+.slider__pagination_right {
+  right: 0px;
+}
+
+.discription {
+  height: 730px;
+  text-align: center;
+  width: 1141px;
+  border: 1px solid #eaeaea;
+  position: absolute;
+  top: 700px;
+  left: calc(50% - 570px);
+  background-color: white;
 }
 /*# sourceMappingURL=style.css.map */
