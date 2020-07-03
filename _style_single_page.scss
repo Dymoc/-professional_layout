@@ -1,17 +1,19 @@
 .singlePage {
     position: relative;
+
+    &__slider {
+        height: 777px;
+        width: $siteWidth;
+        background-color: rgba(247, 247, 247, 1);
+        border: 1px solid $siteBorderColor;
+        position: relative;
+        text-align: center;    
+        display: inline-block;
+        margin-bottom: 763px;
+    }
 }
 
-.singlePage__slider {
-    height: 777px;
-    width: $siteWidth;
-    background-color: rgba(247, 247, 247, 1);
-    border: 1px solid $siteBorderColor;
-    position: relative;
-    text-align: center;    
-    display: inline-block;
-    margin-bottom: 763px;
-}
+
 
 
 .slider__pagination {
@@ -32,11 +34,13 @@
         background-color: $siteColor;
         transform: scale(-1);
     }
+
+    &_right {
+        right: 0px;
+    }
 }   
 
-.slider__pagination_right {
-    right: 0px;
-}
+
 
 .discription {
     height: 730px;
@@ -94,15 +98,6 @@
         margin-top: 67px;
     }
 
-    &__price {
-        font-size: 24px;
-        font-weight: bold;
-        color: rgba(239, 91, 112, 1);
-        text-align: center;
-        line-height: 24px;
-        margin-top: 37px;
-    }
-
     &__characteristics {
         font-size: 14px;
         font-weight: bold;
@@ -122,8 +117,74 @@
                 margin-right: 44px;
             }
         }
-
-
     }
+
+    &__price {
+        width: 642px;
+        font-size: 24px;
+        font-weight: bold;
+        color: rgba(239, 91, 112, 1);
+        text-align: center;
+        line-height: 24px;
+        margin-top: 30px;
+        padding-bottom: 35px;
+        border-bottom: 1px solid rgba(234, 234, 234, 1);;
+    }
+
+    .chooseFilter__header {
+        width: 600px;
+        display: flex;
+        justify-content: space-between;
+        font-size: 14px;
+        font-weight: bold;
+        color: rgba(47, 47, 47, 1);
+        line-height: 24px;
+        margin-top: 35px;
+        margin-right: 295px;
+    }
+
+    .chooseFilter__select {
+        height: 35px;
+        width: 144px;
+        background-color: rgba(255, 255, 255, 1);
+        border: 1px solid rgba(234, 234, 234, 1);
+        margin-right: 53px;
+        margin-left: 16px;
+    }
+
+    .chooseFilter__quantity {
+        height: 35px;
+        width: 144px;
+        background-color: rgba(255, 255, 255, 1);
+        border: 1px solid rgba(234, 234, 234, 1);
+        margin-top: 14px;
+    }
+
+    .chooseFilter__button {
+        height: 55px;
+        width: 555px;
+        background-color:$siteBGC;
+        border: 1px solid $siteColor;
+        margin-left: 15px;
+        margin-top: 20px;
+        font-size: 16px;
+        font-weight: bold;
+        color: rgba(239, 91, 112, 1);
+        padding-left: 70px;
+
+        background-image: url(img/cart_rad.png);
+        background-repeat: no-repeat;
+        background-position: 220px;
+    }
+
+
 }
 
+.similar__name {
+    font-size: 24px;
+    font-weight: 900;
+    color: rgba(77, 77, 77, 1);
+    text-align: center;
+    line-height: 20px;
+    text-transform: uppercase;
+}
