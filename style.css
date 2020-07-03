@@ -58,19 +58,6 @@ a:hover {
   position: relative;
 }
 
-.header__right a {
-  color: white;
-  text-align: center;
-  margin-top: 5px;
-  -webkit-transition: ease-in-out 0.3s;
-  transition: ease-in-out 0.3s;
-}
-
-.header__right a:hover {
-  -webkit-transform: scale(1.2);
-          transform: scale(1.2);
-}
-
 .header__form {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -136,6 +123,137 @@ a:hover {
 
 .header__cart {
   margin-right: 26px;
+  color: white;
+  text-align: center;
+  margin-top: 5px;
+  -webkit-transition: ease-in-out 0.3s;
+  transition: ease-in-out 0.3s;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+.header__cart:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+.myAccount {
+  display: block;
+  outline: none;
+}
+
+.myAccount::-webkit-details-marker {
+  display: none;
+}
+
+.myAccount::after {
+  content: '\25B6';
+  padding-right: 0.2em;
+  margin-left: 7px;
+}
+
+.myAccount__list {
+  width: 262px;
+  list-style-type: none;
+  position: absolute;
+  background-color: white;
+}
+
+.myAccount__list:last-child {
+  border: none;
+}
+
+.myAccount__link {
+  padding-bottom: 20px;
+  border-bottom: 1px solid #eaeaea;
+  margin-top: 8px;
+}
+
+.myAccount__button {
+  height: 50px;
+  width: 225px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #4a4a4a;
+  text-transform: uppercase;
+  border: 1px solid #eaeaea;
+  text-align: center;
+  padding-top: 14px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.myAccount__button:hover {
+  border: 1px solid #f16d7f;
+  color: #f16d7f;
+}
+
+.button[open] > .myAccount::after {
+  content: '\25BC';
+}
+
+.cart {
+  width: 230px;
+  height: 85px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-radius: 5px;
+}
+
+.cart__img {
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+.cart__img:hover {
+  -webkit-transform: scale(1.3);
+          transform: scale(1.3);
+}
+
+.cart__name {
+  font-size: 12px;
+  font-weight: bold;
+  color: #222222;
+  text-transform: uppercase;
+}
+
+.cart__name:hover {
+  color: #f16d7f;
+}
+
+.cart__coast {
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+.cart__coast_x {
+  font-size: 10px;
+}
+
+.cart__action {
+  font-size: 16px;
+  color: silver;
+  text-transform: uppercase;
+  margin-top: 28px;
+}
+
+.cart__action:hover {
+  color: #f16d7f;
+}
+
+.totalCoast {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-size: 16px;
+  font-weight: bold;
+  color: #222222;
+  text-transform: uppercase;
+  margin: 19px -15px 32px -15px;
 }
 
 .logo {
@@ -154,8 +272,8 @@ a:hover {
 }
 
 .logo__img:hover {
-  -webkit-animation: jello-vertical 0.9s both;
-          animation: jello-vertical 0.9s both;
+  -webkit-animation: jello-vertical 1.2s both;
+          animation: jello-vertical 1.2s both;
 }
 
 @-webkit-keyframes jello-vertical {
@@ -231,8 +349,8 @@ a:hover {
 }
 
 .logo__img_h1:hover {
-  -webkit-animation: tracking-in-contract 0.8s cubic-bezier(0.215, 0.61, 0.355, 1) both;
-          animation: tracking-in-contract 0.8s cubic-bezier(0.215, 0.61, 0.355, 1) both;
+  -webkit-animation: tracking-in-contract 1.5s cubic-bezier(0.215, 0.61, 0.355, 1) both;
+          animation: tracking-in-contract 1.5s cubic-bezier(0.215, 0.61, 0.355, 1) both;
 }
 
 @-webkit-keyframes tracking-in-contract {
@@ -321,6 +439,7 @@ a:hover {
   padding: 8px 19px 8px 17px;
   border: none;
   outline: none;
+  position: relative;
 }
 
 .button i {
@@ -517,8 +636,8 @@ form > button:hover {
 .tovar_cart {
   margin-bottom: 30px;
   position: relative;
-  -webkit-transition: ease-in 0.3s;
-  transition: ease-in 0.3s;
+  -webkit-transition: ease-in 0.8s;
+  transition: ease-in 0.8s;
 }
 
 .tovar_cart:hover {
@@ -873,8 +992,8 @@ form > button:hover {
 }
 
 .footer nav:hover .footer_up_h1 {
-  -webkit-animation: text-pop-up-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-          animation: text-pop-up-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  -webkit-animation: text-pop-up-top 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+          animation: text-pop-up-top 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
 
 @-webkit-keyframes text-pop-up-top {

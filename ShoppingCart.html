@@ -51,7 +51,50 @@
         <div class="header__right">
             <div class="header__right">
                 <a href="ShoppingCart.html"><img class="header__cart" src="img/cart.png" alt="cart"></a>
-                <button class="button">My account <i class="fas fa-caret-down"></i></button>
+                <details class="button">
+                    <summary class="myAccount">My account</summary>
+                    <ul class="myAccount__list">
+                      <li class="myAccount__link"> 
+                          <div class="cart">
+                            <a href="single_page.html"><img src="img/myAccount_img_1.png" alt="" class="cart__img"></a>
+                            <div class="cart__discription">
+                                <a href="single_page.html"> <div class="cart__name">Rebox Zane</div></a>
+                                <img src="img/stars.png" alt="">
+                                <div class="cart__coast siteColor">1 <span class="cart__coast_x">x</span> $250</div>
+                            </div>
+                            <a href=""><i class="fas fa-backspace cart__action"></i></a>
+                        </div>
+                    </li> 
+                        <li class="myAccount__link">
+                            <div class="cart">
+                            <a href="single_page.html"><img src="img/myAccount_img_2.png" alt="" class="cart__img"></a>
+                            <div class="cart__discription">
+                                <a href="single_page.html"> <div class="cart__name">Rebox Zane</div></a>
+                                <img src="img/stars.png" alt="">
+                                <div class="cart__coast siteColor">1 <span class="cart__coast_x">x</span> $250</div>
+                            </div>
+                            <a href=""><i class="fas fa-backspace cart__action"></i></a>
+                        </div>
+                    </li>                 
+                    <li class="myAccount__link">
+                        <div class="cart">
+                        <a href="single_page.html"><img src="img/myAccount_img_2.png" alt="" class="cart__img"></a>
+                        <div class="cart__discription">
+                            <a href="single_page.html"> <div class="cart__name">Rebox Zane</div></a>
+                            <img src="img/stars.png" alt="">
+                            <div class="cart__coast siteColor">1 <span class="cart__coast_x">x</span> $250</div>
+                        </div>
+                        <a href=""><i class="fas fa-backspace cart__action"></i></a>
+                    </div>
+                </li>            
+                    <div class="totalCoast">
+                        <div class="totalCoast__text">TOTAL</div>
+                        <div class="totalCoast__text">$500.00</div>               
+                </div>
+                <div class=" myAccount__button" onclick="location ='checkout.html'">Checkout</div>
+                <div class=" myAccount__button" onclick="location ='ShoppingCart.html'">Go to cart</div>
+                    </ul> 
+                </details>
             </div>
     </header>
     <nav class="menu center">
@@ -189,9 +232,9 @@
         </div>
         <div class="sc_product">
             <artical class="sc_product_cart">
-                <a href="#" class="sc_product_cart_a"><img src="img/sc_1.png" alt="" class="sc_product_cart_a_img"></a>
+                <a href="single_page.html" class="sc_product_cart_a"><img src="img/sc_1.png" alt="" class="sc_product_cart_a_img"></a>
                 <div class="sc_product_cart_info">
-                    <a href="#" class="sc_product_cart_info_h1">Mango People T-shirt</a>
+                    <a href="single_page.html" class="sc_product_cart_info_h1">Mango People T-shirt</a>
                     <div class="sc_product_cart_info_color"><span>Color:</span> Red</div>
                     <div class="sc_product_cart_info_size"><span>Size:</span> Xll</div>
                 </div>
@@ -202,9 +245,9 @@
                 <div class="sc_product_cart_action"><a href=""><i class="fas fa-backspace"></i></a></div>
             </artical>
             <artical class="sc_product_cart">
-                <a href="#" class="sc_product_cart_a"><img src="img/sc_2.png" alt="" class="sc_product_cart_img"></a>
+                <a href="single_page.html" class="sc_product_cart_a"><img src="img/sc_2.png" alt="" class="sc_product_cart_img"></a>
                 <div class="sc_product_cart_info">
-                    <a href="#" class="sc_product_cart_info_h1">Mango People T-shirt</a>
+                    <a href="single_page.html" class="sc_product_cart_info_h1">Mango People T-shirt</a>
                     <div class="sc_product_cart_info_color">Color: Red</div>
                     <div class="sc_product_cart_info_size">Size: Xll</div>
                 </div>
@@ -215,9 +258,9 @@
                 <div class="sc_product_cart_action"><a href=""><i class="fas fa-backspace"></i></a></div>
             </artical>
             <artical class="sc_product_cart">
-                <a href="#" class="sc_product_cart_a"><img src="img/sc_3.png" alt="" class="sc_product_cart_img"></a>
+                <a href="single_page.html" class="sc_product_cart_a"><img src="img/sc_3.png" alt="" class="sc_product_cart_img"></a>
                 <div class="sc_product_cart_info">
-                    <a href="#" class="sc_product_cart_info_h1">Mango People T-shirt</a>
+                    <a href="single_page.html" class="sc_product_cart_info_h1">Mango People T-shirt</a>
                     <div class="sc_product_cart_info_color">Color: Red</div>
                     <div class="sc_product_cart_info_size">Size: Xll</div>
                 </div>
@@ -261,7 +304,6 @@
             </div>
         </div>
     </main>
-
     <div class="subscribe center">
         <div class="slider">
             <img src="img/dhaka.png" alt="">
