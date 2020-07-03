@@ -270,6 +270,7 @@ a:hover {
   background-color: #fff;
   display: none;
   top: 48px;
+  z-index: 1;
 }
 
 .drop_last {
@@ -1870,14 +1871,20 @@ form > button:hover {
   width: 47px;
   height: 47px;
   background-color: rgba(42, 42, 42, 0.15);
+  top: 310px;
+}
+
+.slider__pagination a {
+  display: block;
   font-size: -24px;
   color: white;
   line-height: 45px;
-  top: 350px;
 }
 
 .slider__pagination:hover {
   background-color: #f16d7f;
+  -webkit-transform: scale(-1);
+          transform: scale(-1);
 }
 
 .slider__pagination_right {
@@ -1893,5 +1900,51 @@ form > button:hover {
   top: 700px;
   left: calc(50% - 570px);
   background-color: white;
+}
+
+.discription__nameColection {
+  font-size: 14px;
+  font-weight: bold;
+  color: #f16d7f;
+  text-align: center;
+  line-height: 24px;
+  margin-top: 73px;
+}
+
+.discription__shape {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 15px;
+}
+
+.discription__shape_default {
+  width: 42px;
+  border-bottom: 1px solid #eaeaea;
+}
+
+.discription__shape_active {
+  width: 63px;
+  border-bottom: 3px solid #f16d7f;
+}
+
+.discription__heading {
+  font-size: 18px;
+  font-weight: 900;
+  color: #4d4d4d;
+  text-align: center;
+  line-height: 24px;
+  text-transform: uppercase;
+}
+
+.discription__text {
+  font-size: 14px;
+  font-weight: 300;
+  color: #5e5e5e;
+  text-align: center;
+  line-height: 24px;
 }
 /*# sourceMappingURL=style.css.map */

@@ -9,8 +9,8 @@
     border: 1px solid $siteBorderColor;
     position: relative;
     text-align: center;    
-   display: inline-block;
-   margin-bottom: 763px;
+    display: inline-block;
+    margin-bottom: 763px;
 }
 
 
@@ -19,13 +19,18 @@
     width: 47px;
     height: 47px;
     background-color:rgba(42, 42, 42, 0.15);
-    font-size: -24px;
-    color: rgba(255, 255, 255, 1);
-    line-height: 45px;
-    top: 350px;
+    top: 310px;
+
+    & a {
+        display: block;
+        font-size: -24px;
+        color: $siteBGC;
+        line-height: 45px;
+    }
         
     &:hover {
         background-color: $siteColor;
+        transform: scale(-1);
     }
 }   
 
@@ -42,4 +47,48 @@
     top: 700px;
     left: calc(50% - 570px);
     background-color: $siteBGC;
+
+    &__nameColection {
+        font-size: 14px;
+        font-weight: bold;
+        color: rgba(241, 109, 127, 1);
+        text-align: center;
+        line-height: 24px;
+        
+        margin-top: 73px;
+    }
+
+    &__shape {
+        display:inline-flex;
+        justify-content: center;
+        margin-top: 15px;
+
+        &_default {
+            width: 42px;
+            border-bottom: 1px solid $siteBorderColor;
+        }
+
+        &_active {
+            width: 63px;
+            border-bottom: 3px solid $siteColor;
+        }
+    }
+
+    &__heading {
+        font-size: 18px;
+        font-weight: 900;
+        color: rgba(77, 77, 77, 1);
+        text-align: center;
+        line-height: 24px;
+        text-transform: uppercase;
+    }
+
+    &__text {
+        font-size: 14px;
+        font-weight: 300;
+        color: rgba(94, 94, 94, 1);
+        text-align: center;
+        line-height: 24px;
+    }
 }
+
