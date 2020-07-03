@@ -157,6 +157,7 @@ a:hover {
   list-style-type: none;
   position: absolute;
   background-color: white;
+  z-index: 1;
 }
 
 .myAccount__list:last-child {
@@ -1972,6 +1973,7 @@ form > button:hover {
 
 .singlePage {
   position: relative;
+  z-index: 0;
 }
 
 .singlePage__slider {
@@ -1979,7 +1981,6 @@ form > button:hover {
   width: 1600px;
   background-color: #f7f7f7;
   border: 1px solid #eaeaea;
-  position: relative;
   text-align: center;
   display: inline-block;
   margin-bottom: 763px;
@@ -2126,6 +2127,7 @@ form > button:hover {
   border: 1px solid #eaeaea;
   margin-right: 53px;
   margin-left: 16px;
+  padding: 0px 15px 0px 15px;
 }
 
 .discription .chooseFilter__quantity {
@@ -2134,6 +2136,7 @@ form > button:hover {
   background-color: white;
   border: 1px solid #eaeaea;
   margin-top: 14px;
+  padding: 0px 15px 0px 15px;
 }
 
 .discription .chooseFilter__button {
@@ -2150,6 +2153,12 @@ form > button:hover {
   background-image: url(img/cart_rad.png);
   background-repeat: no-repeat;
   background-position: 220px;
+}
+
+.discription .chooseFilter__color_red {
+  width: 12px;
+  height: 12px;
+  background-color: red;
 }
 
 .similar__name {
