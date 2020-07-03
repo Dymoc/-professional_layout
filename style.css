@@ -1938,13 +1938,46 @@ form > button:hover {
   text-align: center;
   line-height: 24px;
   text-transform: uppercase;
+  margin-top: 18px;
 }
 
 .discription__text {
+  width: 625px;
   font-size: 14px;
   font-weight: 300;
   color: #5e5e5e;
   text-align: center;
   line-height: 24px;
+  margin-top: 67px;
+}
+
+.discription__price {
+  font-size: 24px;
+  font-weight: bold;
+  color: #ef5b70;
+  text-align: center;
+  line-height: 24px;
+  margin-top: 37px;
+}
+
+.discription__characteristics {
+  font-size: 14px;
+  font-weight: bold;
+  color: #b9b9b9;
+  text-align: center;
+  line-height: 24px;
+  margin-top: 30px;
+}
+
+.discription__characteristics:last-child {
+  margin-left: 44px;
+}
+
+.discription__characteristics_text {
+  color: #2f2f2f;
+}
+
+.discription__characteristics_text:first-child {
+  margin-right: 44px;
 }
 /*# sourceMappingURL=style.css.map */
