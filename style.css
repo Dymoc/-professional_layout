@@ -2128,6 +2128,10 @@ form > button:hover {
   margin-right: 53px;
   margin-left: 16px;
   padding: 0px 15px 0px 15px;
+  font-size: 13px;
+  color: #bcbcbc;
+  line-height: 24px;
+  outline: none;
 }
 
 .discription .chooseFilter__quantity {
@@ -2137,6 +2141,10 @@ form > button:hover {
   border: 1px solid #eaeaea;
   margin-top: 14px;
   padding: 0px 15px 0px 15px;
+  font-size: 13px;
+  color: #bcbcbc;
+  line-height: 24px;
+  outline: none;
 }
 
 .discription .chooseFilter__button {

@@ -148,6 +148,10 @@
         margin-right: 53px;
         margin-left: 16px;
         padding: 0px 15px 0px 15px;
+        font-size: 13px;
+        color: rgba(188, 188, 188, 1);
+        line-height: 24px;
+        outline: none;
     }
 
     .chooseFilter__quantity {
@@ -157,6 +161,10 @@
         border: 1px solid rgba(234, 234, 234, 1);
         margin-top: 14px;
         padding: 0px 15px 0px 15px;
+        font-size: 13px;
+        color: rgba(188, 188, 188, 1);
+        line-height: 24px;
+        outline: none;
     }
 
     .chooseFilter__button {
@@ -170,7 +178,6 @@
         font-weight: bold;
         color: rgba(239, 91, 112, 1);
         padding-left: 70px;
-
         background-image: url(img/cart_rad.png);
         background-repeat: no-repeat;
         background-position: 220px;
