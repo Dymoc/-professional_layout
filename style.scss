@@ -125,9 +125,7 @@ a:hover {
     }
 }
 
-.header__right:hover .myCart__list{
-    display: block;
-}
+
 
 
 .myCart {
@@ -188,6 +186,64 @@ a:hover {
     content: '\25BC';
 }
 
+.myAccount {
+    display: block;
+    outline: none;
+
+
+    &::-webkit-details-marker {
+        display: none;
+    }
+
+    &::after {
+        content: '\25B6';
+        padding-right: 0.2em;
+        margin-left: 7px;
+    }
+
+    &__list {
+        display: block;
+        width: 262px;
+        list-style-type: none;
+        position: absolute;
+        background-color: rgba(255, 255, 255, 1);
+        top: 50px;
+
+        &:last-child {
+            border: none;
+        }
+    }
+
+    &__link {
+        padding-bottom: 20px;
+        border-bottom: 1px solid $siteBorderColor;
+        margin-top: 8px;
+    }
+
+    &__button {
+        height: 50px;
+        width: 225px;
+        font-size: 14px;
+        font-weight: bold;
+        color: rgba(74, 74, 74, 1);
+        text-transform: uppercase;
+        border: 1px solid $siteBorderColor;
+        text-align: center;
+        padding-top: 14px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        border-radius: 3px;
+
+        &:hover {
+            border: 1px solid $siteColor;
+            color: $siteColor;
+        }
+    }
+}
+
+.button[open]>.myAccount::after {
+    content: '\25BC';
+}
 
 .cart {
     width: 230px;

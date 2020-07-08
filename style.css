@@ -136,10 +136,6 @@ a:hover {
           transform: scale(1.1);
 }
 
-.header__right:hover .myCart__list {
-  display: block;
-}
-
 .myCart {
   display: block;
   outline: none;
@@ -190,6 +186,64 @@ a:hover {
 }
 
 .myCart__button:hover {
+  border: 1px solid #f16d7f;
+  color: #f16d7f;
+}
+
+.button[open] > .myAccount::after {
+  content: '\25BC';
+}
+
+.myAccount {
+  display: block;
+  outline: none;
+}
+
+.myAccount::-webkit-details-marker {
+  display: none;
+}
+
+.myAccount::after {
+  content: '\25B6';
+  padding-right: 0.2em;
+  margin-left: 7px;
+}
+
+.myAccount__list {
+  display: block;
+  width: 262px;
+  list-style-type: none;
+  position: absolute;
+  background-color: white;
+  top: 50px;
+}
+
+.myAccount__list:last-child {
+  border: none;
+}
+
+.myAccount__link {
+  padding-bottom: 20px;
+  border-bottom: 1px solid #eaeaea;
+  margin-top: 8px;
+}
+
+.myAccount__button {
+  height: 50px;
+  width: 225px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #4a4a4a;
+  text-transform: uppercase;
+  border: 1px solid #eaeaea;
+  text-align: center;
+  padding-top: 14px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-radius: 3px;
+}
+
+.myAccount__button:hover {
   border: 1px solid #f16d7f;
   color: #f16d7f;
 }
