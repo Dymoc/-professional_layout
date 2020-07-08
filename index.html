@@ -12,11 +12,13 @@
     <script>
         function viewdiv(id) {
             var el = document.getElementById(id);
-            var link = document.getElementById('toggleLink');
+            var button = document.getElementById('button');
             if (el.style.display == "block") {
                 el.style.display = "none";
+                
             } else {
                 el.style.display = "block";
+                button.open = false;
             }
         }
     
@@ -111,8 +113,8 @@
                 <div class=" myCart__button" onclick="location ='checkout.html'">Checkout</div>
                 <div class=" myCart__button" onclick="location ='ShoppingCart.html'">Go to cart</div>
             </ul>
-            <details class="button">
-                <summary class="myAccount">My account</summary>
+            <details class="button" id="button">
+                <summary class="myAccount" id = "myAccount">My account</summary>
                 <ul class="myAccount__list">
                     <li class="myAccount__link">
                         <a href="#"> Регистрация</a>  
