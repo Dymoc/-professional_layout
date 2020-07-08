@@ -132,44 +132,49 @@ a:hover {
 }
 
 .header__cart:hover {
-  -webkit-transform: scale(1.2);
-          transform: scale(1.2);
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
-.myAccount {
+.header__right:hover .myCart__list {
+  display: block;
+}
+
+.myCart {
   display: block;
   outline: none;
 }
 
-.myAccount::-webkit-details-marker {
+.myCart::-webkit-details-marker {
   display: none;
 }
 
-.myAccount::after {
+.myCart::after {
   content: '\25B6';
   padding-right: 0.2em;
   margin-left: 7px;
 }
 
-.myAccount__list {
+.myCart__list {
+  display: none;
   width: 262px;
   list-style-type: none;
   position: absolute;
   background-color: white;
-  z-index: 1;
+  top: 50px;
 }
 
-.myAccount__list:last-child {
+.myCart__list:last-child {
   border: none;
 }
 
-.myAccount__link {
+.myCart__link {
   padding-bottom: 20px;
   border-bottom: 1px solid #eaeaea;
   margin-top: 8px;
 }
 
-.myAccount__button {
+.myCart__button {
   height: 50px;
   width: 225px;
   font-size: 14px;
@@ -184,7 +189,7 @@ a:hover {
   border-radius: 3px;
 }
 
-.myAccount__button:hover {
+.myCart__button:hover {
   border: 1px solid #f16d7f;
   color: #f16d7f;
 }

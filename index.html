@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap" rel="stylesheet"
+        type="text/css">
     <link rel="stylesheet" href="style.css" type="text/css">
     <script src="https://kit.fontawesome.com/eef10ed1cf.js" crossorigin="anonymous"></script>
 </head>
@@ -48,51 +49,74 @@
                 <button class="header__button"><img src="img/search.png" alt="search"></button>
             </form>
         </div>
+
+
+
+
         <div class="header__right">
             <a href="ShoppingCart.html"><img class="header__cart" src="img/cart.png" alt="cart"></a>
+
+            <ul class="myCart__list">
+                <li class="myCart__link">
+                    <div class="cart">
+                        <a href="single_page.html"><img src="img/myAccount_img_1.png" alt="" class="cart__img"></a>
+                        <div class="cart__discription">
+                            <a href="single_page.html">
+                                <div class="cart__name">Rebox Zane</div>
+                            </a>
+                            <img src="img/stars.png" alt="">
+                            <div class="cart__coast siteColor">1 <span class="cart__coast_x">x</span> $250</div>
+                        </div>
+                        <a href=""><i class="fas fa-backspace cart__action"></i></a>
+                    </div>
+                </li>
+                <li class="myCart__link">
+                    <div class="cart">
+                        <a href="single_page.html"><img src="img/myAccount_img_2.png" alt="" class="cart__img"></a>
+                        <div class="cart__discription">
+                            <a href="single_page.html">
+                                <div class="cart__name">Rebox Zane</div>
+                            </a>
+                            <img src="img/stars.png" alt="">
+                            <div class="cart__coast siteColor">1 <span class="cart__coast_x">x</span> $250</div>
+                        </div>
+                        <a href=""><i class="fas fa-backspace cart__action"></i></a>
+                    </div>
+                </li>
+                <li class="myCart__link">
+                    <div class="cart">
+                        <a href="single_page.html"><img src="img/myAccount_img_2.png" alt="" class="cart__img"></a>
+                        <div class="cart__discription">
+                            <a href="single_page.html">
+                                <div class="cart__name">Rebox Zane</div>
+                            </a>
+                            <img src="img/stars.png" alt="">
+                            <div class="cart__coast siteColor">1 <span class="cart__coast_x">x</span> $250</div>
+                        </div>
+                        <a href=""><i class="fas fa-backspace cart__action"></i></a>
+                    </div>
+                </li>
+                <div class="totalCoast">
+                    <div class="totalCoast__text">TOTAL</div>
+                    <div class="totalCoast__text">$500.00</div>
+                </div>
+                <div class=" myCart__button" onclick="location ='checkout.html'">Checkout</div>
+                <div class=" myCart__button" onclick="location ='ShoppingCart.html'">Go to cart</div>
+            </ul>
+
+
+
             <details class="button">
                 <summary class="myAccount">My account</summary>
                 <ul class="myAccount__list">
-                  <li class="myAccount__link"> 
-                      <div class="cart">
-                        <a href="single_page.html"><img src="img/myAccount_img_1.png" alt="" class="cart__img"></a>
-                        <div class="cart__discription">
-                            <a href="single_page.html"> <div class="cart__name">Rebox Zane</div></a>
-                            <img src="img/stars.png" alt="">
-                            <div class="cart__coast siteColor">1 <span class="cart__coast_x">x</span> $250</div>
-                        </div>
-                        <a href=""><i class="fas fa-backspace cart__action"></i></a>
-                    </div>
-                </li> 
                     <li class="myAccount__link">
-                        <div class="cart">
-                        <a href="single_page.html"><img src="img/myAccount_img_2.png" alt="" class="cart__img"></a>
-                        <div class="cart__discription">
-                            <a href="single_page.html"> <div class="cart__name">Rebox Zane</div></a>
-                            <img src="img/stars.png" alt="">
-                            <div class="cart__coast siteColor">1 <span class="cart__coast_x">x</span> $250</div>
-                        </div>
-                        <a href=""><i class="fas fa-backspace cart__action"></i></a>
-                    </div>
-                </li>                 
-                <li class="myAccount__link">
-                    <div class="cart">
-                    <a href="single_page.html"><img src="img/myAccount_img_2.png" alt="" class="cart__img"></a>
-                    <div class="cart__discription">
-                        <a href="single_page.html"> <div class="cart__name">Rebox Zane</div></a>
-                        <img src="img/stars.png" alt="">
-                        <div class="cart__coast siteColor">1 <span class="cart__coast_x">x</span> $250</div>
-                    </div>
-                    <a href=""><i class="fas fa-backspace cart__action"></i></a>
-                </div>
-            </li>            
-                <div class="totalCoast">
-                    <div class="totalCoast__text">TOTAL</div>
-                    <div class="totalCoast__text">$500.00</div>               
-            </div>
-            <div class=" myAccount__button" onclick="location ='checkout.html'">Checkout</div>
-            <div class=" myAccount__button" onclick="location ='ShoppingCart.html'">Go to cart</div>
-                </ul> 
+                        <div> Регистрация</div>
+  
+                    </li>
+                    <li class="myAccount__link">
+                        <div> Регистрация</div>
+                    </li>                    
+                </ul>
             </details>
         </div>
     </header>
