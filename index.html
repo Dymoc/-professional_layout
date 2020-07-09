@@ -10,18 +10,23 @@
     <link rel="stylesheet" href="style.css" type="text/css">
     <script src="https://kit.fontawesome.com/eef10ed1cf.js" crossorigin="anonymous"></script>
     <script>
-        function viewdiv(id) {
+        function viewCart(id) {
             var el = document.getElementById(id);
             var button = document.getElementById('button');
             if (el.style.display == "block") {
                 el.style.display = "none";
-                
             } else {
                 el.style.display = "block";
                 button.open = false;
             }
         }
-    
+        function closeCart(id) {
+            var el = document.getElementById(id);
+            var button = document.getElementById('button');
+            if (el.style.display == "block") {
+                el.style.display = "none";
+            }
+        }
     </script>
 </head>
 
@@ -64,7 +69,8 @@
             </form>
         </div>
         <div class="header__right">
-            <a id="toggleLink" href="javascript:void(0);" onclick="viewdiv('myCart')"><img class="header__cart" src="img/cart.png" alt="cart"></a>
+            <a href="javascript:void(0);" onclick="viewCart('myCart')"><img class="header__cart" src="img/cart.png"
+                    alt="cart"></a>
 
             <ul class="myCart__list" id="myCart">
                 <li class="myCart__link">
@@ -114,14 +120,14 @@
                 <div class=" myCart__button" onclick="location ='ShoppingCart.html'">Go to cart</div>
             </ul>
             <details class="button" id="button">
-                <summary class="myAccount" id = "myAccount">My account</summary>
+                <summary class="myAccount" id="myAccount" onclick="closeCart('myCart')">My account</summary>
                 <ul class="myAccount__list">
                     <li class="myAccount__link">
-                        <a href="#"> Регистрация</a>  
+                        <a href="#"> Регистрация</a>
                     </li>
                     <li class="myAccount__link">
                         <a href="#"> Регистрация</a>
-                    </li>                    
+                    </li>
                 </ul>
             </details>
         </div>

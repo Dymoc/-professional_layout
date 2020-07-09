@@ -79,6 +79,12 @@ a:hover {
   border-radius: 0px 3px 3px 0px;
   padding: 0px 10px 0px 14px;
   position: relative;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+.header__browse:hover {
+  background-color: #cac7c7;
 }
 
 .header__browse_summary {
@@ -118,6 +124,7 @@ a:hover {
   text-align: left;
   letter-spacing: 0.03em;
   line-height: 32px;
+  outline: none;
 }
 
 .header__cart {
