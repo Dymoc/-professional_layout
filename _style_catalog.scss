@@ -55,7 +55,7 @@
     &[open]>.category_head {
         color: $siteColor;
     }
-    
+
     &[open]>.category_head::after {
         content: '\25B2';
     }
@@ -73,7 +73,7 @@
         border-left: 5px solid $siteColor;
         outline: none;
         box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.05);
-        margin-bottom: 20px;        
+        margin-bottom: 20px;
     }
 
     &_head::-webkit-details-marker {
@@ -265,8 +265,6 @@
     }
 }
 
-
-
 .button {
     &_arrows {
         min-width: 57px;
@@ -304,8 +302,6 @@
         background-position: center;
     }
 }
-
-
 
 .feature_box_banner {
     height: 341px;

@@ -99,7 +99,7 @@ a:hover {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  z-index: 10;
+  z-index: 100;
   top: 24px;
 }
 
@@ -146,6 +146,7 @@ a:hover {
 .myCart {
   display: block;
   outline: none;
+  z-index: 100;
 }
 
 .myCart::-webkit-details-marker {
@@ -491,7 +492,7 @@ a:hover {
   background-color: #fff;
   display: none;
   top: 48px;
-  z-index: 1;
+  z-index: 100;
   -webkit-animation: slide-in-elliptic-left-fwd 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
           animation: slide-in-elliptic-left-fwd 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
@@ -1053,6 +1054,12 @@ form > button:hover {
   color: white;
   letter-spacing: 0.03em;
   line-height: 45px;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+.subscribe_button:hover {
+  background-color: #be3a4c;
 }
 
 .slider {
@@ -1108,6 +1115,8 @@ form > button:hover {
   width: 38px;
   background-color: #f0f0f0;
   margin-right: 13px;
+  -webkit-transition: all 0.8s;
+  transition: all 0.8s;
 }
 
 .button_slider:hover {
@@ -2140,7 +2149,6 @@ form > button:hover {
 
 .singlePage {
   position: relative;
-  z-index: 0;
 }
 
 .singlePage__slider {

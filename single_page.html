@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap" rel="stylesheet"
+        type="text/css">
     <link rel="stylesheet" href="style.css" type="text/css">
     <script src="https://kit.fontawesome.com/eef10ed1cf.js" crossorigin="anonymous"></script>
     <script>
@@ -19,6 +20,7 @@
                 button.open = false;
             }
         }
+
         function closeCart(id) {
             var el = document.getElementById(id);
             var button = document.getElementById('button');
@@ -32,7 +34,7 @@
 <body>
     <header class="header center">
         <div class="header__left">
-            <a href="" class="logo">
+            <a href="index.html" class="logo">
                 <img class="logo__img" src="img/logo.png" alt="logo">
                 <h1 class="logo__img_h1">BRAN<span class="siteColor">D</span></h1>
             </a>
@@ -255,95 +257,99 @@
         </nav>
     </div>
 
-    <main class="singlePage">
-        <div class="singlePage__slider">
-            <div class="slider__pagination slider__pagination_left"><a href=""><i class="fas fa-angle-left"></i></a></div>
-            <img src="img/slide_img.png" alt="">
-            <div class="slider__pagination slider__pagination_right"><a href=""> <i class="fas fa-angle-right"></i></a></div>
-        </div>
-        <div class="discription">
-            <div class="discription__nameColection">WOMEN COLLECTION</div>
-            <div class="discription__shape">
-                <div class="discription__shape_default"></div>
-                <div class="discription__shape_default discription__shape_active"></div>
-                <div class="discription__shape_default"></div>
-            </div>
-            <div class="discription__heading">Moschino Cheap And Chic</div>
-            <div class="discription__text">Compellingly actualize fully researched processes before proactive
-                outsourcing. Progressively syndicate collaborative architectures before cutting-edge services.
-                Completely visualize parallel core competencies rather than exceptional portals.
-            <div class="discription__characteristics">
-                <span>MATERIAL: <span class="discription__characteristics_text">COTTON</span></span>
-                <span>DESIGNER: <span class="discription__characteristics_text">BINBURHAN</span></span>
-            </div>
-            </div>
-            <div class="discription__price">$561</div>
 
-            <form class="chooseFilter">
-                <div class="chooseFilter__header">
-                    <div class="chooseFilter__header_color">CHOOSE COLOR</div>
-                    <div class="chooseFilter__header_size">CHOOSE SIZE</div>
-                    <div class="chooseFilter__header_quntity">QUANTITY</div>
+    <div class="singlePage">
+        <main class="singlePage">
+            <div class="singlePage__slider">
+                <div class="slider__pagination slider__pagination_left"><a href=""><i class="fas fa-angle-left"></i></a>
                 </div>
+                <img class="singlePage__slider_img" src="img/slide_img.png" alt="">
+                <div class="slider__pagination slider__pagination_right"><a href=""> <i
+                            class="fas fa-angle-right"></i></a></div>
+            </div>
+            <div class="discription">
+                <div class="discription__nameColection">WOMEN COLLECTION</div>
+                <div class="discription__shape">
+                    <div class="discription__shape_default"></div>
+                    <div class="discription__shape_default discription__shape_active"></div>
+                    <div class="discription__shape_default"></div>
+                </div>
+                <div class="discription__heading">Moschino Cheap And Chic</div>
+                <div class="discription__text">Compellingly actualize fully researched processes before proactive
+                    outsourcing. Progressively syndicate collaborative architectures before cutting-edge services.
+                    Completely visualize parallel core competencies rather than exceptional portals.
+                    <div class="discription__characteristics">
+                        <span>MATERIAL: <span class="discription__characteristics_text">COTTON</span></span>
+                        <span>DESIGNER: <span class="discription__characteristics_text">BINBURHAN</span></span>
+                    </div>
+                </div>
+                <div class="discription__price">$561</div>
 
-                <select class="chooseFilter__select">
-                    <option value="Red">Red</option>
-                </select>
-                <select class="chooseFilter__select">
-                    <option value="XXL">XXL</option>
-                </select>
-                <input type="number" min="0" max="99" class="chooseFilter__quantity"><br>
-                <button class="chooseFilter__button">Add to Cart</button>
-            </form>
-        </div>
+                <form class="chooseFilter">
+                    <div class="chooseFilter__header">
+                        <div class="chooseFilter__header_color">CHOOSE COLOR</div>
+                        <div class="chooseFilter__header_size">CHOOSE SIZE</div>
+                        <div class="chooseFilter__header_quntity">QUANTITY</div>
+                    </div>
 
-        <section class="similar__tovar">
-            <div class="similar__name">you may like also</div>
-        <div class="product_tovar_cart center">
-            <div class="tovar_cart ">
-                <div class="add_to_cart">
-                    <a href="#"><img src="img/tovar_hover.png" alt=""></a>
-                    <a href="#" class="button_add_to_cart">Add to Cart</a>
-                </div>
-                <img src="img/product_img_1.png" alt="">
-                <div class="tovar_info">Mango People T-shirt</div>
-                <div class="tovar_price siteColor">$52.00</div>
-                <div class="stars"><img src="img/stars.png" alt=""></div>
+                    <select class="chooseFilter__select">
+                        <option value="Red">Red</option>
+                    </select>
+                    <select class="chooseFilter__select">
+                        <option value="XXL">XXL</option>
+                    </select>
+                    <input type="number" min="0" max="99" class="chooseFilter__quantity"><br>
+                    <button class="chooseFilter__button">Add to Cart</button>
+                </form>
             </div>
-            <div class="tovar_cart">
-                <div class="add_to_cart">
-                    <a href="#"><img src="img/tovar_hover.png" alt=""></a>
-                    <a href="#" class="button_add_to_cart">Add to Cart</a>
-                </div>
-                <img src="img/product_img_2.png" alt="">
-                <div class="tovar_info">Mango People T-shirt</div>
-                <div class="tovar_price siteColor">$52.00</div>
-                <div class="stars"><img src="img/stars.png" alt=""></div>
-            </div>
-            <div class="tovar_cart">
-                <div class="add_to_cart">
-                    <a href="#"><img src="img/tovar_hover.png" alt=""></a>
-                    <a href="#" class="button_add_to_cart">Add to Cart</a>
-                </div>
-                <img src="img/product_img_3.png" alt="">
-                <div class="tovar_info">Mango People T-shirt</div>
-                <div class="tovar_price siteColor">$52.00</div>
-                <div class="stars"><img src="img/stars.png" alt=""></div>
-            </div>
-            <div class="tovar_cart">
-                <div class="add_to_cart">
-                    <a href="#"><img src="img/tovar_hover.png" alt=""></a>
-                    <a href="#" class="button_add_to_cart">Add to Cart</a>
-                </div>
-                <img src="img/product_img_4.png" alt="">
-                <div class="tovar_info">Mango People T-shirt</div>
-                <div class="tovar_price siteColor">$52.00</div>
-                <div class="stars"><img src="img/stars.png" alt=""></div>
-            </div>
-        </div>
-        </section>
-    </main>
 
+            <section class="similar__tovar">
+                <div class="similar__name">you may like also</div>
+                <div class="product_tovar_cart center">
+                    <div class="tovar_cart ">
+                        <div class="add_to_cart">
+                            <a href="#"><img src="img/tovar_hover.png" alt=""></a>
+                            <a href="#" class="button_add_to_cart">Add to Cart</a>
+                        </div>
+                        <img src="img/product_img_1.png" alt="">
+                        <div class="tovar_info">Mango People T-shirt</div>
+                        <div class="tovar_price siteColor">$52.00</div>
+                        <div class="stars"><img src="img/stars.png" alt=""></div>
+                    </div>
+                    <div class="tovar_cart">
+                        <div class="add_to_cart">
+                            <a href="#"><img src="img/tovar_hover.png" alt=""></a>
+                            <a href="#" class="button_add_to_cart">Add to Cart</a>
+                        </div>
+                        <img src="img/product_img_2.png" alt="">
+                        <div class="tovar_info">Mango People T-shirt</div>
+                        <div class="tovar_price siteColor">$52.00</div>
+                        <div class="stars"><img src="img/stars.png" alt=""></div>
+                    </div>
+                    <div class="tovar_cart">
+                        <div class="add_to_cart">
+                            <a href="#"><img src="img/tovar_hover.png" alt=""></a>
+                            <a href="#" class="button_add_to_cart">Add to Cart</a>
+                        </div>
+                        <img src="img/product_img_3.png" alt="">
+                        <div class="tovar_info">Mango People T-shirt</div>
+                        <div class="tovar_price siteColor">$52.00</div>
+                        <div class="stars"><img src="img/stars.png" alt=""></div>
+                    </div>
+                    <div class="tovar_cart">
+                        <div class="add_to_cart">
+                            <a href="#"><img src="img/tovar_hover.png" alt=""></a>
+                            <a href="#" class="button_add_to_cart">Add to Cart</a>
+                        </div>
+                        <img src="img/product_img_4.png" alt="">
+                        <div class="tovar_info">Mango People T-shirt</div>
+                        <div class="tovar_price siteColor">$52.00</div>
+                        <div class="stars"><img src="img/stars.png" alt=""></div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
     <div class="subscribe center">
         <div class="slider">
             <img src="img/dhaka.png" alt="">
