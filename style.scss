@@ -126,14 +126,14 @@ a:hover {
 
         &:hover {
             transform: scale(1.1);
-
-        &:hover .myCart__list {
-            display: block;
-        }       
-
         }
     }
 }
+.header__right_img:hover .myCart__list {
+    display: block;
+}
+
+
 
 .myCart {
     display: block;
@@ -156,7 +156,7 @@ a:hover {
         list-style-type: none;
         position: absolute;
         background-color: rgba(255, 255, 255, 1);
-        top: 50px;
+        top: 35px;
         z-index: 100;
 
         &:last-child {

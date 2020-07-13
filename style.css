@@ -143,7 +143,7 @@ a:hover {
           transform: scale(1.1);
 }
 
-.header__cart:hover:hover .myCart__list {
+.header__right_img:hover .myCart__list {
   display: block;
 }
 
@@ -168,7 +168,7 @@ a:hover {
   list-style-type: none;
   position: absolute;
   background-color: white;
-  top: 50px;
+  top: 35px;
   z-index: 100;
 }
 
@@ -2018,7 +2018,6 @@ form > button:hover {
 
 .chekout {
   border-bottom: 1px solid silver;
-  margin-top: 71px;
 }
 
 .chekout_h1 {
@@ -2029,14 +2028,19 @@ form > button:hover {
   text-transform: uppercase;
 }
 
-.chekout:first-of-type {
-  padding-bottom: 50px;
-}
-
-.form {
+.chekout:hover .form {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+.chekout:first-of-type {
+  padding-bottom: 0px;
+  margin-top: 90px;
+}
+
+.form {
+  display: none;
 }
 
 .form_guest {
@@ -2144,6 +2148,7 @@ form > button:hover {
   border: none;
   background-color: white;
   margin-left: 32px;
+  margin-bottom: 50px;
 }
 
 .button_forgot:hover {

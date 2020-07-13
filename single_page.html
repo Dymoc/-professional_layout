@@ -70,8 +70,9 @@
             </form>
         </div>
         <div class="header__right">
-            <a href="javascript:void(0);" onclick="viewCart('myCart')"><img class="header__cart" src="img/cart.png"
-                alt="cart">
+            <div class="header__right_img">
+                <a href="ShoppingCart.html"><img class="header__cart" src="img/cart.png"
+                        alt="cart"></a>
                 <ul class="myCart__list" id="myCart">
                     <li class="myCart__link">
                         <div class="cart">
@@ -119,9 +120,9 @@
                     <div class=" myCart__button" onclick="location ='checkout.html'">Checkout</div>
                     <div class=" myCart__button" onclick="location ='ShoppingCart.html'">Go to cart</div>
                 </ul>
-            </a>
-            <details class="button" id="button">
-                <summary class="myAccount" id="myAccount" onclick="closeCart('myCart')">My account</summary>
+            </div>
+            <details class="button">
+                <summary class="myAccount">My account</summary>
                 <ul class="myAccount__list">
                     <li class="myAccount__link">
                         <a href="#"> Регистрация</a>
@@ -130,7 +131,6 @@
                         <a href="#"> Регистрация</a>
                     </li>
                 </ul>
-                
             </details>
         </div>
     </header>

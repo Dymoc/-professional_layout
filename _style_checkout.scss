@@ -1,6 +1,6 @@
 .chekout {
-    border-bottom: 1px solid silver;
-    margin-top: 71px;
+    border-bottom: 1px solid silver;  
+
 
     &_h1 {
         font-size: 16px;
@@ -9,14 +9,19 @@
         line-height: 72px;
         text-transform: uppercase;
     }
+
+    &:hover .form {
+        display: flex;
+    }
 }
 
 .chekout:first-of-type {
-    padding-bottom: 50px;
+    padding-bottom: 0px;
+    margin-top: 90px;
 }
 
 .form {
-    display: flex;
+    display: none;
 
     &_guest {
         margin: 0px;
@@ -128,6 +133,7 @@
     border: none;
     background-color: $siteBGC;
     margin-left: 32px;
+    margin-bottom: 50px;
 }
 
 .button_forgot:hover {
