@@ -2139,6 +2139,7 @@ form > button:hover {
   background-color: white;
   border: 1px solid #eaeaea;
   margin-top: 38px;
+  margin-bottom: 50px;
 }
 
 .button_forgot {
