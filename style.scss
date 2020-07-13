@@ -127,6 +127,9 @@ a:hover {
         &:hover {
             transform: scale(1.1);
 
+        &:hover .myCart__list {
+            display: block;
+        }       
 
         }
     }
@@ -135,7 +138,6 @@ a:hover {
 .myCart {
     display: block;
     outline: none;
-    z-index: 100;
 
 
     &::-webkit-details-marker {
@@ -155,6 +157,7 @@ a:hover {
         position: absolute;
         background-color: rgba(255, 255, 255, 1);
         top: 50px;
+        z-index: 100;
 
         &:last-child {
             border: none;
