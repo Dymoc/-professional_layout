@@ -2161,10 +2161,6 @@ form > button:hover {
   outline: none;
 }
 
-.singlePage {
-  position: relative;
-}
-
 .singlePage__slider {
   height: 777px;
   width: 1600px;
@@ -2207,7 +2203,7 @@ form > button:hover {
   width: 1141px;
   border: 1px solid #eaeaea;
   position: absolute;
-  top: 700px;
+  top: 1050px;
   left: calc(50% - 570px);
   background-color: white;
 }
