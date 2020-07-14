@@ -102,6 +102,7 @@ a:hover {
     }
 
     &__form input {
+        height: 32px;
         line-height: 30px;
         background-color: $siteBGC;
         border: 1px solid rgba(230, 230, 230, 1);

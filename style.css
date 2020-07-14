@@ -113,6 +113,7 @@ a:hover {
 }
 
 .header__form input {
+  height: 32px;
   line-height: 30px;
   background-color: white;
   border: 1px solid #e6e6e6;
