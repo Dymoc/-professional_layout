@@ -643,6 +643,7 @@ form > button:hover {
       -ms-flex-pack: center;
           justify-content: center;
   width: 680px;
+  position: relative;
 }
 
 .menu_ul__link {
@@ -661,10 +662,6 @@ form > button:hover {
 
 .menu_ul__link:hover {
   border-bottom: 3px solid #f16d7f;
-}
-
-.menu_ul__list {
-  position: relative;
 }
 
 .menu_ul__list:hover .drop {

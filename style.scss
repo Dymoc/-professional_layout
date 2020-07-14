@@ -559,6 +559,7 @@ form>button:hover {
     display: flex;
     justify-content: center;
     width: 680px;
+    position: relative;
 
     &__link {
         font-size: 14px;
@@ -579,7 +580,6 @@ form>button:hover {
     }
 
     &__list {
-        position: relative;
 
         &:hover .drop {
             display: flex;
