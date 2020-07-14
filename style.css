@@ -1520,6 +1520,10 @@ form > button:hover {
   margin: 0px;
 }
 
+.catalog__product {
+  width: 890px;
+}
+
 #price {
   width: 263px;
 }
