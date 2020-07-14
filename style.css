@@ -2173,6 +2173,7 @@ form > button:hover {
   text-align: center;
   display: inline-block;
   margin-bottom: 763px;
+  position: relative;
 }
 
 .slider__pagination {
