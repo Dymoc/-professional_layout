@@ -5,8 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="style.css" type="text/css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap" rel="stylesheet"
+        type="text/css">
+    <link rel="stylesheet" href="../src/layout/style/style.css" type="text/css">
     <script src="https://kit.fontawesome.com/eef10ed1cf.js" crossorigin="anonymous"></script>
 
 </head>
@@ -14,8 +15,8 @@
 <body>
     <header class="header center">
         <div class="header__left">
-            <a href="index.html" class="logo">
-                <img class="logo__img" src="img/logo.png" alt="logo">
+            <a href="#" class="logo">
+                <img class="logo__img" src="../src/assets/imgs/logo.png" alt="logo">
                 <h1 class="logo__img_h1">BRAN<span class="siteColor">D</span></h1>
             </a>
             <form class="header__form" action="">
@@ -46,22 +47,22 @@
                     </div>
                 </details>
                 <input type="text" placeholder="Search for Item...">
-                <button class="header__button"><img src="img/search.png" alt="search"></button>
+                <button class="header__button"><img src="../src/assets/imgs/search.png" alt="search"></button>
             </form>
         </div>
         <div class="header__right">
             <div class="header__right_img">
-                <a href="ShoppingCart.html"><img class="header__cart" src="img/cart.png"
-                        alt="cart"></a>
+                <a href="ShoppingCart.html"><img class="header__cart" src="../src/assets/imgs/cart.png" alt="cart"></a>
                 <ul class="myCart__list" id="myCart">
                     <li class="myCart__link">
                         <div class="cart">
-                            <a href="single_page.html"><img src="img/myAccount_img_1.png" alt="" class="cart__img"></a>
+                            <a href="single_page.html"><img src="../src/assets/imgs/myAccount_img_1.png" alt=""
+                                    class="cart__img"></a>
                             <div class="cart__discription">
                                 <a href="single_page.html">
                                     <div class="cart__name">Rebox Zane</div>
                                 </a>
-                                <img src="img/stars.png" alt="">
+                                <img src="../src/assets/imgs/stars.png" alt="">
                                 <div class="cart__coast siteColor">1 <span class="cart__coast_x">x</span> $250</div>
                             </div>
                             <a href=""><i class="fas fa-backspace cart__action"></i></a>
@@ -69,12 +70,13 @@
                     </li>
                     <li class="myCart__link">
                         <div class="cart">
-                            <a href="single_page.html"><img src="img/myAccount_img_2.png" alt="" class="cart__img"></a>
+                            <a href="single_page.html"><img src="../src/assets/imgs/myAccount_img_2.png" alt=""
+                                    class="cart__img"></a>
                             <div class="cart__discription">
                                 <a href="single_page.html">
                                     <div class="cart__name">Rebox Zane</div>
                                 </a>
-                                <img src="img/stars.png" alt="">
+                                <img src="../src/assets/imgs/stars.png" alt="">
                                 <div class="cart__coast siteColor">1 <span class="cart__coast_x">x</span> $250</div>
                             </div>
                             <a href=""><i class="fas fa-backspace cart__action"></i></a>
@@ -82,12 +84,13 @@
                     </li>
                     <li class="myCart__link">
                         <div class="cart">
-                            <a href="single_page.html"><img src="img/myAccount_img_2.png" alt="" class="cart__img"></a>
+                            <a href="single_page.html"><img src="../src/assets/imgs/myAccount_img_2.png" alt=""
+                                    class="cart__img"></a>
                             <div class="cart__discription">
                                 <a href="single_page.html">
                                     <div class="cart__name">Rebox Zane</div>
                                 </a>
-                                <img src="img/stars.png" alt="">
+                                <img src="../src/assets/imgs/stars.png" alt="">
                                 <div class="cart__coast siteColor">1 <span class="cart__coast_x">x</span> $250</div>
                             </div>
                             <a href=""><i class="fas fa-backspace cart__action"></i></a>
@@ -116,7 +119,7 @@
     </header>
     <nav class="menu center">
         <ul class="menu_ul">
-            <li class="menu_ul__list"><a href="index.html" class="menu_ul__link">Home</a></li>
+            <li class="menu_ul__list"><a href="#" class="menu_ul__link">Home</a></li>
             <li class="menu_ul__list"><a href="catalog_man.html" class="menu_ul__link">Man</a>
                 <div class="drop">
                     <div class="drop__flex">
@@ -227,82 +230,94 @@
             </li>
         </ul>
     </nav>
-    <div class="breadcrumb">
-        <div class="breadcrumb_header siteColor">New Arrivals</div>
-        <nav class="breadcrumb_nav">
-            <ul class="breadcrumb_nav_ul">
-                <li class="breadcrumb_nav_link"><a class="breadcrumb_nav_a" href="index.html"> Home</a></li>
-                <li class="breadcrumb_nav_link"><a class="breadcrumb_nav_a" href="#"> Man</a></li>
-                <li class="breadcrumb_nav_link"><a class="breadcrumb_nav_a" href="#"> New Arrivals</a></li>
-            </ul>
-        </nav>
+    <div class="promo center">
+        <div class="promo__content">
+            <h1>THE BRAND</h1>
+            <p>OF LUXERIOUS <span class="siteColor">FASHION</span></p>
+        </div>
     </div>
-    <main class="center">
-        <section class="chekout">
-            <div class="chekout_h1">01. Shipping Adress</div>
-            <div class="form">
-                <form class="form_guest">
-                    <div class="form_h2">Check as a guest or register</div>
-                    <div class="form_h3">Register with us for future convenience</div>
-                    <input type="radio" name="guest_or_reg" id="guest" class="form_radio">
-                    <label for="guest" class="form_label">checkout as guest</label><br>
-                    <input type="radio" name="guest_or_reg" id="reg" class="form_radio">
-                    <label for="reg" class="form_label">register</label>
-                    <div class="form_h2">register and save time!</div>
-                    <div class="form_h3">Register with us for future convenience</div>
-                    <details class="form_details">
-                    <summary class="form_summary">Fast and easy checkout</summary>
-                    <ul class="form_summary_ul">
-                        <li>Lorem, ipsum dolor.</li>
-                        <li>Lorem, ipsum dolor.</li>
-                    </ul>
-                    </details>
-                    <details class="form_details">                    
-                    <summary class="form_summary">Easy access to your order history and status</summary>
-                    </details>
-                    <button class="checkout_button">cONTINUE</button>
-                </form>
-                <form class="form_reg">
-                    <div class="form_h2">Already registed?</div>
-                    <div class="form_h3">Please log in below</div>
-                    <div class="form_input_name">EMAIL ADDRESS <span class="siteColor">*</span></div>
-                    <input type="email" class="form_input_text">
-                    <div class="form_input_name">PASSWORD <span class="siteColor">*</span></div>
-                    <input type="password" class="form_input_text">
-                    <div class="Required">* Required Fileds</div>
-                    <button class="checkout_button">Log in</button>
-                    <button class="button_forgot">Forgot Password ?</button>
-                </form>
+    <div class="banner center">
+        <div class="banner_right">
+            <div class="banner_hot_deal">
+                <a href="#"><img src="../src/assets/imgs/bannner_hot_deal.png" alt="">
+                    <div class="badge">
+                        <h1>Hot deal</h1>
+                        <p class="siteColor">FOR MEN</p>
+                    </div>
+                </a>
             </div>
+            <div class="banner_luxirous">
+                <a href="#"><img src="../src/assets/imgs/banner_luxirous.png" alt="">
+                    <div class="badge">
+                        <h1>LUXIROUS &amp; trendy</h1>
+                        <p class="siteColor">ACCESORIES</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="banner_left">
+            <div class="banner_offer">
+                <a href="#"><img src="../src/assets/imgs/banner_offer.png" alt="">
+                    <div class="badge">
+                        <h1>30% offer</h1>
+                        <p class="siteColor">women</p>
+                    </div>
+                </a>
+            </div>
+            <div class="banner_new">
+                <a href="#"><img src="../src/assets/imgs/banner_new.png" alt="">
+                    <div class="badge">
+                        <h1>new arrivals</h1>
+                        <p class="siteColor">FOR kids</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <section class="product center">
+        <div class="product_top">
+            <h1>Fetured Items</h1>
+            <p>Shop for items based on what we featured in this week</p>
 
-        </section>
-
-        <section class="chekout">
-            <div class="chekout_h1">02. BILLING INFORMATION</div>
-        </section>
-
-
-        <section class="chekout">
-            <div class="chekout_h1">03. SHIPPING INFORMATION</div>
-        </section>
-
-        <section class="chekout">
-            <div class="chekout_h1">04. SHIPPING METHOD</div>
-        </section>
-
-        <section class="chekout">
-            <div class="chekout_h1"> 05. PAYMENT METHOD</div>
-        </section>
-
-        <section class="chekout">
-            <div class="chekout_h1">06. ORDER REVIEW</div>
-        </section>
-
-
-    </main>
+        </div>
+        <div class="product_tovar_cart" id="catalog">
+           
+        </div>
+        <div class="prduct_bottom">
+            <button class="button">Browse All Product <i class="fas fa-long-arrow-alt-right"></i></button>
+        </div>
+        <div class="feature">
+            <div class="feature_banner">
+                <img src="../src/assets/imgs/feature_banner.png" alt="">
+                <img class=feature_shadow src="../src/assets/imgs/feature_banner_shadow.png" alt="">
+                <div class="feature_text">
+                    <h1>30%<span class="siteColor"> OFFER</span></h1>
+                    <p>FOR WOMEN</p>
+                </div>
+            </div>
+            <artical class="feature_box_delivery">
+                <img src="../src/assets/imgs/delivery.png" alt="">
+                <h1>Free Delivery</h1>
+                <p>Worldwide delivery on all. Authorit tively morph next-generation innov tion with extensive models.
+                </p>
+            </artical>
+            <artical class="feature_box_sales">
+                <img src="../src/assets/imgs/sales.png" alt="">
+                <h1>Sales &amp; discounts</h1>
+                <p>Worldwide delivery on all. Authorit tively morph next-generation innov tion with extensive models.
+                </p>
+            </artical>
+            <artical class="feature_box_quality">
+                <img src="../src/assets/imgs/quality.png" alt="">
+                <h1>Quality assurance</h1>
+                <p>Worldwide delivery on all. Authorit tively morph next-generation innov tion with extensive models.
+                </p>
+            </artical>
+        </div>
+    </section>
     <div class="subscribe center">
         <div class="slider">
-            <img src="img/dhaka.png" alt="">
+            <img src="../src/assets/imgs/dhaka.png" alt="">
             <p class="slider_content">“Vestibulum quis porttitor dui! Quisque viverra nunc mi, a pulvinar purus
                 condimentum a. Aliquam condimentum mattis neque sed pretium”</p>
             <h1 class="slider_name_autor siteColor">Bin Burhan</h1>
@@ -325,8 +340,8 @@
     <div class="footer">
         <div class="footer_up center">
             <div class="abaut">
-                <a href="index.html" class="logo">
-                    <img class="logo__img" src="img/logo.png" alt="logo">
+                <a href="#" class="logo">
+                    <img class="logo__img" src="../src/assets/imgs/logo.png" alt="logo">
                     <h1 class="logo__img_h1">BRAN<span class="siteColor">D</span></h1>
                 </a>
                 <p>Objectively transition extensive data rather than cross functional solutions. Monotonectally
@@ -338,7 +353,7 @@
             <nav class="company">
                 <h1 class="footer_up_h1 siteColor">COMPANY</h1>
                 <ul>
-                    <li><a href="index.html" class="nav_link">Home</a></li>
+                    <li><a href="#" class="nav_link">Home</a></li>
                     <li><a href="#" class="nav_link">Shop</a></li>
                     <li><a href="#" class="nav_link">About</a></li>
                     <li><a href="#" class="nav_link">How It Works</a></li>
@@ -377,6 +392,8 @@
             </div>
         </div>
     </div>
+
+    <script src="../src/components/catalog.js"></script>
 </body>
 
 </html>

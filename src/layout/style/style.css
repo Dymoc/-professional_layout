@@ -673,7 +673,7 @@ form > button:hover {
 .promo {
   height: 613px;
   background-color: #e8e8e8;
-  background-image: url(img/promo.png);
+  background-image: url(../../assets/imgs/promo.png);
   background-repeat: no-repeat;
   background-position: center -52px;
   display: -webkit-box;
@@ -856,7 +856,7 @@ form > button:hover {
   color: white;
   padding-left: 43px;
   padding-top: 10px;
-  background-image: url(img/cart-white.png);
+  background-image: url(../../assets/imgs/cart-white.png);
   background-repeat: no-repeat;
   background-position: 10px;
 }
@@ -1010,7 +1010,7 @@ form > button:hover {
 .subscribe {
   width: 1600px;
   height: 438px;
-  background: url(img/subscribe.png);
+  background: url(../../assets/imgs/subscribe.png);
   background-repeat: no-repeat;
   margin: 0 auto;
   margin-top: 97px;
@@ -1301,7 +1301,7 @@ form > button:hover {
 
 .breadcrumb {
   height: 148px;
-  background-image: url(img/breadcrumb.png);
+  background-image: url(../../assets/imgs/breadcrumb.png);
   padding-top: 65px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1601,7 +1601,7 @@ form > button:hover {
   color: white;
   padding-left: 43px;
   padding-top: 10px;
-  background-image: url(img/arrows.png);
+  background-image: url(../../assets/imgs/arrows.png);
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -1619,7 +1619,7 @@ form > button:hover {
   color: white;
   padding-left: 43px;
   padding-top: 10px;
-  background-image: url(img/heard.png);
+  background-image: url(../../assets/imgs/heard.png);
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -1876,7 +1876,7 @@ form > button:hover {
   -moz-appearance: none;
   -ms-appearance: none;
   appearance: none;
-  background: url("img/caret-down-solid.svg") no-repeat center;
+  background: url("../src/assets/imgs/caret-down-solid.svg") no-repeat center;
   background-position: 330px;
   outline: 0;
 }
@@ -2342,7 +2342,7 @@ form > button:hover {
   font-weight: bold;
   color: #ef5b70;
   padding-left: 70px;
-  background-image: url(img/cart_rad.png);
+  background-image: url(../../assets/imgs//cart_rad.png);
   background-repeat: no-repeat;
   background-position: 220px;
 }
