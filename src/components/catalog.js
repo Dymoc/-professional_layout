@@ -7,14 +7,15 @@ let NAMES = [
     'PUMKIN PEOPLE T-SHIRT',
     'PINEAPPLE PEOPLE T-SHIRT',
     'CUCUMBER PEOPLE T-SHIRT',
-    'TOMATO PEOPLE T-SHIRT'
+    'TOMATO PEOPLE T-SHIRT',
+    'TOMATO PEOPLE T-SHIRT',
 ];
-let PRICES = [52, 53, 55, 67, 69, 94, 23, 45];
+let PRICES = [52, 53, 55, 67, 69, 94, 23, 45, 56];
 
-function getArrayOfObjects() {
+function getArrayOfObjects(num) {
     let local = [];
 
-    for (let i = 0; i < NAMES.length; i++) {
+    for (let i = 0; i < num; i++) {
         local.push({
             productName: NAMES[i],
             productPrice: PRICES[i],
@@ -26,7 +27,7 @@ function getArrayOfObjects() {
     return local;
 }
 
-let catalog = {
+let catalogOfIndex = {
     container: null,
     items: [],
     init() {
@@ -34,13 +35,33 @@ let catalog = {
         this._fillCatalog();
         this._render();
     },
-    _fillCatalog() { 
-        this.items = getArrayOfObjects();
+    _fillCatalog() {
+        this.items = getArrayOfObjects(8);
     },
     _render() {
         let htmlStr = '';
         this.items.forEach(item => {
             htmlStr += createItemTemplate(item);
+        });
+        this.container.innerHTML = htmlStr;
+    }
+}
+
+let catalogOfCatalog = {
+    container: null,
+    items: [],
+    init() {
+        this.container = document.querySelector('#catalogOfCatalog');
+        this._fillCatalog();
+        this._render();
+    },
+    _fillCatalog() {
+        this.items = getArrayOfObjects(9);
+    },
+    _render() {
+        let htmlStr = '';
+        this.items.forEach(item => {
+            htmlStr += createItemTemplateOfCatalog(item);
         });
         this.container.innerHTML = htmlStr;
     }
@@ -59,23 +80,19 @@ function createItemTemplate(item) {
 </div>`
 }
 
+function createItemTemplateOfCatalog(item) {
+    return `<div class="tovar_cart" >
+    <div class="add_to_cart">
+        <a href="single_page.html"><img src="../src/assets/imgs/tovar_hover.png" alt=""></a>
+        <a href="#" class="button_add_to_cart">Add to Cart</a>
+        <a href="#" class="button_arrows"></a>
+        <a href="#" class="button_like"></a>
+    </div>
+    <img src="${item.productImg}" alt="">
+    <div class="tovar_info">${item.productName}</div>
+    <div class="tovar_price siteColor">$${item.productPrice}</div>
+    <div class="stars"><img src="../src/assets/imgs/stars.png" alt=""></div>
+</div>`
+}
 
-catalog.init();
 
-
-
-
-
-
- `<div class="tovar_cart" >
-     <div class="add_to_cart">
-         <a href="single_page.html"><img src="../src/assets/imgs/tovar_hover.png" alt=""></a>
-         <a href="#" class="button_add_to_cart">Add to Cart</a>
-         <a href="#" class="button_arrows"></a>
-         <a href="#" class="button_like"></a>
-     </div>
-     <img src="../src/assets/imgs/image_placeholder_1.png" alt="">
-     <div class="tovar_info">Mango People T-shirt</div>
-     <div class="tovar_price siteColor">$52.00</div>
-     <div class="stars"><img src="../src/assets/imgs/stars.png" alt=""></div>
- </div>`
