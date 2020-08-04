@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .preview {
+            margin: 5px;
+            border: 1px solid transparent;
+            cursor: pointer
+        }
+
+        .preview:hover {
+            border: 1px solid darkred
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <button class="button" id="left" name="left">Left</button>
+        <img src="" alt="" width="400" height="475" id="main-pic">
+        <button class="button" id="right">Right</button>
+
+        <div id="carousel">
+
+        </div>
+
+        <button id="testest">Ok</button>
+    </div>
+    <script>
+        let gallery = {
+            main: null,
+            carousel: null,
+            items: [],
+            baseUrl: 'https://raw.githubusercontent.com/Dymoc/static/master/JSON/catalog.json',
+            buttonRight: null,
+            buttonLeft: null,
+            init() {
+                this.main = document.querySelector('#main-pic');
+                this.carousel = document.querySelector('#carousel');
+                this.getImages();
+                this.buttonRight = document.querySelector('#right');
+                this.buttonLeft = document.querySelector('#left');
+
+
+
+                setTimeout(() => {
+                    this.render();
+                    this.handleActions();
+                    this.handleActionsButtonRight();
+                    this.handleActionsButtonLeft();
+                }, 200);
+            },
+
+            handleActionsButtonRight() {
+                this.buttonRight.addEventListener('click', evt => {
+                    index = this.items.indexOf(this.main.src);
+                    if (index == (this.items.length - 1)) {
+                        this.changeMainImg(this.items[0]);
+                    } else {
+                        this.changeMainImg(this.items[index + 1]);
+                    }
+                });
+            },
+
+            handleActionsButtonLeft() {
+                this.buttonLeft.addEventListener('click', evt => {
+                    index = this.items.indexOf(this.main.src);
+                    if (index == 0) {
+                        this.changeMainImg(this.items[this.items.length - 1])
+                    } else {
+                        this.changeMainImg(this.items[index - 1]);
+                    }
+                });
+            },
+
+            getImages() {
+                fetch(this.baseUrl)
+                    .then(d => d.json())
+                    .then(items => {
+                        this.items = items.map(el => el.productImg);
+                    });
+            },
+
+            handleActions() {
+                this.carousel.addEventListener('mouseover', evt => {
+                    if (evt.target.name == 'preview') {
+                        this.changeMainImg(evt.target.src);
+                        console.log(evt.target);
+                    }
+                });
+            },
+
+            changeMainImg(url) {
+                this.main.src = url;
+            },
+            
+            render() {
+                this.main.src = this.items[0];
+                let str = '';
+                this.items.forEach(imgUrl => {
+                    str +=
+                        `<img src="${imgUrl}" width="120" height="150" class="preview" name="preview" onerror="console.log('Файл не найден');">`
+                })
+                this.carousel.innerHTML = str;
+            }
+        }
+
+
+
+        gallery.init();
+    </script>
+</body>
+
+</html>
