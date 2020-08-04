@@ -53,7 +53,7 @@ let catalogOfIndex = {
     },
 
     _handleActionsButtonAddToCart() {
-        this.button.addEventListener('click', evt => {
+        this.container.addEventListener('click', evt => {
             console.log('yes');
         });
     }
@@ -82,7 +82,7 @@ let catalogOfCatalog = {
 function createItemTemplate(item) {
     return `<div class = "tovar_cart" id = "${item.productId}">
     <div class = "add_to_cart">
-        <a href = "single_page.html"><img src = "../src/assets/imgs/tovar_hover.png" alt = ""></a> 
+        <a><img src = "../src/assets/imgs/tovar_hover.png" alt = ""></a> 
         <div style="cursor:pointer" class = "button_add_to_cart" > Add to Cart</div> 
     </div> 
     <img src = "${item.productImg}" alt = "">
