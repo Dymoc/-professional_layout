@@ -57,10 +57,6 @@ function dublTovar(items) {
     return unique(items);
 }
 
-// function quantityTovarOfcart(item) {
-
-// }
-
 function sumTovarOfCart(items) {
     let coast = 0;
     for (el of items) {
@@ -68,7 +64,6 @@ function sumTovarOfCart(items) {
     }
     return coast;
 }
-
 
 let catalogOfIndex = {
     container: null,
@@ -150,7 +145,7 @@ let catalogOfCart = {
         this._render();
         this._totalCoast();
         this._itemsUnique();
-        // this._quantityTovarOfcart();
+
     },
     _render() {
         let htmlStr = '';
@@ -167,9 +162,6 @@ let catalogOfCart = {
         dublTovar(this.items);
     },
 
-    // _quantityTovarOfcart() {
-
-    // }
 }
 
 function createItemTemplate(item) {
