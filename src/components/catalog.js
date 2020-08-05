@@ -42,7 +42,7 @@ function addToCart(productId, items) {
                 el.productQuantity += 1;
                 catalogOfCart.init();
                 console.log('yes');
-            }            
+            }
         }
         for (el of items) {
             if (el.productId == productId) {
@@ -53,16 +53,9 @@ function addToCart(productId, items) {
     }
 }
 
-// function dublTovar(){
-//     for (el of catalogOfCart.items) {
-//         if (el.productId == productId) {
-//             el.productQuantity += 1;
-//             catalogOfCart.init();
-//             console.log('yes');
-//         }            
-//     }
-//     return true;
-// }
+function dublTovar(items) {
+    return unique(items);
+}
 
 // function quantityTovarOfcart(item) {
 
@@ -70,8 +63,8 @@ function addToCart(productId, items) {
 
 function sumTovarOfCart(items) {
     let coast = 0;
-    for (price of items) {
-        coast = coast + price.productPrice;
+    for (el of items) {
+        coast = coast + el.productPrice * el.productQuantity;
     }
     return coast;
 }
@@ -156,6 +149,7 @@ let catalogOfCart = {
         this.quantity = document.querySelector('.cart__coast');
         this._render();
         this._totalCoast();
+        this._itemsUnique();
         // this._quantityTovarOfcart();
     },
     _render() {
@@ -166,7 +160,11 @@ let catalogOfCart = {
         this.container.innerHTML = htmlStr;
     },
     _totalCoast() {
-        this.totalCoast.innerHTML = '$' + sumTovarOfCart(this.items);
+        this.totalCoast.innerHTML = '$' + sumTovarOfCart(this.items, this.productQuantity);
+    },
+
+    _itemsUnique() {
+        dublTovar(this.items);
     },
 
     // _quantityTovarOfcart() {
