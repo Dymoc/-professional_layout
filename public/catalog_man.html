@@ -53,49 +53,9 @@
         <div class="header__right">
             <div class="header__right_img">
                 <a href="ShoppingCart.html"><img class="header__cart" src="../src/assets/imgs/cart.png" alt="cart"></a>
-                <ul class="myCart__list" id="myCart">
-                    <li class="myCart__link">
-                        <div class="cart">
-                            <a href="single_page.html"><img src="../src/assets/imgs/myAccount_img_1.png" alt=""
-                                    class="cart__img"></a>
-                            <div class="cart__discription">
-                                <a href="single_page.html">
-                                    <div class="cart__name">Rebox Zane</div>
-                                </a>
-                                <img src="../src/assets/imgs/stars.png" alt="">
-                                <div class="cart__coast siteColor">1 <span class="cart__coast_x">x</span> $250</div>
-                            </div>
-                            <a href=""><i class="fas fa-backspace cart__action"></i></a>
-                        </div>
-                    </li>
-                    <li class="myCart__link">
-                        <div class="cart">
-                            <a href="single_page.html"><img src="../src/assets/imgs/myAccount_img_2.png" alt=""
-                                    class="cart__img"></a>
-                            <div class="cart__discription">
-                                <a href="single_page.html">
-                                    <div class="cart__name">Rebox Zane</div>
-                                </a>
-                                <img src="../src/assets/imgs/stars.png" alt="">
-                                <div class="cart__coast siteColor">1 <span class="cart__coast_x">x</span> $250</div>
-                            </div>
-                            <a href=""><i class="fas fa-backspace cart__action"></i></a>
-                        </div>
-                    </li>
-                    <li class="myCart__link">
-                        <div class="cart">
-                            <a href="single_page.html"><img src="../src/assets/imgs/myAccount_img_2.png" alt=""
-                                    class="cart__img"></a>
-                            <div class="cart__discription">
-                                <a href="single_page.html">
-                                    <div class="cart__name">Rebox Zane</div>
-                                </a>
-                                <img src="../src/assets/imgs/stars.png" alt="">
-                                <div class="cart__coast siteColor">1 <span class="cart__coast_x">x</span> $250</div>
-                            </div>
-                            <a href=""><i class="fas fa-backspace cart__action"></i></a>
-                        </div>
-                    </li>
+                <ul class="myCart__list" >
+                    <ul id="myCart">                        
+                    </ul>
                     <div class="totalCoast">
                         <div class="totalCoast__text">TOTAL</div>
                         <div class="totalCoast__text">$500.00</div>
@@ -451,6 +411,7 @@
     <script src="../src/components/catalog.js"></script>
     <script>
         catalogOfCatalog.init();
+        catalogOfCart.init();
     </script>
 </body>
 

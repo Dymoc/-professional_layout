@@ -27,18 +27,27 @@ function getArrayOfObjects(num) {
     return local;
 }
 
+function addToCart(productId, items) {
+    items.forEach(el => {
+        if (el.productId == productId){
+            catalogOfCart.items.push(el);
+            catalogOfCart.init();
+        }
+    });
+ }
+
+
 let catalogOfIndex = {
-    button: null,
     container: null,
+    button: null,
     items: [],
     init() {
         this.container = document.querySelector('#catalog');
         this._fillCatalog();
-
+        this._render();
 
         setTimeout(() => {
-            this._render();  
-            this.button = document.querySelector('.add_to_cart');
+            this.button = document.querySelectorAll('.add_to_cart');
             this._handleActionsButtonAddToCart();
         }, 200);
     },
@@ -52,23 +61,28 @@ let catalogOfIndex = {
         });
         this.container.innerHTML = htmlStr;
     },
-
     _handleActionsButtonAddToCart() {
-        this.button.addEventListener('click', evt => {
-            if (evt.target.name == 'add_to_cart'){
-                console.log('yes');
-            }
-        });
-    }
+        for (key of this.button) {
+            key.addEventListener('click', key => { 
+                addToCart(key.target.id, this.items);
+            });
+        }
+    },
 }
 
 let catalogOfCatalog = {
     container: null,
+    button: null,
     items: [],
     init() {
         this.container = document.querySelector('#catalogOfCatalog');
         this._fillCatalog();
         this._render();
+
+        setTimeout(() => {
+            this.button = document.querySelectorAll('.add_to_cart');
+            this._handleActionsButtonAddToCart();
+        }, 200);
     },
     _fillCatalog() {
         this.items = getArrayOfObjects(9);
@@ -79,14 +93,39 @@ let catalogOfCatalog = {
             htmlStr += createItemTemplateOfCatalog(item);
         });
         this.container.innerHTML = htmlStr;
-    }
+    },
+    _handleActionsButtonAddToCart() {
+        for (key of this.button) {
+            key.addEventListener('click', key => { 
+                addToCart(key.target.id, this.items);
+            });
+        }
+    },
+}
+
+let catalogOfCart = {
+    container: null,
+    items: [],
+
+    init() {
+        this.container = document.querySelector('#myCart');
+        this._render();
+    
+    },
+    _render() {
+        let htmlStr = '';
+        this.items.forEach(item => {
+            htmlStr += createItemTemplateOfCart(item);
+        });
+        this.container.innerHTML = htmlStr;
+    },
 }
 
 function createItemTemplate(item) {
-    return `<div name="add_to_cart" class = "tovar_cart" id = "${item.productId}">
-    <div class = "add_to_cart">
+    return `<div name="add_to_cart" class = "tovar_cart">
+    <div class = "add_to_cart" >
         <a><img src = "../src/assets/imgs/tovar_hover.png" alt = ""></a> 
-        <div  style="cursor:pointer" class = "button_add_to_cart" > Add to Cart</div> 
+        <div  style="cursor:pointer" class = "button_add_to_cart" id = "${item.productId}"> Add to Cart</div> 
     </div> 
     <img src = "${item.productImg}" alt = "">
     <div class = "tovar_info" > ${item.productName}</div> 
@@ -96,10 +135,10 @@ function createItemTemplate(item) {
 }
 
 function createItemTemplateOfCatalog(item) {
-    return `<div class="tovar_cart" id = '${item.productId}'>
+    return `<div class="tovar_cart">
     <div class="add_to_cart"
         <a href="single_page.html"><img src="../src/assets/imgs/tovar_hover.png" alt=""></a>
-        <a style="cursor:pointer" class="button_add_to_cart">Add to Cart</a>
+        <a style="cursor:pointer" class="button_add_to_cart" id = '${item.productId}'>Add to Cart</a>
         <a style="cursor:pointer" class="button_arrows"></a>
         <a style="cursor:pointer" class="button_like"></a>
     </div>
@@ -114,7 +153,7 @@ function createItemTemplateOfCart(item) {
     return `<li class="myCart__link">
                 <div class="cart">
                     <a href="single_page.html"><img src="${item.productImg}" alt=""
-                            class="cart__img"></a>
+                            class="cart__img" height="85px" style="margin-right:10px"></a>
                     <div class="cart__discription">
                         <a href="single_page.html">
                             <div class="cart__name">${item.productName}</div>
