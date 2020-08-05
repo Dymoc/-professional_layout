@@ -37,8 +37,9 @@ let catalogOfIndex = {
 
 
         setTimeout(() => {
-            this._render();
-            this.button = document.querySelectorAll('.add_to_cart');
+            this._render();  
+            this.button = document.querySelector('.add_to_cart');
+            this._handleActionsButtonAddToCart();
         }, 200);
     },
     _fillCatalog() {
@@ -53,8 +54,10 @@ let catalogOfIndex = {
     },
 
     _handleActionsButtonAddToCart() {
-        this.container.addEventListener('click', evt => {
-            console.log('yes');
+        this.button.addEventListener('click', evt => {
+            if (evt.target.name == 'add_to_cart'){
+                console.log('yes');
+            }
         });
     }
 }
@@ -80,10 +83,10 @@ let catalogOfCatalog = {
 }
 
 function createItemTemplate(item) {
-    return `<div class = "tovar_cart" id = "${item.productId}">
+    return `<div name="add_to_cart" class = "tovar_cart" id = "${item.productId}">
     <div class = "add_to_cart">
         <a><img src = "../src/assets/imgs/tovar_hover.png" alt = ""></a> 
-        <div style="cursor:pointer" class = "button_add_to_cart" > Add to Cart</div> 
+        <div  style="cursor:pointer" class = "button_add_to_cart" > Add to Cart</div> 
     </div> 
     <img src = "${item.productImg}" alt = "">
     <div class = "tovar_info" > ${item.productName}</div> 
