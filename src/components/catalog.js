@@ -29,43 +29,44 @@ function getArrayOfObjects(num) {
 }
 
 function addToCart(productId, items) {
-    items.forEach(el => {
-        if (el.productId == productId) {
-            catalogOfCart.items.push(el);
-            catalogOfCart.init();
+    if (catalogOfCart.items.length == 0) {
+        items.forEach(el => {
+            if (el.productId == productId) {
+                catalogOfCart.items.push(el);
+                catalogOfCart.init();
+            }
+        });
+    } else {
+        for (el of catalogOfCart.items) {
+            if (el.productId == productId) {
+                el.productQuantity += 1;
+                catalogOfCart.init();
+                console.log('yes');
+            }            
         }
-    });
-
-
-    // if (catalogOfCart.items.length == 0) {
-    //     items.forEach(el => {
-    //         if (el.productId == productId) {
-    //             catalogOfCart.items.push(el);
-    //             catalogOfCart.init();
-    //         }
-    //     });
-    // } else {
-    //     for (el of catalogOfCart.items) {
-    //         if (el.productId == productId) {
-    //             el.productQuantity += 1;
-    //             catalogOfCart.init();
-    //             console.log('yes');
-    //             break;
-
-    //         } else {
-    //             for (el of items) {
-    //                 if (el.productId == productId) {
-    //                     catalogOfCart.items.push(el);
-    //                     catalogOfCart.init();
-    //                 }
-    //             }
-
-
-    //         }
-    //     }
-
-    // }
+        for (el of items) {
+            if (el.productId == productId) {
+                catalogOfCart.items.push(el);
+                catalogOfCart.init();
+            }
+        }
+    }
 }
+
+// function dublTovar(){
+//     for (el of catalogOfCart.items) {
+//         if (el.productId == productId) {
+//             el.productQuantity += 1;
+//             catalogOfCart.init();
+//             console.log('yes');
+//         }            
+//     }
+//     return true;
+// }
+
+// function quantityTovarOfcart(item) {
+
+// }
 
 function sumTovarOfCart(items) {
     let coast = 0;
