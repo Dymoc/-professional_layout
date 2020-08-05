@@ -20,7 +20,8 @@ function getArrayOfObjects(num) {
             productName: NAMES[i],
             productPrice: PRICES[i],
             productImg: `${imgURL}image_placeholder_${i + 1}.png`,
-            productId: 'prod_' + i
+            productId: 'prod_' + i,
+            productQuantity: 1,
             //rates (звезды)
         })
     }
@@ -29,12 +30,50 @@ function getArrayOfObjects(num) {
 
 function addToCart(productId, items) {
     items.forEach(el => {
-        if (el.productId == productId){
+        if (el.productId == productId) {
             catalogOfCart.items.push(el);
             catalogOfCart.init();
         }
     });
- }
+
+
+    // if (catalogOfCart.items.length == 0) {
+    //     items.forEach(el => {
+    //         if (el.productId == productId) {
+    //             catalogOfCart.items.push(el);
+    //             catalogOfCart.init();
+    //         }
+    //     });
+    // } else {
+    //     for (el of catalogOfCart.items) {
+    //         if (el.productId == productId) {
+    //             el.productQuantity += 1;
+    //             catalogOfCart.init();
+    //             console.log('yes');
+    //             break;
+
+    //         } else {
+    //             for (el of items) {
+    //                 if (el.productId == productId) {
+    //                     catalogOfCart.items.push(el);
+    //                     catalogOfCart.init();
+    //                 }
+    //             }
+
+
+    //         }
+    //     }
+
+    // }
+}
+
+function sumTovarOfCart(items) {
+    let coast = 0;
+    for (price of items) {
+        coast = coast + price.productPrice;
+    }
+    return coast;
+}
 
 
 let catalogOfIndex = {
@@ -63,7 +102,8 @@ let catalogOfIndex = {
     },
     _handleActionsButtonAddToCart() {
         for (key of this.button) {
-            key.addEventListener('click', key => { 
+            key.addEventListener('click', key => {
+                console.log(key.target.id);
                 addToCart(key.target.id, this.items);
             });
         }
@@ -96,7 +136,7 @@ let catalogOfCatalog = {
     },
     _handleActionsButtonAddToCart() {
         for (key of this.button) {
-            key.addEventListener('click', key => { 
+            key.addEventListener('click', key => {
                 addToCart(key.target.id, this.items);
             });
         }
@@ -105,12 +145,17 @@ let catalogOfCatalog = {
 
 let catalogOfCart = {
     container: null,
+    totalCoast: null,
+    quantity: null,
     items: [],
 
     init() {
         this.container = document.querySelector('#myCart');
+        this.totalCoast = document.getElementById('totalCoast');
+        this.quantity = document.querySelector('.cart__coast');
         this._render();
-    
+        this._totalCoast();
+        // this._quantityTovarOfcart();
     },
     _render() {
         let htmlStr = '';
@@ -119,6 +164,13 @@ let catalogOfCart = {
         });
         this.container.innerHTML = htmlStr;
     },
+    _totalCoast() {
+        this.totalCoast.innerHTML = '$' + sumTovarOfCart(this.items);
+    },
+
+    // _quantityTovarOfcart() {
+
+    // }
 }
 
 function createItemTemplate(item) {
@@ -159,9 +211,9 @@ function createItemTemplateOfCart(item) {
                             <div class="cart__name">${item.productName}</div>
                         </a>
                         <img src="../src/assets/imgs/stars.png" alt="">
-                        <div class="cart__coast siteColor">1 <span class="cart__coast_x">x</span> $${item.productPrice}</div>
+                        <div class="cart__coast siteColor"><span class="quantity">${item.productQuantity}</span><span class="cart__coast_x">x</span> $${item.productPrice}</div>
                     </div>
-                    <a href=""><i class="fas fa-backspace cart__action"></i></a>
+                    <a class="delFromCart"><i class="fas fa-backspace cart__action"></i></a>
                 </div>
             </li>`
 }

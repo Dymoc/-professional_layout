@@ -790,6 +790,11 @@ form > button:hover {
   line-height: 54px;
 }
 
+.myCart__text{
+  text-align: center;
+  margin-top: 15px;
+}
+
 .product_tovar_cart {
   margin-top: 60px;
   display: -webkit-box;
