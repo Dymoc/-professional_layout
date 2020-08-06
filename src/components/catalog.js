@@ -29,35 +29,23 @@ function getArrayOfObjects(num) {
 }
 
 function addToCart(productId, items) {
-    if (catalogOfCart.items.length == 0) {
-        items.forEach(el => {
-            if (el.productId == productId) {
-                catalogOfCart.items.push(el);
-                catalogOfCart.init();
-            }
-        });
-    } else {
-        for (el of catalogOfCart.items) {
-            if (el.productId == productId) {
-                el.productQuantity += 1;
-                catalogOfCart.init();
-                console.log('yes');
-            }
-        }
-        for (el of items) {
-            if (el.productId == productId) {
-                catalogOfCart.items.push(el);
-                catalogOfCart.init();
-            }
+    for (el of catalogOfCart.items) {
+        if (el.productId == productId) {
+            el.productQuantity += 1;
         }
     }
+    for (el of items) {
+        if (el.productId == productId) {
+            catalogOfCart.items.push(el);
+        }
+    }
+    catalogOfCart.items = catalogOfCart.items.filter(getUniqueItems);
+    catalogOfCart.init();
 }
 
-function uniqueItems(value,index,self) {
+function getUniqueItems(value, index, self) {
     return self.indexOf(value) === index;
-    // return lala(items);
-    let uniqueItems;
-
+}
 
 function sumTovarOfCart(items) {
     let coast = 0;
@@ -94,7 +82,6 @@ let catalogOfIndex = {
     _handleActionsButtonAddToCart() {
         for (key of this.button) {
             key.addEventListener('click', key => {
-                console.log(key.target.id);
                 addToCart(key.target.id, this.items);
             });
         }
@@ -146,11 +133,6 @@ let catalogOfCart = {
         this.quantity = document.querySelector('.cart__coast');
         this._render();
         this._totalCoast();
-        this._itemsUnique();
-<<<<<<< HEAD
-
-=======
->>>>>>> 6eff00cc5b3c3065a1d2d01f5ea094460ebe2ea1
     },
     _render() {
         let htmlStr = '';
@@ -163,18 +145,7 @@ let catalogOfCart = {
         this.totalCoast.innerHTML = '$' + sumTovarOfCart(this.items, this.productQuantity);
     },
 
-    _itemsUnique() {
-        
-        this.items =uniqueItems(this.items.filter(this.items));
-        
-    },
 
-<<<<<<< HEAD
-=======
-    // _quantityTovarOfcart() {
-
-    // }  
->>>>>>> 6eff00cc5b3c3065a1d2d01f5ea094460ebe2ea1
 }
 
 function createItemTemplate(item) {
@@ -209,7 +180,7 @@ function createItemTemplateOfCart(item) {
     return `<li class="myCart__link">
                 <div class="cart">
                     <a href="single_page.html"><img src="${item.productImg}" alt=""
-                            class="cart__img" height="85px" style="margin-right:10px"></a>
+                            class="cart__img" height="90px" style="margin-right:10px"></a>
                     <div class="cart__discription">
                         <a href="single_page.html">
                             <div class="cart__name">${item.productName}</div>
