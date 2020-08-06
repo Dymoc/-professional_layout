@@ -144,6 +144,24 @@ a:hover {
           transform: scale(1.1);
 }
 
+.header__cart_quantity{
+  display: none;
+  position: absolute;
+  background-color: #f16d7f;
+  text-align: center;
+  color: white;
+  font-size: 16px;
+  width: 23px;
+  height: 23px;
+  border-radius: 15px;
+  top: -9px;
+  left: 23px;
+}
+
+.header__right_img{
+  position: relative;
+}
+
 .header__right_img:hover .myCart__list {
   display: block;
 }

@@ -55,6 +55,14 @@ function sumTovarOfCart(items) {
     return coast;
 }
 
+function quantityOfCart(items){
+    let quantity = 0;
+    for(el of items){
+        quantity += el.productQuantity;
+    }
+    return quantity;
+}
+
 let catalogOfIndex = {
     container: null,
     button: null,
@@ -130,9 +138,11 @@ let catalogOfCart = {
     init() {
         this.container = document.querySelector('#myCart');
         this.totalCoast = document.getElementById('totalCoast');
-        this.quantity = document.querySelector('.cart__coast');
+        this.quantity = document.querySelector('.header__cart_quantity');
         this._render();
         this._totalCoast();
+        this._quantity();
+
     },
     _render() {
         let htmlStr = '';
@@ -144,6 +154,10 @@ let catalogOfCart = {
     _totalCoast() {
         this.totalCoast.innerHTML = '$' + sumTovarOfCart(this.items, this.productQuantity);
     },
+    _quantity() {        
+        this.quantity.innerHTML = quantityOfCart(this.items);
+        this.quantity.style.display = 'block';
+    }
 }
 
 function createItemTemplate(item) {
