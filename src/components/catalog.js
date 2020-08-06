@@ -144,8 +144,6 @@ let catalogOfCart = {
     _totalCoast() {
         this.totalCoast.innerHTML = '$' + sumTovarOfCart(this.items, this.productQuantity);
     },
-
-
 }
 
 function createItemTemplate(item) {
