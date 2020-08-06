@@ -43,6 +43,23 @@ function addToCart(productId, items) {
     catalogOfCart.init();
 }
 
+function delFromCart(productId, items) {
+    for (el of items) {
+
+        if (el.productQuantity == 1) {
+            let index = items.indexOf(el)
+            delete items.splice(index, 1);
+        } else {
+            if (el.productId == productId) {
+                el.productQuantity -= 1;
+            }
+        }
+    }
+    catalogOfCart.init();
+}
+
+
+
 function getUniqueItems(value, index, self) {
     return self.indexOf(value) === index;
 }
@@ -55,9 +72,9 @@ function sumTovarOfCart(items) {
     return coast;
 }
 
-function quantityOfCart(items){
+function quantityOfCart(items) {
     let quantity = 0;
-    for(el of items){
+    for (el of items) {
         quantity += el.productQuantity;
     }
     return quantity;
@@ -133,6 +150,7 @@ let catalogOfCart = {
     container: null,
     totalCoast: null,
     quantity: null,
+    button: null,
     items: [],
 
     init() {
@@ -142,6 +160,11 @@ let catalogOfCart = {
         this._render();
         this._totalCoast();
         this._quantity();
+
+        setTimeout(() => {
+            this.button = document.querySelectorAll('.delFromCart');
+            this._handleActionsButtonDelFromCart();
+        }, 200);
 
     },
     _render() {
@@ -154,10 +177,17 @@ let catalogOfCart = {
     _totalCoast() {
         this.totalCoast.innerHTML = '$' + sumTovarOfCart(this.items, this.productQuantity);
     },
-    _quantity() {        
+    _quantity() {
         this.quantity.innerHTML = quantityOfCart(this.items);
         this.quantity.style.display = 'block';
-    }
+    },
+    _handleActionsButtonDelFromCart() {
+        for (key of this.button) {
+            key.addEventListener('click', key => {
+                delFromCart(key.target.id, this.items);
+            });
+        }
+    },
 }
 
 function createItemTemplate(item) {
@@ -200,7 +230,7 @@ function createItemTemplateOfCart(item) {
                         <img src="../src/assets/imgs/stars.png" alt="">
                         <div class="cart__coast siteColor"><span class="quantity">${item.productQuantity}</span><span class="cart__coast_x">x</span> $${item.productPrice}</div>
                     </div>
-                    <a class="delFromCart"><i class="fas fa-backspace cart__action"></i></a>
+                    <a class="delFromCart" ><i class="fas fa-backspace cart__action" id = "${item.productId}"></i></a>
                 </div>
             </li>`
 }
