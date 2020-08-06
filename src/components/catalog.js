@@ -53,8 +53,16 @@ function addToCart(productId, items) {
     }
 }
 
+<<<<<<< HEAD
 function dublTovar(items) {
     return unique(items);
+=======
+function uniqueItems(value,index,self) {
+    return self.indexOf(value) === index;
+    // return lala(items);
+    let uniqueItems;
+
+>>>>>>> 6eff00cc5b3c3065a1d2d01f5ea094460ebe2ea1
 }
 
 function sumTovarOfCart(items) {
@@ -145,7 +153,10 @@ let catalogOfCart = {
         this._render();
         this._totalCoast();
         this._itemsUnique();
+<<<<<<< HEAD
 
+=======
+>>>>>>> 6eff00cc5b3c3065a1d2d01f5ea094460ebe2ea1
     },
     _render() {
         let htmlStr = '';
@@ -159,9 +170,17 @@ let catalogOfCart = {
     },
 
     _itemsUnique() {
-        dublTovar(this.items);
+        
+        this.items =uniqueItems(this.items.filter(this.items));
+        
     },
 
+<<<<<<< HEAD
+=======
+    // _quantityTovarOfcart() {
+
+    // }  
+>>>>>>> 6eff00cc5b3c3065a1d2d01f5ea094460ebe2ea1
 }
 
 function createItemTemplate(item) {
