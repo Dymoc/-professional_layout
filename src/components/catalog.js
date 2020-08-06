@@ -53,13 +53,12 @@ function addToCart(productId, items) {
     }
 }
 
-function dublTovar(items) {
-    return unique(items);
+function uniqueItems(value,index,self) {
+    return self.indexOf(value) === index;
+    // return lala(items);
+    let uniqueItems;
+
 }
-
-// function quantityTovarOfcart(item) {
-
-// }
 
 function sumTovarOfCart(items) {
     let coast = 0;
@@ -150,7 +149,6 @@ let catalogOfCart = {
         this._render();
         this._totalCoast();
         this._itemsUnique();
-        // this._quantityTovarOfcart();
     },
     _render() {
         let htmlStr = '';
@@ -164,12 +162,14 @@ let catalogOfCart = {
     },
 
     _itemsUnique() {
-        dublTovar(this.items);
+        
+        this.items =uniqueItems(this.items.filter(this.items));
+        
     },
 
     // _quantityTovarOfcart() {
 
-    // }
+    // }  
 }
 
 function createItemTemplate(item) {
