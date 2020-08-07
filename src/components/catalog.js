@@ -46,7 +46,7 @@ function addToCart(productId, items) {
 function delFromCart(productId, items) {
     for (el of items) {
 
-        if (el.productQuantity == 1) {
+        if (el.productQuantity == 1 && el.productId == productId) {
             let index = items.indexOf(el)
             delete items.splice(index, 1);
         } else {
@@ -57,8 +57,6 @@ function delFromCart(productId, items) {
     }
     catalogOfCart.init();
 }
-
-
 
 function getUniqueItems(value, index, self) {
     return self.indexOf(value) === index;
@@ -81,21 +79,30 @@ function quantityOfCart(items) {
 }
 
 let catalogOfIndex = {
+    urlBD: 'https://raw.githubusercontent.com/Dymoc/static/master/JSON/bdTovar.json',
     container: null,
     button: null,
     items: [],
     init() {
         this.container = document.querySelector('#catalog');
         this._fillCatalog();
-        this._render();
 
         setTimeout(() => {
             this.button = document.querySelectorAll('.add_to_cart');
             this._handleActionsButtonAddToCart();
         }, 200);
     },
-    _fillCatalog() {
-        this.items = getArrayOfObjects(8);
+    _fillCatalog() {       
+        fetch(this.urlBD)
+            .then(data => data.json())
+            .then(items => this.items = items)
+            .catch(() => {
+                console.log('err')
+            })
+            .finally(() => {
+                this._render();
+            });
+
     },
     _render() {
         let htmlStr = '';
