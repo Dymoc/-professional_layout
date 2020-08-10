@@ -162,12 +162,19 @@ let catalogOfCart = {
         }
     },
     addToCart(productId, items) {
-        for (el of this.items) {
-            if (el.productQuantity > 0 && el.productId == productId) {   
-                el.productQuantity += 1;             
-            }
-        }
+   
+            
+        
+
+        // for (el of this.items) {
+        //     if (el.productQuantity > 0 && el.productId == productId) {   
+        //         el.productQuantity += 1;             
+        //     }
+        // }
         for (el of items) {
+            if (this.items.includes(productId)) {                   
+                el.productQuantity = 1;             
+            }
             if (el.productId == productId) {
                 this.items.push(el);
                 el.productQuantity = 1;
