@@ -49,10 +49,8 @@ function delFromCart(productId, items) {
         if (el.productQuantity == 1 && el.productId == productId) {
             let index = items.indexOf(el)
             delete items.splice(index, 1);
-        } else {
-            if (el.productId == productId) {
+        } else if(el.productQuantity != 1 &&el.productId == productId){           
                 el.productQuantity -= 1;
-            }
         }
     }
     catalogOfCart.init();
