@@ -40,40 +40,15 @@ function addToCart(productId, items) {
         }
     }
     catalogOfCart.items = catalogOfCart.items.filter(getUniqueItems);
-    catalogOfCart.init();
-}
+    catalogOfCart._render();
 
-function delFromCart(productId, items) {
-    for (el of items) {
-
-        if (el.productQuantity == 1 && el.productId == productId) {
-            let index = items.indexOf(el)
-            delete items.splice(index, 1);
-        } else if(el.productQuantity != 1 &&el.productId == productId){           
-                el.productQuantity -= 1;
-        }
-    }
-    catalogOfCart.init();
+    setTimeout(() => {
+        catalogOfCart._handleActionsButtonDelFromCart();
+    }, 200);
 }
 
 function getUniqueItems(value, index, self) {
     return self.indexOf(value) === index;
-}
-
-function sumTovarOfCart(items) {
-    let coast = 0;
-    for (el of items) {
-        coast = coast + el.productPrice * el.productQuantity;
-    }
-    return coast;
-}
-
-function quantityOfCart(items) {
-    let quantity = 0;
-    for (el of items) {
-        quantity += el.productQuantity;
-    }
-    return quantity;
 }
 
 let catalogOfIndex = {
@@ -90,7 +65,7 @@ let catalogOfIndex = {
             this._handleActionsButtonAddToCart();
         }, 200);
     },
-    _fillCatalog() {       
+    _fillCatalog() {
         fetch(this.urlBD)
             .then(data => data.json())
             .then(items => this.items = items)
@@ -152,6 +127,7 @@ let catalogOfCatalog = {
 }
 
 let catalogOfCart = {
+    urlBD: 'https://raw.githubusercontent.com/Dymoc/static/master/JSON/bdCart.json',
     container: null,
     totalCoast: null,
     quantity: null,
@@ -162,8 +138,9 @@ let catalogOfCart = {
         this.container = document.querySelector('#myCart');
         this.totalCoast = document.getElementById('totalCoast');
         this.quantity = document.querySelector('.header__cart_quantity');
-        this._render();
-        this._totalCoast();
+        this.fillCart();
+
+        // this._totalCoast();
         this._quantity();
 
         setTimeout(() => {
@@ -171,6 +148,19 @@ let catalogOfCart = {
             this._handleActionsButtonDelFromCart();
         }, 200);
 
+        // this._sumTovarOfCart();
+
+    },
+    fillCart() {
+        fetch(this.urlBD)
+            .then(data => data.json())
+            .then(items => this.items = items)
+            .catch(() => {
+                console.log('err')
+            })
+            .finally(() => {
+                this._render();
+            });
     },
     _render() {
         let htmlStr = '';
@@ -179,20 +169,51 @@ let catalogOfCart = {
         });
         this.container.innerHTML = htmlStr;
     },
-    _totalCoast() {
-        this.totalCoast.innerHTML = '$' + sumTovarOfCart(this.items, this.productQuantity);
-    },
+    // _totalCoast() {
+    //     this.totalCoast.innerHTML = '$' + this._sumTovarOfCart(this.items, this.productQuantity);
+    // },
     _quantity() {
-        this.quantity.innerHTML = quantityOfCart(this.items);
+        this.quantity.innerHTML = this._quantityOfCart(this.items);
         this.quantity.style.display = 'block';
     },
     _handleActionsButtonDelFromCart() {
         for (key of this.button) {
             key.addEventListener('click', key => {
-                delFromCart(key.target.id, this.items);
+                this._delFromCart(key.target.id, this.items);
             });
         }
     },
+    _delFromCart(productId, items) {
+        console.log(productId, items);
+        for (el of items) {
+            if (el.productQuantity == 1 && el.productId == productId) {
+                let index = items.indexOf(el)
+                delete items.splice(index, 1);
+            } else if (el.productQuantity != 1 && el.productId == productId) {
+                el.productQuantity -= 1;
+            }
+        }
+        this._render();
+        
+        setTimeout(() => {
+            this.button = document.querySelectorAll('.delFromCart');
+            this._handleActionsButtonDelFromCart();
+        }, 200);
+    },
+    // _sumTovarOfCart(items) {
+    //     let coast = 0;
+    //     for (el of items) {
+    //         coast = coast + el.productPrice * el.productQuantity;
+    //     }
+    //     return coast;
+    // },
+    _quantityOfCart(items) {
+        let quantity = 0;
+        for (el of items) {
+            quantity += el.productQuantity;
+        }
+        return quantity;
+    }
 }
 
 function createItemTemplate(item) {
