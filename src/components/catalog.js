@@ -28,29 +28,6 @@ function getArrayOfObjects(num) {
     return local;
 }
 
-function addToCart(productId, items) {
-    for (el of catalogOfCart.items) {
-        if (el.productId == productId) {
-            el.productQuantity += 1;
-        }
-    }
-    for (el of items) {
-        if (el.productId == productId) {
-            catalogOfCart.items.push(el);
-        }
-    }
-    catalogOfCart.items = catalogOfCart.items.filter(getUniqueItems);
-    catalogOfCart._render();
-
-    setTimeout(() => {
-        catalogOfCart._handleActionsButtonDelFromCart();
-    }, 200);
-}
-
-function getUniqueItems(value, index, self) {
-    return self.indexOf(value) === index;
-}
-
 let catalogOfIndex = {
     urlBD: 'https://raw.githubusercontent.com/Dymoc/static/master/JSON/bdTovar.json',
     container: null,
@@ -87,7 +64,7 @@ let catalogOfIndex = {
     _handleActionsButtonAddToCart() {
         for (key of this.button) {
             key.addEventListener('click', key => {
-                addToCart(key.target.id, this.items);
+                catalogOfCart.addToCart(key.target.id, this.items);
             });
         }
     },
@@ -138,15 +115,12 @@ let catalogOfCart = {
         this.container = document.querySelector('#myCart');
         this.totalCoast = document.getElementById('totalCoast');
         this.quantity = document.querySelector('.header__cart_quantity');
+
         this.fillCart();
 
         // this._totalCoast();
         this._quantity();
 
-        setTimeout(() => {
-            this.button = document.querySelectorAll('.delFromCart');
-            this._handleActionsButtonDelFromCart();
-        }, 200);
 
         // this._sumTovarOfCart();
 
@@ -168,6 +142,10 @@ let catalogOfCart = {
             htmlStr += createItemTemplateOfCart(item);
         });
         this.container.innerHTML = htmlStr;
+        
+        this.button = document.querySelectorAll('.delFromCart');
+        this._handleActionsButtonDelFromCart();
+
     },
     // _totalCoast() {
     //     this.totalCoast.innerHTML = '$' + this._sumTovarOfCart(this.items, this.productQuantity);
@@ -179,26 +157,40 @@ let catalogOfCart = {
     _handleActionsButtonDelFromCart() {
         for (key of this.button) {
             key.addEventListener('click', key => {
-                this._delFromCart(key.target.id, this.items);
+                this._delFromCart(key.target.id);
             });
         }
     },
-    _delFromCart(productId, items) {
-        console.log(productId, items);
+    addToCart(productId, items) {
+        for (el of this.items) {
+            if (el.productQuantity > 0 && el.productId == productId) {   
+                el.productQuantity += 1;             
+            }
+        }
         for (el of items) {
+            if (el.productId == productId) {
+                this.items.push(el);
+                el.productQuantity = 1;
+            }
+        }
+        this.items = this.items.filter(this.getUniqueItems);
+        this._render();
+    },
+
+    getUniqueItems(value, index, self) {
+        return self.indexOf(value) === index;
+    },
+
+    _delFromCart(productId) {
+        for (el of this.items) {
             if (el.productQuantity == 1 && el.productId == productId) {
-                let index = items.indexOf(el)
-                delete items.splice(index, 1);
+                let index = this.items.indexOf(el);
+                delete this.items.splice(index, 1);
             } else if (el.productQuantity != 1 && el.productId == productId) {
                 el.productQuantity -= 1;
             }
         }
         this._render();
-        
-        setTimeout(() => {
-            this.button = document.querySelectorAll('.delFromCart');
-            this._handleActionsButtonDelFromCart();
-        }, 200);
     },
     // _sumTovarOfCart(items) {
     //     let coast = 0;
