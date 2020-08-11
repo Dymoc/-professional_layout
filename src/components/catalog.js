@@ -1,35 +1,5 @@
-const imgURL = 'https://raw.githubusercontent.com/Dymoc/static/master/img/';
-let NAMES = [
-    'MANGO PEOPLE T-SHIRT',
-    'BANANA PEOPLE T-SHIRT',
-    'STRAWBERRY PEOPLE T-SHIRT',
-    'ORANGE PEOPLE T-SHIRT',
-    'PUMKIN PEOPLE T-SHIRT',
-    'PINEAPPLE PEOPLE T-SHIRT',
-    'CUCUMBER PEOPLE T-SHIRT',
-    'TOMATO PEOPLE T-SHIRT',
-    'TOMATO PEOPLE T-SHIRT',
-];
-let PRICES = [52, 53, 55, 67, 69, 94, 23, 45, 56];
-
-function getArrayOfObjects(num) {
-    let local = [];
-
-    for (let i = 0; i < num; i++) {
-        local.push({
-            productName: NAMES[i],
-            productPrice: PRICES[i],
-            productImg: `${imgURL}image_placeholder_${i + 1}.png`,
-            productId: 'prod_' + i,
-            productQuantity: 1,
-            //rates (звезды)
-        })
-    }
-    return local;
-}
-
 let catalogOfIndex = {
-    urlBD: 'https://raw.githubusercontent.com/Dymoc/static/master/JSON/bdTovar.json',
+    urlBD: 'https://raw.githubusercontent.com/Dymoc/static/master/JSON/bdTovarOfIndex.json',
     container: null,
     button: null,
     items: [],
@@ -52,7 +22,6 @@ let catalogOfIndex = {
             .finally(() => {
                 this._render();
             });
-
     },
     _render() {
         let htmlStr = '';
@@ -71,21 +40,28 @@ let catalogOfIndex = {
 }
 
 let catalogOfCatalog = {
+    urlBD: 'https://raw.githubusercontent.com/Dymoc/static/master/JSON/bdTovarOfCatalog.json',
     container: null,
     button: null,
     items: [],
     init() {
         this.container = document.querySelector('#catalogOfCatalog');
-        this._fillCatalog();
-        this._render();
-
+        this._fillCatalog();       
         setTimeout(() => {
             this.button = document.querySelectorAll('.add_to_cart');
             this._handleActionsButtonAddToCart();
         }, 200);
     },
     _fillCatalog() {
-        this.items = getArrayOfObjects(9);
+        fetch(this.urlBD)
+            .then(data => data.json())
+            .then(items => this.items = items)
+            .catch(() => {
+                console.log('err')
+            })
+            .finally(() => {
+                this._render();
+            });
     },
     _render() {
         let htmlStr = '';
@@ -97,7 +73,7 @@ let catalogOfCatalog = {
     _handleActionsButtonAddToCart() {
         for (key of this.button) {
             key.addEventListener('click', key => {
-                addToCart(key.target.id, this.items);
+                catalogOfCart.addToCart(key.target.id, this.items);
             });
         }
     },
@@ -117,13 +93,6 @@ let catalogOfCart = {
         this.quantity = document.querySelector('.header__cart_quantity');
 
         this.fillCart();
-
-        // this._totalCoast();
-        this._quantity();
-
-
-        // this._sumTovarOfCart();
-
     },
     fillCart() {
         fetch(this.urlBD)
@@ -142,18 +111,13 @@ let catalogOfCart = {
             htmlStr += createItemTemplateOfCart(item);
         });
         this.container.innerHTML = htmlStr;
-        
-        this.button = document.querySelectorAll('.delFromCart');
-        this._handleActionsButtonDelFromCart();
 
+        this.button = document.querySelectorAll('.delFromCart');        
+        setTimeout(this._handleActionsButtonDelFromCart(),200);        
+        this._quantity();
+        this._totalCoast();
     },
-    // _totalCoast() {
-    //     this.totalCoast.innerHTML = '$' + this._sumTovarOfCart(this.items, this.productQuantity);
-    // },
-    _quantity() {
-        this.quantity.innerHTML = this._quantityOfCart(this.items);
-        this.quantity.style.display = 'block';
-    },
+    
     _handleActionsButtonDelFromCart() {
         for (key of this.button) {
             key.addEventListener('click', key => {
@@ -161,31 +125,28 @@ let catalogOfCart = {
             });
         }
     },
-    addToCart(productId, items) {
-   
-            
-        
 
-        // for (el of this.items) {
-        //     if (el.productQuantity > 0 && el.productId == productId) {   
-        //         el.productQuantity += 1;             
-        //     }
-        // }
-        for (el of items) {
-            if (this.items.includes(productId)) {                   
-                el.productQuantity = 1;             
-            }
-            if (el.productId == productId) {
-                this.items.push(el);
-                el.productQuantity = 1;
+    addToCart(productId, items) {
+        
+        if (!(this._chekInCartProduct(productId))) {
+            for (el of items) {
+                if (el.productId == productId) {
+                    this.items.push(el);
+                    el.productQuantity = 1;
+                }
             }
         }
-        this.items = this.items.filter(this.getUniqueItems);
         this._render();
     },
 
-    getUniqueItems(value, index, self) {
-        return self.indexOf(value) === index;
+    _chekInCartProduct(productId) {
+        for (elCart of this.items) {
+            if (elCart.productId.includes(productId)) {
+                elCart.productQuantity += 1;
+                return true;
+            }
+        }
+        return false;
     },
 
     _delFromCart(productId) {
@@ -199,16 +160,27 @@ let catalogOfCart = {
         }
         this._render();
     },
-    // _sumTovarOfCart(items) {
-    //     let coast = 0;
-    //     for (el of items) {
-    //         coast = coast + el.productPrice * el.productQuantity;
-    //     }
-    //     return coast;
-    // },
-    _quantityOfCart(items) {
+
+    _totalCoast() {
+        this.totalCoast.innerHTML = '$' + this._sumOfProduct(this.items, this.productQuantity);
+    },
+
+    _sumOfProduct() {
+        let coast = 0;
+        for (el of this.items) {
+            coast = coast + el.productPrice * el.productQuantity;
+        }
+        return coast;
+    },
+
+    _quantity() {
+        this.quantity.innerHTML = this._quantityOfCart(this.items);
+        this.quantity.style.display = 'block';
+    },
+
+    _quantityOfCart() {
         let quantity = 0;
-        for (el of items) {
+        for (el of this.items) {
             quantity += el.productQuantity;
         }
         return quantity;
@@ -219,7 +191,7 @@ function createItemTemplate(item) {
     return `<div name="add_to_cart" class = "tovar_cart">
     <div class = "add_to_cart" >
         <a><img src = "../src/assets/imgs/tovar_hover.png" alt = ""></a> 
-        <div  style="cursor:pointer" class = "button_add_to_cart" id = "${item.productId}"> Add to Cart</div> 
+        <submit  style="cursor:pointer" class = "button_add_to_cart" id = "${item.productId}"> Add to Cart</submit> 
     </div> 
     <img src = "${item.productImg}" alt = "">
     <div class = "tovar_info" > ${item.productName}</div> 
