@@ -31,8 +31,10 @@ let cart = {
         });
         this.container.innerHTML = htmlStr;
 
-        this.button = document.querySelectorAll('.delFromCart');        
-        setTimeout(this._handleActionsButtonDelFromCart(),200);        
+        this.button = document.querySelectorAll('.delFromCart');     
+
+        setTimeout(this._handleActionsButtonDelFromCart(),100);  
+
         this._quantity();
         this._totalCoast();
     },
@@ -45,8 +47,7 @@ let cart = {
         }
     },
 
-    addToCart(productId, items) {
-        
+    addToCart(productId, items) {        
         if (!(this._chekInCartProduct(productId))) {
             for (el of items) {
                 if (el.productId == productId) {

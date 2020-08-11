@@ -877,8 +877,8 @@ form > button:hover {
   font-size: 13px;
   font-weight: bold;
   color: white;
-  padding-left: 43px;
-  padding-top: 10px;
+  padding-left: 40px;
+  background-color: transparent;
   background-image: url(../../assets/imgs/cart-white.png);
   background-repeat: no-repeat;
   background-position: 10px;
@@ -1624,6 +1624,7 @@ form > button:hover {
   color: white;
   padding-left: 43px;
   padding-top: 10px;
+  background-color: transparent;
   background-image: url(../../assets/imgs/arrows.png);
   background-repeat: no-repeat;
   background-position: center;
@@ -1642,6 +1643,7 @@ form > button:hover {
   color: white;
   padding-left: 43px;
   padding-top: 10px;
+  background-color: transparent;
   background-image: url(../../assets/imgs/heard.png);
   background-repeat: no-repeat;
   background-position: center;

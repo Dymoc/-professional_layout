@@ -83,7 +83,7 @@ function createItemTemplate(item) {
     return `<div name="add_to_cart" class = "tovar_cart">
     <div class = "add_to_cart" >
         <a><img src = "../src/assets/imgs/tovar_hover.png" alt = ""></a> 
-        <submit  style="cursor:pointer" class = "button_add_to_cart" id = "${item.productId}"> Add to Cart</submit> 
+        <button  style="cursor:pointer" class = "button_add_to_cart" id = "${item.productId}"> Add to Cart</button> 
     </div> 
     <img src = "${item.productImg}" alt = "">
     <div class = "tovar_info" > ${item.productName}</div> 
@@ -96,9 +96,9 @@ function createItemTemplateOfCatalog(item) {
     return `<div class="tovar_cart">
     <div class="add_to_cart"
         <a href="single_page.html"><img src="../src/assets/imgs/tovar_hover.png" alt=""></a>
-        <submit style="cursor:pointer" class="button_add_to_cart" id = '${item.productId}'>Add to Cart</submit>
-        <submit style="cursor:pointer" class="button_arrows"></submit>
-        <submit style="cursor:pointer" class="button_like"></submit>
+        <button style="cursor:pointer" class="button_add_to_cart" id = '${item.productId}'>Add to Cart</button>
+        <button style="cursor:pointer" class="button_arrows"></button>
+        <button style="cursor:pointer" class="button_like"></button>
     </div>
     <img src="${item.productImg}" alt="">
     <div class="tovar_info">${item.productName}</div>
