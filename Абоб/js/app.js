@@ -77,29 +77,32 @@ let abobePhotozhab = {
         }
     },
     _square() {
+        let width = this.canvas.width;
+        let height = this.canvas.height;
+        let startX;
+        let startY;
+        let endX;
+        let endY;
         this.canvas.onmousedown = () => {
             startX = this.x;
             startY = this.y;
         }
-
         this.canvas.onmousemove = () => {
-             endX =  0 + (this.x - startX);
-             endY = 0 + (this.y - startY);                       
+            endX = 0 + (this.x - startX);
+            endY = 0 + (this.y - startY);
         }
-
         this.canvas.onmouseup = () => {
-            this.ctx.rect(startX, startY,endX, endY);
+            this.ctx.rect(startX, startY, endX, endY);
             this.ctx.stroke();
         }
     },
-    // _clearCnv() {
-    //     let width = this.canvas.width;
-    //     let height = this.canvas.height;
-    //     this.ctx.fillStyle = '#fff';
-    //     this.canvas.onmousemove = () => {
-    //         this.ctx.fillRect(0, 0, width, height);
-    //     }
-    // },
+    _clearCnv() {
+        let width = this.canvas.width;
+        let height = this.canvas.height;
+        this.ctx.beginPath();
+        this.ctx.clearRect(0, 0, width, height);
+        this.ctx.stroke();
+    },
     _renderCoordinates() {
         this.coordinates.querySelector('#xCoord').innerText = this.x;
         this.coordinates.querySelector('#yCoord').innerText = this.y;
