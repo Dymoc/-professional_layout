@@ -10,7 +10,7 @@ let catalogOfIndex = {
         setTimeout(() => {
             this.button = document.querySelectorAll('.add_to_cart');
             this._handleActionsButtonAddToCart();
-        }, 350);
+        }, 400);
     },
     _fillCatalog() {
         fetch(this.urlBD)
@@ -50,7 +50,7 @@ let catalogOfCatalog = {
         setTimeout(() => {
             this.button = document.querySelectorAll('.add_to_cart');
             this._handleActionsButtonAddToCart();
-        }, 350);
+        }, 400);
     },
     _fillCatalog() {
         fetch(this.urlBD)
